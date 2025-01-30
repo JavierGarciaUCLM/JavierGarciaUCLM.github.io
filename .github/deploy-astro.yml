@@ -1,0 +1,38 @@
+name: Deploy Astro to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]  # <--- La rama donde trabajas. Ajusta si usas otra.
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1) Descarga el código del repo
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      # 2) Usa Node (versión recomendada para Astro: >=16)
+      - name: Use Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18  # o 16, ambas sirven
+
+      # 3) Instala dependencias (pnpm o npm)
+      - name: Install dependencies
+        run: |
+          npm install  # o 'pnpm install' si prefieres pnpm
+
+      # 4) Compila tu proyecto Astro (genera carpeta dist/)
+      - name: Build
+        run: |
+          npm run build  # o 'pnpm run build'
+
+      # 5) Despliega la carpeta dist/ a GH Pages (rama gh-pages)
+      - name: Deploy to GH Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
