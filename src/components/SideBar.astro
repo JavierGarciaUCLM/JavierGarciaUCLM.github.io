@@ -5,6 +5,18 @@ import SideBarMenu from "./SideBarMenu.astro";
 const { sideBarActiveItemID } = Astro.props;
 ---
 
+<script is:inline>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const currentTheme = html.getAttribute('data-theme');
+    if (currentTheme === 'dark') {
+      html.setAttribute('data-theme', 'lofi');
+    } else {
+      html.setAttribute('data-theme', 'dark');
+    }
+  }
+</script>
+
 <div class="drawer-side z-40">
   <label for="my-drawer" class="drawer-overlay"></label>
   <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
@@ -12,12 +24,22 @@ const { sideBarActiveItemID } = Astro.props;
       <a href="/">
         <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
           <div class="w-[8.5rem]">
-            <Image class="mask mask-circle" format="webp" width={300} height={300} src="/profile.webp" alt="Profile image" />
+            <Image
+              class="mask mask-circle"
+              format="webp"
+              width={300}
+              height={300}
+              src="/profile.webp"
+              alt="Profile image"
+            />
           </div>
         </div>
       </a>
     </div>
+
     <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    
+    <!-- Ahora el botón se pintará en SideBarFooter.astro al lado de tus iconos -->
     <SideBarFooter />
   </aside>
 </div>

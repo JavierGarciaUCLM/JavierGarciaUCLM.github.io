@@ -4,10 +4,10 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
-	plugins: [require("@tailwindcss/typography"),require("daisyui")],
+	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	daisyui: {
-		themes: true, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
-		darkTheme: "dark", // name of one of the included themes for dark mode
-		logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
-	  }
-}
+		themes: ["dark", "lofi"], // Activamos solo los temas oscuro y lofi
+		darkTheme: "dark", // Usamos el tema "dark" de DaisyUI
+		logs: false, // Desactiva los logs innecesarios en la consola
+	},
+};
