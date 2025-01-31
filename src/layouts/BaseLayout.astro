@@ -20,6 +20,29 @@ const {
 <!doctype html>
 <html lang="en" data-theme="lofi">
   <head>
+    <!-- Lee el tema de localStorage antes de renderizar la página Hecho para mantener estado light o dark mode-->
+     <script is:inline>
+  function applySavedTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'lofi';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    // Sincroniza el checkbox
+    const checkbox = document.getElementById('theme-toggle-checkbox');
+    if (checkbox) {
+      // Si tu icono "on" es la Luna => theme "dark"
+      checkbox.checked = (savedTheme === 'dark');
+    }
+  }
+
+  // Al cargar la página
+  applySavedTheme();
+
+  // Si usas astro:transitions, cada vez que cambias de ruta:
+  document.addEventListener('astro:after-swap', () => {
+    applySavedTheme();
+  });
+</script>
+
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
   </head>
