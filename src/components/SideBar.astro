@@ -9,11 +9,13 @@ const { sideBarActiveItemID } = Astro.props;
   function toggleTheme() {
     const html = document.documentElement;
     const currentTheme = html.getAttribute('data-theme');
-    if (currentTheme === 'dark') {
-      html.setAttribute('data-theme', 'lofi');
-    } else {
-      html.setAttribute('data-theme', 'dark');
-    }
+    
+    // Cambiamos de 'dark' a 'lofi' (o viceversa)
+    const newTheme = (currentTheme === 'dark') ? 'lofi' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    
+    // Guardamos la preferencia en localStorage
+    localStorage.setItem('theme', newTheme);
   }
 </script>
 
