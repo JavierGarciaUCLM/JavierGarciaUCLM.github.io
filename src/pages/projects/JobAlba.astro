@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Cajita from "../../layouts/Cajita.astro";
+---
+
+<BaseLayout title="JobAlba, A New Job Search Experience" sideBarActiveItemID="projects">
+  <div class="w-full max-w-4xl px-6 py-8 mx-auto">
+    <!-- Título y fecha -->
+    <h1 class="text-4xl font-bold mb-2">JobAlba</h1>
+    <p class="text-gray-500 text-md mb-4">Developed in collaboration with Agustín Prieto</p>
+
+    <!-- Descripción del proyecto -->
+    <div class="text-justify text-lg leading-relaxed space-y-4">
+      <p>
+        <strong>JobAlba</strong> is an intuitive job search platform designed to quickly connect companies and candidates. Inspired by dating apps, it ensures a fast and effective matching process while prioritizing accessibility and ease of use. The application features a simple, adaptable interface with multiple language options and a Dark Mode for visual comfort, making it accessible to both local and international users.
+      </p>
+
+      <p>
+        Android-based application developed and deployed in collaboration with
+        <a href="https://github.com/Agustin-dotcom" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800">
+          <strong>Agustín Prieto</strong>
+        </a>. The initial prototype and user interface were meticulously designed in Figma, focusing on user experience and intuitive navigation.
+      </p>
+      <p>
+      For the frontend, <strong>Kotlin</strong> was used for native development in Android Studio, along with the <strong>Android SDK</strong> to create user interfaces. 
+      The design of the screens was managed through <strong>XML layouts</strong>, ensuring a well-structured and responsive user interface.
+      </p>
+      <p>
+      On the backend side, the development is still ongoing, but it already includes the implementation of <strong>Firebase Realtime Database</strong> for a user-friendly backend solution.
+      The remote database functionality also relies on Firebase, maintaining consistency with the previously implemented <strong>Firebase services</strong>. 
+      The application is intended to be distributed via app stores like the Google Play Store for easy access and broad user reach.
+      </p>
+    </div>
+
+
+    <div class="w-full max-w-4xl mx-auto mt-10">
+  <h2 class="text-2xl font-bold mb-4">Project Repository</h2>
+  <div id="github-repo" class="p-6 border rounded-lg shadow-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
+    <p>Loading repository data...</p>
+  </div>
+
+  <script>
+    async function fetchGitHubRepo() {
+      const response = await fetch('https://api.github.com/repos/JavierGarciaUCLM/Jobder');
+      const repoData = await response.json();
+
+      document.getElementById('github-repo').innerHTML = `
+        <h3 class="text-xl font-semibold">${repoData.full_name}</h3>
+        <p>${repoData.description || 'No description available.'}</p>
+        <p><strong>Last updated:</strong> ${new Date(repoData.updated_at).toLocaleDateString()}</p>
+        <p><strong>Stars:</strong> ${repoData.stargazers_count} ⭐</p>
+        <a href="${repoData.html_url}" target="_blank" class="text-blue-600 underline hover:text-blue-800 dark:text-blue-400">View on GitHub</a>
+      `;
+    }
+
+    // Inicialización al cargar la página
+    fetchGitHubRepo();
+  </script>
+</div>
+
+</BaseLayout>
