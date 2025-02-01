@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="AppForDevices: A Comprehensive System" sideBarActiveItemID="projects">
+  <div class="w-full max-w-4xl px-6 py-8 mx-auto">
+    <h1 class="text-4xl font-bold mb-2">AppForDevices</h1>
+    <p class="text-gray-500 text-md mb-4">Developed in collaboration with Agustín Prieto, Carmen Noblejas and Lucian Andrei</p>
+
+    <div class="text-justify text-lg leading-relaxed space-y-4">
+      <p>
+        <strong>App For Devices</strong> is a modern and scalable platform designed to manage electronic devices through efficient processes of purchasing, renting, repairing, and reviewing devices. The system is tailored for both individual users and businesses, offering a centralized solution that streamlines device management.
+      </p>
+      <p>
+      This platform has been developed and deployed in collaboration with 
+      <a href="https://github.com/Lux-source" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800">
+          <strong>Lucian Andrei</strong></a>,
+          <strong>Carmen Noblejas</strong> and
+          <a href="https://github.com/Agustin-dotcom" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800">
+          <strong>Agustín Prieto</strong></a>
+      whose expertise and dedication were essential in creating a robust and user-friendly system.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Backend API Development</h2>
+      <p>
+        The project’s core is built around a <strong>RESTful API</strong> developed in <strong>C# (.NET)</strong> and deployed using <strong>Azure DevOps</strong>. The API handles critical operations such as device purchases, rentals, repair requests, and reviews. The API ensures data validation and robust backend functionality via well-structured REST controllers.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Interactive Frontend</h2>
+      <p>
+        The frontend is built using <strong>Blazor (Razor Pages)</strong>, providing a modern, intuitive, and responsive interface. Users can browse devices, complete purchases or rentals, and leave reviews. The frontend communicates seamlessly with the backend through well-defined <strong>Data Transfer Objects (DTOs)</strong>, ensuring data consistency and integrity.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Automated Testing</h2>
+      <p>
+        The project includes robust automated testing integrated into the <strong>Azure DevOps pipelines</strong>. 
+        Tests cover API verification, user interface validation using <strong>Selenium WebDriver</strong>, and comprehensive backend unit testing with 
+        <strong>XUnit</strong>. This approach ensures the system’s reliability and minimizes critical errors.
+        <a href="/docs/TestPlan.pdf" target="_blank"> <u>Test Plan can be found here (link) </u></a>
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Deployment and Scalability</h2>
+      <p>
+        The project is fully deployed on <strong>Microsoft Azure</strong>, leveraging its cloud capabilities for scalability and continuous monitoring. The integration with Azure DevOps allows for seamless updates and efficient management of the software development lifecycle.
+      </p>
+    </div>
+
+    <div class="w-full max-w-4xl mx-auto mt-10">
+  <h2 class="text-2xl font-bold mb-4">Azure DevOps Project</h2>
+  <div id="devops-project" class="p-6 border rounded-lg shadow-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
+    <p>Loading project data...</p>
+  </div>
+
+  <script>
+    async function fetchAzureProject() {
+      const token = '6yXt6ztCVl5lMT5W7sLQxnD5uEjWplFgQA1HhkSLfi85sXrYJ6XGJQQJ99BAACAAAAAJsFPkAAASAZDOWTYs';  // Coloca aquí tu token de acceso personal
+      const response = await fetch('https://dev.azure.com/SE2425TheAvengers/_apis/projects/SEIIProject?api-version=7.0', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Basic ${btoa(':' + token)}`,
+        }
+      });
+
+      if (!response.ok) {
+        document.getElementById('devops-project').innerHTML = `<p>Error fetching project data. Please check the token or project URL.</p>`;
+        return;
+      }
+
+      const projectData = await response.json();
+
+      document.getElementById('devops-project').innerHTML = `
+        <h3 class="text-xl font-semibold">${projectData.name}</h3>
+        <p>${projectData.description || 'No description available.'}</p>
+        <p><strong>Visibility:</strong> ${projectData.visibility}</p>
+        <p><strong>State:</strong> ${projectData.state}</p>
+        <a href="https://dev.azure.com/SE2425TheAvengers/SEIIProject" target="_blank" 
+           class="text-blue-600 underline hover:text-blue-800 dark:text-blue-400">View on Azure DevOps</a>
+      `;
+    }
+
+    fetchAzureProject();
+  </script>
+</div>
+</BaseLayout>
