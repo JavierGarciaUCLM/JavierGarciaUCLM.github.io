@@ -58,7 +58,8 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   {
-    last_posts.map((post) => (
+    last_posts.slice(-1).map((post) => (  /* Muestra el último posts del blog, mira bien las fechas añadidas */
+        /* last_posts.slice(0, 1).map((post)) para mostrar el más nuevo */
       <>
         <HorizontalCard
           title={post.data.title}
