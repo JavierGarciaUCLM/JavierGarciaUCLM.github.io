@@ -1,0 +1,30 @@
+.text 
+main:
+    li a0, LED_MATRIX_0_BASE        #a0 con dirección de comienzo matriz led
+    li a2, LED_MATRIX_0_WIDTH         #Metemos en a2 el ancho de fila
+    li a3, 0x00ff00                    #Verde
+    call poll1
+
+
+poll1:
+    lw s1, SWITCHES_0_BASE        #Carga el valor de bits encendido en Switch0
+    andi s1, s1, 0x4              #Filtra el bit 2
+    beq s1, zero, poll1            #Si es cero es que no se puso el bit 2
+    lw a1, SWITCHES_1_BASE        #Leemos la cantidad de Switch1 en (2^n)   
+    #Hasta aquí bien
+    
+    
+    
+    mul t3, a1, a2                    #Multiplicamos el número de bits x tamaño de fila
+    
+bucle:
+    beq t3, zero, final
+    sw a3, 0(a0)                        #Cargamos el amarillo
+    addi a0, a0, 4                    #Pasamos al siguiente led
+    addi t3, t3, -1                    #Quitamos una fila por poner
+    j bucle
+    
+    
+final:
+    li a7, 10
+    ecall
