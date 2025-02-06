@@ -1,0 +1,391 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+COMANDOS PARA NAVEGAR
+pwd--> mostrar directorio actual
+cd --> change directory
+ls --> listar contenido
+ls -l --> contenido en forma de lista/ ls -a -->muestra archivos ocultos
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+COMANDOS PARA MODIFICAR ARCHIVOS
+cp origen destino --> ej cp /etc/passwdd Escritorio/ || cp /etc/passwdd Escritorio/newpasswd (cambiamos el nombre del fichero)
+Para copiar directorios, es necesario usar cp -r
+mv --> es igual que cp pero en este caso solo movemos sin copiar(tambien se puede renombrar mv prueba examen)
+mkdir --> crear directorios (para crear varios a la vez mkdri {gato,perro}
+mkdir -p --> creas directorios con un directorio dentro ej. mkdir -p 2020/verano
+rm --> borro directorio vacio
+rm -r --> borro directorio y su contenido
+rm -ri --> igual que rmdir -r te pregunta una confirmacion
+touch --> crear archivo
+touch .archivo --> creamos fichero oculto al+n y veo las lineas
+nano fichero --> escribimos contenido en el directorio
+cat --> veo contenido
+cat fichero1 fichero2 --> veo contenido de ambos
+cat fichero 1 fichero2 > fusion -->concatenamos ambos
+cat > fichero1 --> creo un fichero ctrl c para salir
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+VARIABLES
+variable=value
+variable= (variable vacia)
+variable="$dir" puntero a variable dir
+variable=´$dir´ almacenamos en variable el contenido de dir
+newvariable=${variable} funciona igual que ´$dir´
+newvariable=${variable:-word} (almacena el contenido de variable, y en caso de estar vacia -word)
+newvariable=${variable:=word} (almacena el contenido de word en nw y en variable si esta vacia)
+unset variable --> borramos la variable
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+DEFINING SHELL COMMANDS
+; --> ejecutas comandos en una misma linea
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+COMANDOS PARA LISTAR, CLASIFICAR Y MODIFICAR CONTENIDO 
+head --> te muestra las 10 primeras lineas de un documento
+head -n numero --> el numero de lineas que indiques
+tail --> igual que head pero mostrando las 10 ultimas
+tail -n +2 nombre --> te muestra a partir de la segunda linea (si pones +3 de la tercera y asi)
+diff archivo1 archivo2 --> te muestra las diferencias entre documentos
+echo --> muestro contenido por consola
+echo contenido >> archivo --> añado contenido al archivo
+cut -d " " -f 2 --> cortas la columna de un fichero(mantienes el segundo campo)
+cut -d " " -f 1--> matienes el primer campo
+sed "s/,/ /g(con g se aplica a todas las comas del documento)" nombre--> sustituimos un valor por otro
+sort --> ordenamos el contenido de un documento alfabeticamente(con -r los ordena al reves)(sort -u te quita si e/xiste alguna linea repetida)
+sort-t" " -k4 -r prueba
+uniq -d te dice que hay repetido en un documento uniq -u te dice lo que no esta repetido
+tr sustituyes un valor por otro: ex tr A-B-C < documento
+paste opcion ficheros
+-o util es como > (solo en sort) ej sort -t";" -k 2 data.txt -o shorted.txt
+
+wc sirve para contar  -l fichero lineas
+wc sirve para contar  -b fichero bytes
+wc sirve para contar  -w fichero palabras
+
+RECUERDA: cut se puede usar como cut -c 3,5 sin cubrir delimitadores
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+COMANDOS PARA LOCALIZAR Y BUSCAR FICHEROS Y DIRECTORIOS
+locate nombre --> empleado para buscar archivos en el sistema
+locate -b nombre --> buscamos archivos que coincida el nombre 
+find --> es igual que locate pero puedo indicar la ruta en la que quieres buscar ej(find / -name passwd 2>/dev/null(con esta ultima parte quitamos el ruido)
+ej find / -type d(tipo de archivo) -name nombre 2>/dev/nu
+podemos usar otros como -group, -size (tamaño...)
+grep GRE--> se usa para buscar en el texto de un archivo. ex grep loquequierobuscar /manue/contenido;.txt ex grep -n loquequierobuscar /manue/contenido.txt(numero de linea en la que se encuentra el contenido)
+find / -type f -exec ls -lh {} \;
+du --> se usa para organizar documentos por tamaño
+ej du -hs * | sort -rh | head -5
+
+RECORDATORIO comando grep->-c printea una cuenta de las lineas en las que aparece el patron buscado
+-i: ignora la case para la busqueda
+-n:muesta las lineas que coinciden y el numero de lineas
+-v printea todas las lineas que no coinciden con el patron
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+INFORMACION PERMISOS DE LINUX
+-Estan representados con una cadena de 10 caracteres
+-El primer caracter es siempre el idenfificador del archivo(si es un enlace, fichero directorio..)
+-Los 9 caracteres restantes se dividen en tres bloques
+   -Primer bloque: Hace referencia a los permisos que tiene el usuario 
+   -Segundo bloque: Hace referencia a los permisos del grupo del propietario
+   -Tercer bloque: Hace referencia al resto de usuarios
+chmod --> se usa para cambiar los permisos ex. chmod a(todos),u(solo propietario,g(solo grupo),o(resto de usuarios,+ o -(si queremos dar o quitar archivos r,w,x nombre_archivo
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+SOFT LINKS VS HARD LINKS
+-Es necesario saber, que un link es un puntero a un fichero
+-Hard Link--> ex ln nombre_documento nombre_hardlink. Es un enlace directo al documento original, en caso de modificar el contenido de un 
+hardlink, también estaríamos modificando el contenido del documento original.
+-Soft Link -->ex ln -s nombre_documento nombre_softlink,
+Podríamos concluir con que la diferencia entre ambos es que el hardlink apunta al contenido del fichero original, mientras que el softlink apunta al nombre del fichero
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+REDIRECCIONES
+Redireccion de outputs (1)
+Redireccion de inputs (3) --> En este caso se usa <
+Redireccion de errores (2)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+PIPES
+Son formas de conectar la salida de un programa con la entrada de otros
+Se usan para ahorrarnos sentencias, y declarar en una misma linea varios comandos
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+BASH SCRIPT
+
+$# --> numeros de parametros que hemos pasado
+
+OPERADORES
+numeros -> -gt -lt -ge -l3 -eq -ne(distinto de)
+cadenas -> > < == !=
+
+MUCHO CUIDADO A LA HORA DE HACER SCRIPTS DE USAR CADA OPERADOR CON EL TIPO DE DATO CORRECTO 
+
+CONDICIONALES USANDO BASH
+
+Ejemplo script para sumar 2 numeros:
+#!/bin/bash
+echo -n "Escribe num1"
+read num1
+echo -n "Escribe num2"
+read num2
+
+///EJEMPLO if///
+Suma forma1
+echo "$num1 + $num2 =$(($num1+$num2))"
+Suma forma2
+suma=$(($num1+$num2))/Detalle importante en linux cuando declaramos variables, no puede haber espacios
+echo "$num1 + $num2 = $suma"
+
+if [[ loquesea operador loquesea ]](es muy importante dejar espacios
+then
+	contenido_condicional
+fi
+
+if [[ loquesea operador loquesea ]](es muy importante dejar espacios
+then
+	contenido_condicional
+else
+	contenido_condicional
+fi
+//Ej1//
+if [ $# -eq 0 ]
+then
+	echo "No parameters"
+	exit 1
+else
+	echo "$# parameters have been introduced: $@"
+fi
+
+
+# The parameter must be the name of a file. Check if this file is or not in the current directory. Otherwise, print a message.
+
+if ls -l $1 > /dev/null 2> /dev/null 
+then
+	echo "Parameter $1 exists"
+	if [ -f $1 ]
+	then
+		echo "Parameter $1 is a regular file"
+		if [ -s $1 ]
+		then
+			echo "Parameter $1 is a non empty regular filea"
+		else
+			echo "Parameter $1 is an empty regular filea"
+		fi
+	else
+		echo "Parameter $1 is a directory"
+		ls -l $1
+	fi
+
+else
+	echo "Parameter $1 does not exist"
+        exit 2
+fi
+# In case of the parameter is a file, check if it is empty or not with a corresponding message.
+# In case of the parameter is a directory, list the directory.
+ 
+///EJEMPLO for///
+#!/bin/bash
+for VAL in 1 2 3 4
+do 
+	echo $VAL
+done
+
+#!/bin/bash
+num=0
+for i in * 
+do 
+	echo $num $i
+	num=´expr $num+1´
+done
+
+//EJEMPLO IF + FOR//
+ 1 #!/bin/bash
+ 2
+ 3 numc=`find *.c 2> /dev/null  | wc -l`
+ 4
+ 5 if [ $numc -eq 0 ]
+ 6 then
+ 7         echo ¨No hay ningun archivo de tipo c¨
+ 8 else
+ 9         mkdir prog_c 2>/dev/null
+10         for i in *.c
+11         do
+12                 echo ¨Moviendo $i¨
+13                 mv $i prog_c
+14         done
+15 fi
+16
+//EJEMPLO SWITCH//
+#!/bin/sh
+FRUIT="kiwi"
+case "$FRUIT" in
+"apple") echo "Apple pie is quite tasty."
+;;
+"banana") echo "I like banana nut bread."
+;;
+"kiwi") echo "New Zealand is famous for kiwi."
+;;
+esac
+///EJEMPLO while///
+while true
+do
+echo “Do you really want to delete the directory $1"
+read answer
+case $answer in
+[yY]*) rmdir $1; break;;
+[nN]*) echo “Don’t delete $1"; break;;
+*) echo “Please, answer yes or not";;
+esac
+done
+
+#!/bin/bash
+
+case $# in
+    0) echo "day:";read day;
+       echo "month:";read month;
+       echo "year:";read year;;
+
+    1) day=$1;echo "month:";read month;m=0;
+       echo "year:";read year;;
+
+    2) day=$1; month=$2;echo "year:";read year;;
+    3) day=$1; month=$2; year=$3;;
+    *) echo "too many parameters";exit;;
+esac
+ 
+if [ $year -lt 0 ]
+then
+    echo "ilegal year"
+    exit 1;
+fi
+
+if [ $month -lt 0 ] && [ $month -gt 12 ]
+then
+    echo "ilegal month"
+    exit 2;
+fi
+if [ $day -lt 0 ] && [ $day -gt 31 ]
+then
+    echo "ilegal day"
+    exit 3;
+fi
+
+cal $month $year | tail -n 6 | grep -w $day >/dev/null 2>/dev/null
+if [ $? -ne 0 ]
+then
+    echo "ilegal date"
+    exit 4;
+fi
+
+echo "Perfect Date"
+
+  GNU nano 4.8                                                                                                  bolsadechuches.sh                                                                                                            #!/bin/bash
+
+if [ $# -eq 1 ]
+then
+        if [ -f $1 ]
+        then
+                while true
+                do
+                        echo "Elige una opcion"
+                        read opcion
+                        case $opcion in
+                                1) sort -t":" -k 2 $1 | more;;
+                                2) echo "a quien elimino"
+                                        read id
+                                        while read linea
+                                        do
+                                                echo $linea | cut -d":" -f 1 | grep $id > /dev/null
+                                                if [ $? -ne 0  ]
+                                                then
+                                                        echo $linea >> nuevo.txt
+                                                fi
+                                        done<$1
+                                        cat  nuevo.txt > $1;;
+                                3) echo  "";;
+                                4) exit 0;;
+                                *) echo "Te voy a comprar una bolsa de chuches, vale tonto?";;
+                        esac
+                done
+
+        else
+                echo "Algo anda mal"
+        fi
+else
+        echo "Te voy a comprar una bolsa de chuches campeon"
+fi
+
+#!/bin/bash
+
+if [ $# -ne 1 ]
+        then echo "Dame un parametro man"; exit 1
+fi
+
+if [ ! -f $1 ]
+        then echo "Dame un fichero que exista"; exit 1
+fi
+
+while true
+do
+        echo  "MENU: Pulsa 1,2,3,4"
+        read x
+        case $x in
+                1) sort -t":" -k2 $1;;
+                2) echo "Dame ID para eliminar: "; read ID
+                cat $1 | grep ^[$ID]$ > /dev/null
+                echo "" > FichTemp.txt
+                if [ $? -eq 0 ]
+                then    while read linea
+                        do
+                                echo $linea | cut -d":" -f 1 | grep ^[$ID]$ >/dev/null
+                                if [ $? -ne 0 ]
+                                        then echo $linea >> FichTemp.txt
+                                fi
+                        done<$1
+                fi
+                cp FichTemp.txt $1
+                ;;
+                3)echo "ID: "; read nID
+                echo "Name and surname: "; read name
+                echo "Salary: "; read salary
+                echo "$nID:$name:$salary" >> $1;;
+                4) exit 0;;
+                *) echo "ERROR";;
+        esac
+done
+
+
+///EJEMPLO until///
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+AWK TOOL
+
+| awk '{print $numero}' printea el campo del numero indicado
+awk -F 'lo que sea' '{print $numero}' --> filtra el separador que le indiquemos
+awk -v 'lo que sea' --> Asigna una variable
+awk -f progfile --> especifica un fichero en concreto
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
