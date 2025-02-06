@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Tercer curso: ESIIAB" sideBarActiveItemID="notes">
+  <div class="w-full max-w-4xl px-6 py-8 mx-auto">
+    <h1 class="text-4xl font-bold mb-2">Cuarto curso</h1>
+    <p class="text-gray-500 text-md mb-4">Consulta los materiales disponibles para cuarto.</p>
+
+    <div class="text-justify text-lg leading-relaxed space-y-6">
+      <h2 class="text-2xl font-semibold mt-6">Material disponible</h2>
+      <div class="space-y-8">
+        <!-- Sistemas Web -->
+        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
+          <h3 class="text-2xl font-semibold text-base-content flex items-center">
+            <span class="mr-2">🌐</span> Sistemas Web
+          </h3>
+          <ul class="list-disc list-inside pl-5 text-base-content">
+            <ul class="list-disc list-inside pl-5 text-base-content">
+                <li>
+                  <a href="https://drive.google.com/file/d/1vl4fGeoqH2XR0hdU5nTOSt8KOns9YcqP/view?usp=drive_link"
+                  class="text-blue-500 underline hover:text-blue-800 transition">
+                  Laboratorios
+                  </a>
+                </li>
+            <details class="bg-base-0 rounded-lg shadow-sm">
+                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
+                  Entregables
+                </summary>
+                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
+                  <li>
+                    <a
+                      href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable1.zip"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Entregable 1
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable3.zip"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Entregable 3
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/IPO/Snippets-Seminar3.txt"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Entregable 3 (Snippets)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable4.zip"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Entregable 4
+                    </a>
+                  </li>
+                </ul>
+              </details>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <h2 class="text-2xl font-semibold">¿Tienes más apuntes o documentos para compartir?</h2>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">Comparte tus archivos aquí.</p>
+      <a
+        href="mailto:jaleoab@gmail.com"
+        class="inline-block px-6 py-3 text-white bg-blue-600 rounded-lg hover:bg-blue-800"
+      >
+        Enviar correo
+      </a>
+    </div>
+
+    <div class="flex justify-end mt-10">
+      <p class="text-gray-500 italic">
+        Agradecimientos especiales a Lucian y Carmen por compartir sus apuntes.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

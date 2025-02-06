@@ -1,0 +1,289 @@
+Slide 13
+export default function Navbar() {
+  return (
+    <nav>
+      This is the Navbar.
+    </nav>
+  )
+}
+export default function Header() {
+  return (
+    <header>
+      This is the Header.
+    </header>
+  )
+}
+export default function Footer() {
+  return (
+    <footer>
+      This is the Footer.
+    </footer>
+  )
+}
+Slide 14
+import Navbar from '@/components/Navbar'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import React from 'react'
+
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className='flex min-h-screen flex-col'>
+      <Navbar />
+      <Header />
+      <main className='mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8'>
+        {children}
+      </main>
+      <Footer />
+    </div>
+  )
+}
+Slide 15
+export default function Index() {
+  return (
+    <div>
+      This is the main page.
+    </div>
+  )
+}
+export default function Cart() {
+  return (
+    <div>
+      This is the cart page.
+    </div>
+  )
+}
+Slide 17
+export default function Footer() {
+  return (
+    <footer className='mx-auto mt-auto w-full max-w-screen-xl px-4 py-6 sm:px-6 lg:px-8'>
+      <hr className='border-gray-300' />
+      <span className='block pt-6 text-center text-xs font-light text-gray-900'>
+        Web Engineering and Services - &copy;&nbsp;GameShop
+      </span>
+    </footer>
+  )
+}
+Slide 18
+export default function Header() {
+  return (
+    <header className='mx-auto w-full bg-gray-800 px-6 pb-16 pt-24 text-center sm:pb-20 sm:pt-28 lg:px-8 lg:pb-24 lg:pt-32'>
+      <div className='mx-auto max-w-2xl'>
+        <h1 className='text-6xl font-bold text-gray-100 sm:text-7xl lg:text-8xl'>
+          GameShop
+        </h1>
+        <p className='mt-4 text-sm leading-8 text-gray-400 sm:mt-6 sm:text-base lg:text-lg'>
+          The e-shop created by players for players
+        </p>
+      </div>
+    </header>
+  )
+}
+Slide 20
+import { ReactNode } from 'react'
+import Link from 'next/link'
+
+export const navbarButtonClasses =
+  'rounded-full p-2 text-gray-400 hover:text-white focus:text-white focus:outline-none focus:ring-2 focus:ring-white';
+
+interface NavbarButtonProps {
+  href: string;
+  children: ReactNode;
+}
+
+export default function NavbarButton({ href, children }: NavbarButtonProps) {
+  return (
+    <Link href={href} className={navbarButtonClasses}>
+      {children}
+    </Link>
+  )
+}
+Slides 21 to 24
+import {
+  ArrowRightStartOnRectangleIcon,
+  ShoppingCartIcon,
+  UserIcon,
+} from '@heroicons/react/24/outline'
+import NavbarButton from '@/components/NavbarButton'
+import Link from 'next/link'
+import { getSession } from '@/lib/auth'
+
+export default async function Navbar() {
+  const session = await getSession()
+
+  return (
+    <nav className='fixed top-0 z-50 w-full bg-gray-800 bg-opacity-90 backdrop-blur-lg backdrop-filter'>
+      <div className='mx-auto max-w-7xl px-6 sm:px-8 lg:px-10'>
+        <div className='relative flex h-16 items-center justify-between'>
+          <div className='flex flex-1 items-stretch justify-start'>
+            <Link
+              className='flex flex-shrink-0 items-center space-x-4 text-gray-300 hover:text-gray-100'
+              href='/'
+            >
+              <img
+                className='block h-8 w-auto'
+                src='/img/logo.svg'
+                alt='GameShop logo'
+              />
+              <div className='inline-block w-auto text-xl font-semibold'>
+                GameShop
+              </div>
+            </Link>
+          </div>
+          <div className='absolute inset-y-0 right-0 flex items-center space-x-4'>
+            {session ? (
+              <>
+                <NavbarButton href='/cart'>
+                  <span className='sr-only'>Cart</span>
+                  <ShoppingCartIcon className='h-6 w-6' aria-hidden='true' />
+                </NavbarButton>
+                <NavbarButton href='/profile'>
+                  <span className='sr-only'>User profile</span>
+                  <UserIcon className='h-6 w-6' aria-hidden='true' />
+                </NavbarButton>
+                <NavbarButton href='#'>
+                  <span className='sr-only'>Sign out</span>
+                  <ArrowRightStartOnRectangleIcon
+                    className='h-6 w-6'
+                    aria-hidden='true'
+                  />
+                </NavbarButton>
+              </>
+            ) : (
+              <>
+                <Link
+                  href='/auth/signup'
+                  className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-gray-100'
+                >
+                  Sign up
+                </Link>
+                <Link
+                  href='/auth/signin'
+                  className='rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-gray-100'
+                >
+                  Sign in
+                </Link>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
+}
+Slide 27
+import { Product } from '@/models/Product'
+import { Types } from 'mongoose'
+import Link from 'next/link'
+
+interface ProductTileProps {
+  product: Product & { _id: Types.ObjectId }
+}
+
+export default function ProductTile({ product }: ProductTileProps) {
+  return (
+    <Link href={`/products/${product._id}`} className='group'>
+      <div className='aspect-h-1 aspect-w-2 w-full overflow-hidden rounded-lg bg-gray-200'>
+        <img
+          src={product.img}
+          alt={product.name}
+          className='h-full w-full object-cover object-center group-hover:opacity-75'
+        />
+      </div>
+      <h3 className='mt-4 text-sm text-gray-900'>{product.name}</h3>
+      <p className='mt-1 text-lg font-medium text-gray-900'>
+        {product.price + ' €'}
+      </p>
+    </Link>
+  )
+}
+Slide 28
+import ProductTile from '@/components/ProductTile'
+import { getProducts } from '@/lib/handlers'
+
+export default async function Index() {
+  const data = await getProducts()
+
+  return (
+    <div className='flex flex-col'>
+      <div className='grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8'>
+        {data.products.map((product) => (
+          <ProductTile key={product._id.toString()} product={product} />
+        ))}
+      </div>
+    </div>
+  )
+}
+Slide 30
+import { redirect } from 'next/navigation'
+import { getCartItems } from '@/lib/handlers'
+import Link from 'next/link'
+import { getSession } from '@/lib/auth'
+
+export default async function Cart() {
+  const session = await getSession()
+  if (!session) {
+    redirect('/auth/signin')
+  }
+
+  const cartItemsData = await getCartItems(session.userId)
+  if (!cartItemsData) {
+    redirect('/auth/signin')
+  }
+
+  return (
+    <div className='flex flex-col'>
+      <h3 className='pb-4 text-3xl font-bold text-gray-900 sm:pb-6 lg:pb-8'>
+        My Shopping Cart
+      </h3>
+      {cartItemsData.cartItems.length === 0 ? (
+        <div className='text-center'>
+          <span className='text-sm text-gray-400'>The cart is empty</span>
+        </div>
+      ) : (
+        <>
+          {cartItemsData.cartItems.map((cartItem) => (
+            <div key={cartItem.product._id.toString()}>
+              <Link href={`/products/${cartItem.product._id.toString()}`}>
+                {cartItem.product.name}
+              </Link>
+              <br />
+              {cartItem.qty}
+              <br />
+              {cartItem.product.price.toFixed(2) + ' €'}
+            </div>
+          ))}
+        </>
+      )}
+    </div>
+  )
+}
+Slide 32
+import { Types } from 'mongoose'
+import { notFound } from 'next/navigation'
+import { getProduct } from '@/lib/handlers'
+
+export default async function Product({
+  params,
+}: {
+  params: { productId: string }
+}) {
+  if (!Types.ObjectId.isValid(params.productId)) {
+    notFound()
+  }
+
+  const product = await getProduct(params.productId)
+  if (product === null) {
+    notFound()
+  }
+
+  return (
+    <div className='flex flex-col'>
+      <h3 className='pb-4 text-3xl font-bold text-gray-900 sm:pb-6 lg:pb-8'>
+        {product.name}
+      </h3>
+      {product.description && <p>{product.description}</p>}
+      {/* Here you should show the details of the product. */}
+    </div>
+  )
+}
