@@ -10,7 +10,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <h2 class="text-2xl font-semibold mt-6">Material disponible</h2>
 
       <div class="space-y-8">
-        <!-- Arquitectura de Computadores -->
         <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
           <h3 class="text-2xl font-semibold text-base-content flex items-center">
             <span class="mr-2">🖥️</span> Arquitectura de Computadores
@@ -54,15 +53,55 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </ul>
         </section>
 
-        <!-- Interacción Persona-Ordenador I -->
         <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
           <h3 class="text-2xl font-semibold text-base-content flex items-center">
             <span class="mr-2">🖱️</span> Interacción Persona-Ordenador I
           </h3>
-          <!-- Si deseas agregar algún elemento principal, puedes incluirlo aquí -->
           <ul class="list-disc list-inside pl-5 text-base-content"></ul>
           <ul class="space-y-4 pl-5 text-base-content">
-            <li>
+              <details class="bg-base-0 rounded-lg shadow-sm">
+                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
+                  Actividades
+                </summary>
+                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
+                  <li>
+                    <a
+                      href="/notes/Tercero/IPO/Actividades/Actividad2.1.pdf"
+                      target="_blank"
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Actividad 2.1
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/IPO/Actividades/Actividad3.1.pdf"
+                      target="_blank"
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Actividad 3.1
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/IPO/Actividades/Actividad3.2.pdf"
+                      target="_blank"
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Actividad 3.2
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/IPO/Actividades/Actividad4.2.pdf"
+                      target="_blank"
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Actividad 4.1
+                    </a>
+                  </li>
+                </ul>
+              </details>
               <details class="bg-base-0 rounded-lg shadow-sm">
                 <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
                   Trabajo en grupo (Games development)
@@ -89,7 +128,22 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 </ul>
               </details>
             </li>
-            <li>
+            <details class="bg-base-0 rounded-lg shadow-sm">
+              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
+                Trabajo en grupo (Web Fundamentals)
+              </summary>
+              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
+                <li>
+                  <a
+                    href="/notes/Tercero/IPO/WebFundamentals.pdf"
+                    target="_blank"
+                    class="text-blue-500 underline hover:text-blue-800 transition"
+                  >
+                    Presentación
+                  </a>
+                </li>
+              </ul>
+            </details>
               <details class="bg-base-0 rounded-lg shadow-sm">
                 <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
                   Trabajo en pareja (Study of Interaction in Social Media)
@@ -107,6 +161,32 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                   <li>
                     <a
                       href="/notes/Tercero/IPO/SocialMedia.pdf"
+                      target="_blank"
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Report
+                    </a>
+                  </li>
+                  
+                </ul>
+              </details>
+              <details class="bg-base-0 rounded-lg shadow-sm">
+                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
+                  Trabajo en pareja (Interaction and Ubiquitous Computing)
+                </summary>
+                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
+                  <li>
+                    <a
+                      href="/notes/Tercero/IPO/UbiquitousComputingPresentacion.pdf"
+                      target="_blank"
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Presentación
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/IPO/UbiquitousComputing.pdf"
                       target="_blank"
                       class="text-blue-500 underline hover:text-blue-800 transition"
                     >
@@ -155,7 +235,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </ul>
         </section>
 
-        <!-- Sistemas Distribuidos -->
         <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
           <h3 class="text-2xl font-semibold text-base-content flex items-center">
             <span class="mr-2">🌐</span> Sistemas Distribuidos
@@ -170,10 +249,84 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
                 Apuntes primer parcial
               </a>
             </li>
+            <details class="bg-base-0 rounded-lg shadow-sm">
+              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
+                Apuntes segundo parcial
+              </summary>
+              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
+                <li>
+                  <a
+                    href="/notes/Tercero/Distribuidos/Tema5.pdf"
+                    target="_blank"
+                    class="text-blue-500 underline hover:text-blue-800 transition"
+                  >
+                    Unidad 5
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/notes/Tercero/Distribuidos/Tema6.pdf"
+                    target="_blank"
+                    class="text-blue-500 underline hover:text-blue-800 transition"
+                  >
+                    Unidad 6
+                  </a>
+                </li>
+              </details>
+              <details class="bg-base-0 rounded-lg shadow-sm">
+                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
+                  Prácticas
+                </summary>
+                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
+                  <li>
+                    <a
+                      href="/notes/Tercero/Distribuidos/Practicas/Practica1.zip"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Práctica 1
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/Distribuidos/Practicas/Practica2.zip"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Práctica 2
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/Distribuidos/Practicas/Practica3.zip"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Práctica 3
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/Distribuidos/Practicas/Practica4.zip"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Práctica 4
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/notes/Tercero/Distribuidos/Practicas/Practica5.zip"
+                      download
+                      class="text-blue-500 underline hover:text-blue-800 transition"
+                    >
+                      Práctica 5
+                    </a>
+                  </li>
+                </details>
           </ul>
         </section>
 
-        <!-- Sistemas Inteligentes -->
         <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
           <h3 class="text-2xl font-semibold text-base-content flex items-center">
             <span class="mr-2">🤖</span> Sistemas Inteligentes
@@ -181,16 +334,33 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <ul class="list-disc list-inside pl-5 text-base-content">
             <li>
               <a
-                target="_blank"
+                href="https://drive.google.com/file/d/1MEVR9SP7mud3ra7YAi1ef4EgdxmMF_gX/view?usp=drive_link"
                 class="text-blue-500 underline hover:text-blue-800 transition"
               >
-                En proceso...
+                Laboratorios
+              </a>
+            </li>
+            <li>
+              <a
+                href="/notes/Tercero/Inteligentes/EjerciciosPython.7z"
+                download
+                class="text-blue-500 underline hover:text-blue-800 transition"
+              >
+                Ejercicios Python
+              </a>
+            </li>
+            <li>
+              <a
+                href="/notes/Tercero/Inteligentes/Entregas.7z"
+                download
+                class="text-blue-500 underline hover:text-blue-800 transition"
+              >
+                Entregas
               </a>
             </li>
           </ul>
         </section>
 
-        <!-- Aspectos Profesionales de la Informática -->
         <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
           <h3 class="text-2xl font-semibold text-base-content flex items-center">
             <span class="mr-2">📜</span> Aspectos Profesionales de la Informática
@@ -209,7 +379,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
         <h2 class="text-2xl font-semibold mt-8">Intensificación Tecnologías de la Información</h2>
 
-        <!-- Integración de Sistemas Informáticos -->
         <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
           <h3 class="text-2xl font-semibold text-base-content flex items-center">
             <span class="mr-2">🔗</span> Integración de Sistemas Informáticos
@@ -290,7 +459,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </a>
     </div>
 
-    <!-- Agradecimientos -->
+    
     <div class="flex justify-end mt-10">
       <p class="text-gray-500 italic">
         Agradecimientos especiales a Lucian y Carmen por compartir sus apuntes.
