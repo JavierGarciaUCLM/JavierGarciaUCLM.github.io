@@ -1,0 +1,32 @@
+Requirements
+
+npm install
+npm i -D daisyui@latest
+npm install autoprefixer --save-dev
+npm install @tailwindcss/line-clamp
+
+For the dark mode 
+It uses the system default, so if you want to check the other mode should be done by changing the system 
+
+npm install next-themes
+npm install @nextui-org/react # In the end we didnt use it, but we have it installed, just in case you dont have conflicts
+
+npm run seed
+npm run dev
+
+Login
+
+await fetch('http://localhost:3000/api/auth/signin', {
+method: 'POST',
+headers: {
+'Accept': 'application/json',
+'Content-Type': 'application/json'
+},
+body: JSON.stringify({email: "johndoe@example.com", password: "1234"})
+});
+
+Logout
+
+await fetch('http://localhost:3000/api/auth/signout', {
+method: 'POST'
+});
