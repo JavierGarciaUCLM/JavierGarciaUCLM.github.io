@@ -1,0 +1,38 @@
+ejercicio 1
+ps -aux | awk '/^r/ {print $1 " " $4}'
+
+ejercicio 2
+ 
+if [ $# -eq 1 ]
+then
+        ps -aux | awk -v usuario=$1 '{if (usuario==$1) print "The user " $1 " has an active process with PID "$2; el>fi
+exit 1
+
+ejercicio 3
+
+awk 'BEGIN{llena=0; vacia=0} {if(""!=$0) print ++llena, $0; else print ++vacia, $0 }END{print llena" " vacia}' ./file
+
+ejercicio 4
+
+if [ $# -eq 2 ]
+then
+	case $1 in
+		1)shift;awk '{print $0}'
+		2)shift;awk '{if(""!=$0) print NR, $0;}' 
+		3)shift;awk 'BEGIN{llena=0; vacia=0} {if(""!=$0) print ++llena, $0; else print ++vacia, $0 }END{print llena" " vacia}'
+	esac
+else
+	echo "No se han pasado los parrametros bien"
+fi
+
+ejercicio 9add
+
+#!/bin/bash
+
+cat $1 | awk 'BEGIN{printf "  Name  Ex1  Ex2  Ex3  Mean  Apt\n";s1=0;s2=0;s3=0; m=0; c=0; t=0; p=0}
+{s1=s1+$2; s2=s2+$3; s3=s3+$4; m=($2+$3+$4)/3; p++; printf "%6s %4s %4s %4s   %.1f",$1, $2,$3,$4, m; if(m>=5) {print "  Yes"; c++} else {print "  No"}}
+END{s1=s1/p; s2=s2/p; s3=s3/p; t=(s1+s2+s3)/3; printf " Total   %.1f  %.1f  %.1f  %.1f  %d\n", s1, s2, s3, t, c}'
+
+
+
+ 

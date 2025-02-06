@@ -1,0 +1,116 @@
+#!/bin/bash
+
+echo "-- Manual de Scripts Linux --"
+
+#echo "Hola Mundo" $1 #$1 coge el valor de un parametro pasado
+
+#--Comprimir y Descomprimir--
+# Comprimir:     tar  -cvf practicas.tar practica1.sh practica2.sh
+# Descomprimir:  tar -xvf practicas.tar
+#---
+
+#----Scripts---------
+# Variables: mivariable="Loquequiera"
+# echo $mivariable
+
+#---Variables------
+#variable=10
+#variable=$(( variable-1 ))
+#echo  $variable  //9
+
+# -- No mostrar Errores--
+# 2>/dev/null
+#------------------------
+
+#--
+# $# Numero de argumentos posicionales en un shell-script.
+# $@ Lista de todos los argumentos posicionales en un shell-script.
+# $0 Nombre del shell-script en ejecucion.
+# echo raul | cat > raul.txt --> ha escrito raul en raul.txt
+#--
+
+
+# --IF--
+# if [ -eq ]; (equal) -ne (no equal)
+# then
+# *lo que quieras hacer*
+# else
+# *...*
+# fi (para terminar)
+#--------------------
+
+# --FOR--
+# Corto
+#for i in 1 2 3 4 5
+#do
+# echo "Hello $i"
+#done
+
+# Medio
+#for i in {1. .5}
+#do
+#  echo "Hai $i"
+#done
+
+# Largo
+#for i in {0. .8. .2} #i=0; i<8; i=i+2;
+#do
+#  echo "Hai $i"
+#done
+#---------------------
+
+# --WHILE--
+#variable=10
+#echo  $variable
+
+#while [ $variable -eq 10 ]
+#do
+#echo $variable
+#variable=$(( variable-1 ))
+#done
+#--------------------------
+
+#--SWITCH CASE---
+#case palabra in
+#patron [ | patron ...]) comandos ;;
+#...
+#esac
+# Ejemplo:
+#case $1 in
+#	hola ) echo "Has dicho hola"; break;;
+#	h* ) echo "Has dicho adios"; break;;
+#	*) echo "No has escrito ni hola ni nada con h";;
+#esac
+#-----
+
+#---Bucle Num-------
+#num =`expr $num +1´ // o -1
+#-------------------
+
+#---FUNCIONES------
+#
+#pene(){
+#echo $1 $2
+#}
+#
+#pene $3 $4
+#-----------------
+
+# --Scanf--
+#printf "\n Hola: "
+#read -r numero
+#echo "Tu numero es $numero"
+
+#if [[ $numero == 1 ]]; then
+#printf "hola"
+#echo "hola"
+#fi
+#----------------------
+
+# -- Contar Archivos --
+# ls / | wc -l        //Siendo / el directorio donde queramos que se cuente (si no pones nada lo cuenta ahi)
+#ls -dq *snp* | wc -l //Cuenta los que tengan esas letras
+
+# -- Añadir ultima linea --
+# echo guillem >> notas.txt
+#---------------------------
