@@ -1,124 +1,524 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://javiergarciauclm.github.io/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://javiergarciauclm.github.io/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/projects/JobAlba/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/projects/JobAlba/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/projects/AppForDevices/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/projects/AppForDevices/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/projects/FlappyBird/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/projects/FlappyBird/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/blog/demo-post-3/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/blog/when-ai-revives-the-past-technological-advancement-or-emotional-dilemma/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/blog/demo-post-2/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/projects/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/blog/demo-post-1/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/notes/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/projects/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/store/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/services/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/blog/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/store/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/cv/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/blog/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/docs/TestPlan.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/cv/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://javiergarciauclm.github.io/blog/tag/AI/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/docs/TestPlan.pdf</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/notes/Primero/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/blog/tag/rust/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/blog/tag/tokio/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/store/callofdutywii/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/notes/Cuarto/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/store/disneyinfinitywii/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/store/callofdutywii/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/store/justdance2017/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/store/disneyinfinitywii/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/store/tomodachi3ds/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/store/justdance2017/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/store/wiifit/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/store/tomodachi3ds/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/store/mariokart7/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/store/wiifit/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/store/samsungmando/</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/store/mariokart7/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
 </url>
 <url>
-  <loc>https://javiergarciauclm.github.io/docs/certificadoB1.pdf</loc>
-  <lastmod>2025-02-01T15:03:03+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://javiergarciauclm.github.io/store/samsungmando/</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/docs/certificadoB1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Calculo/GeneralCalculo.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Calculo/Presentacion1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Calculo/Presentacion2.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Calculo/Presentacion3.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Calculo/Presentacion4.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Empresas/GeneralEmpresas.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Programacion/GeneralProgramacion.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Programacion/FPII/ExplicacionTests.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Programacion/FPII/Proyecto/Enunciado.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Fisica/GeneralFisica.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Fisica/Examenes.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/TC/GeneralTC.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Algebra/GeneralAlgebra.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/EC/GeneralEC.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/EC/LucesLed.txt</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/EC/Practica4.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/EC/Practica5.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/EC/Practica6.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/EC/Practica8.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/EC/Practica9.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/EC/Practica10.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Primero/Sistemas/GeneralSistemas.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Logica/tg1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Logica/Control1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Logica/Control1PLD.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Logica/EjercicioControl2.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Logica/SimulacroRC.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Logica/RC.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/ED/GeneralED.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/ED/CarmenED.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/ED/PolishNotationED.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/SWI/GeneralSoftwareI.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/SWI/Proyecto/SRS1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/SWI/Proyecto/ExamenSRS1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/SWI/Proyecto/SRS2.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/SWI/Proyecto/ExamenSRS2.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/SWI/Proyecto/SRSOrdinario.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Operativos/GeneralOperativos.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Operativos/ResumenPrimerParcial.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Operativos/EjerciciosTema3.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Operativos/EjerciciosTema4.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Operativos/EjerciciosTema4.1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Labs/Estadistica1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Labs/Estadistica2.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Labs/Estadistica3.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Labs/Estadistica4.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Labs/Estadistica7.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Labs/Estadistica8.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Labs/Estadistica9.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Labs/Estadistica10.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Examenes/ExamenRandom1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Examenes/ExamenRandom2.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Examenes/UnoDeLosExamenes2324.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Formulas/AlgunaFuncionExamenEnR.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Estadistica/Formulas/FormularioFumadon.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/BBDD/CarmenBBDD.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Metodologia/GeneralMetodologia.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Metodologia/CarmenMetodologia.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Metodologia/Trabajos/TrabajoGreedy.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Metodologia/Trabajos/TrabajoDynamic.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Metodologia/Trabajos/TrabajoBacktracking.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/Concurrentes/CarmenConcurrentes.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Segundo/RedesII/GeneralRedes.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/AC/GeneralAC.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/SoftwareII/SoftwareII.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/SoftwareII/CarmenSW.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/Actividades/Actividad2.1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/Actividades/Actividad3.1.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/Actividades/Actividad3.2.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/IPOTrabajo.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/WebFundamentals.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/SocialMediaPresentacion.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/SocialMedia.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/UbiquitousComputingPresentacion.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/UbiquitousComputing.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/IPOHumanPart.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/IPO/IPOComputerPart.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/Distribuidos/DistribuidosPrimerParcial.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/Distribuidos/Tema5.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
+<url>
+<loc>https://javiergarciauclm.github.io/notes/Tercero/Distribuidos/Tema6.pdf</loc>
+<lastmod>2025-02-06T18:17:45+00:00</lastmod>
+<priority>0.51</priority>
+</url>
 </urlset>
