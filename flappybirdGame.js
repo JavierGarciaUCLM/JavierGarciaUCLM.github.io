@@ -54,13 +54,10 @@ function draw() {
   text("Score: " + score, 10, 40);
 }
 
-function keyPressed() {
+function touchStarted() {
   if (key === ' ') {
     vel = -5;
   }
-}
-function touchStarted() {
-  vel = -5;
 }
 
 function resetGame() {
