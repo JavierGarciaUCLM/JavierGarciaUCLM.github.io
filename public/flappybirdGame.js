@@ -55,9 +55,7 @@ function draw() {
 }
 
 function touchStarted() {
-  if (key === ' ') {
     vel = -5;
-  }
 }
 
 function resetGame() {
