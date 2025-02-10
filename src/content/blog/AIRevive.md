@@ -66,3 +66,40 @@ As AI continues to evolve, we move closer to a dystopian reality where the only 
 <p style="text-align: justify;">
 As AI progresses and transforms our understanding of life and death, we must consider: <strong>are we prepared for a future where death no longer marks a final boundary but becomes the beginning of digital preservation?</strong> And what price will our humanity pay for this shift?
 </p>
+
+<section 
+  class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg"
+>
+  <button 
+    id="share-link-button" 
+    class="px-3 py-2 text-sm cursor-pointer"
+  >
+    🔗 Liked it? Share with friends!
+  </button>
+</section>
+
+
+
+<script>
+  document.getElementById('share-link-button').addEventListener('click', function() {
+    const shareData = {
+      title: document.title,
+      url: window.location.href
+    };
+
+    // Si el navegador soporta la API Web Share
+    if (navigator.share) {
+      navigator.share(shareData)
+        .then(() => console.log('Enlace compartido con éxito'))
+        .catch((error) => console.error('Error al compartir', error));
+    } else if (navigator.clipboard) {
+      // Fallback: Copiar la URL al portapapeles
+      navigator.clipboard.writeText(shareData.url)
+        .then(() => alert('¡Enlace copiado al portapapeles!'))
+        .catch(err => console.error('No se pudo copiar el enlace', err));
+    } else {
+      // En caso de que no se soporte ninguna opción anterior
+      alert('Tu navegador no soporta esta función. Por favor, copia manualmente el enlace.');
+    }
+  });
+</script>
