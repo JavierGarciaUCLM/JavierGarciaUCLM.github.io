@@ -59,6 +59,12 @@ function keyPressed() {
     vel = -5;
   }
 }
+function mousePressed() {
+  vel = -5;
+}
+function touchStarted() {
+  vel = -5;
+}
 
 function resetGame() {
   cX = 30;
