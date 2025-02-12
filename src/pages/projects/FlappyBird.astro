@@ -20,7 +20,7 @@ import Cajita from "../../layouts/Cajita.astro";
       </p>
       <p>
         The game was initially developed using <strong>Processing</strong>, a powerful sketch-based framework for creative coding, known for its ease of use in prototyping visual applications.  
-        To deploy the game on the web, the project was adapted to <strong>p5.js</strong>, a JavaScript library based on Processing, allowing integration with HTML5 and web technologies.  
+        To deploy the game on the web, the project was adapted to <strong>p5.js</strong>, a JavaScript library based on Processing, allowing integration with HTML and web technologies.  
         The canvas rendering is handled through the p5.js framework, using key event listeners and a main game loop to control animations, collision detection, and user interactions.
       </p>
       <p>
@@ -33,9 +33,9 @@ import Cajita from "../../layouts/Cajita.astro";
 
     <div class="w-full flex justify-center my-10" style="margin-left: 200px;">
     <div>
-      <!-- Game canvas will be centered here -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-      <script src="/flappybirdGame.js" is:inline></script>
+      <script src="/Games/flappybirdGame.js" is:inline></script>
     </div>
   </div>
+  <p class="text-center text-gray-600 mt-2"> Click to jump. </p>
 </BaseLayout>
