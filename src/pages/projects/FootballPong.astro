@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Cajita from "../../layouts/Cajita.astro";
+---
+
+<BaseLayout title="Football Pong" sideBarActiveItemID="projects">
+  <div class="w-full max-w-4xl px-6 py-8 mx-auto">
+    <h1 class="text-4xl font-bold mb-2">Pong Game</h1>
+
+    <div class="text-justify text-lg leading-relaxed space-y-4">
+      <p>
+        This project, entirely coded in Python, is one of my first explorations into reactive behavior, also known as videogame AI. <strong>Pong</strong> is a simple 
+        game designed in 1972 by <strong>Nolan Bushnell</strong>. In this game, collision detection and game mechanics have been fully implemented.
+      </p>
+      <p>
+        The game mechanics rely on basic physics with velocity and collision control with borders and CPU and user, very similar to <a href="https://javiergarciauclm.github.io/projects/FlappyBird/" style="text-decoration: underline;" target="_blank">Flappy Bird</a>. 
+        The ball is randomly generated along Y-axis, in order to provide some lucky factor. 
+        A dual counter has been added to compare the CPU vs Player skills.
+      </p>
+      <p>
+        The game was initially developed using <strong>Python</strong> with <strong>Pygame</strong>, a popular library designed for coding 2D games by providing 
+        functionalities for rendering graphics, handling user input, and management of game logic.
+        As other games, to be deployed in the web the code was translated to <strong>p5.js</strong>, a JavaScript library based on Processing, allowing integration with HTML and web technologies.  
+        The code developed in Python can be found <a href="/Games/Pong.py" style="text-decoration: underline;" target="_blank">here</a>.
+      </p>
+      <p>
+        Regarding to the <strong>AI topic</strong> in this game, reactive behavior has been added. The CPU paddle moves based on the ball's position, reacting in real-time.
+        Whenever the ball moves upward  (decreasing along Y-axis), the CPU paddle is also decremented as the same time as the ball. Likewise, when the ball moves downward, Y-axis coordinates increase.
+        Following this logic, if we wanted to design an unbeatable game with Pong, if ball speed is equal to CPU paddle speed, it will be always tracking the same coordinate
+        that the ball has, making this game unwinnable.
+       </p>
+    </div>
+
+
+    <div class="w-full flex justify-center my-10" style="margin-left: 200px;">
+    <div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+      <script src="/Games/pongGame.js" is:inline></script>
+    </div>
+  </div>
+  <p class="text-center text-gray-600 mt-2"> W and S to move. </p>
+</BaseLayout>
