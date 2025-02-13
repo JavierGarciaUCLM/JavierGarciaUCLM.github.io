@@ -29,7 +29,7 @@ progress does not inadvertently curb natural emotional development.
 With the intervention of AI and technology in the management of deceased individuals the new term <strong>digital necromancy</strong>
 has been defined. This term could also refer to the use of Computer-Generated Imagery (CGI), which is not directly related to AI, but 
 is becoming more connected every day. For years, this technique has been applied to deceased famous people such as <a href="https://www.youtube.com/watch?v=BxlPCLRfk8U" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>Dalí</strong></a> or
-<a href="https://www.youtube.com/watch?v=oxXpB9pSETo" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>Morgan Freeman</strong></a>, but due to the easy access to these technologies, it has taken a step further, allowing people to start using the technology itself to communicate with deceased loved ones.
+<a href="https://www.youtube.com/shorts/jVow2456-uQ" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>Morgan Freeman</strong></a>, but due to the easy access to these technologies, it has taken a step further, allowing people to start using the technology itself to communicate with deceased loved ones.
 </p>
 
 <p style="text-align: justify;">
@@ -52,7 +52,8 @@ In the following blog, this topic is addressed, as a user of the blog replicated
 
 <iframe 
   src="https://www.meneame.net/m/tecnolog%C3%ADa/amigo-murio-hicieron-ia-alimentada-tuits-posts-libros-llore" target="_blank" rel="noopener noreferrer" 
-  title="Post de Menéame" 
+  title="Post de Menéame"
+  alt="Post from Meneame web page, where a debate is created related to digital necromancy"
   width="100%" 
   height="300" 
   frameborder="0" 
