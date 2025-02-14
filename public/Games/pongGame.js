@@ -183,7 +183,7 @@ function pointWon(winner) {
 // Función para reubicar la pelota en una posición aleatoria
 function resetBall() {
   ball.x = screenWidth / 2 - 10; 
-  ball.y = random(10, 790); 
+  ball.y = random(10, 760); 
   //Se invierte aleatoriamente la dirección de la pelota
   ballSpeedX *= random([-1, 1]);
   ballSpeedY *= random([-1, 1]);
