@@ -9,7 +9,14 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
 const last_posts = posts.slice(0, 3);
 ---
 
-<BaseLayout sideBarActiveItemID="home">
+
+
+<BaseLayout sideBarActiveItemID="home"
+  title="Javier García Web Page"
+  desc="Hey! I'm Javier García, Welcome to my personal portfolio."
+  img="/social_fondo.webp"
+  >
+  
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm Javier García</div>
@@ -31,6 +38,7 @@ const last_posts = posts.slice(0, 3);
       </a>
     </section>
   </div>
+  
   <div>
     <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
   </div>
