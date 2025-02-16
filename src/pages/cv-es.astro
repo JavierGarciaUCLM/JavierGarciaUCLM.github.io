@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="CV en Español" sideBarActiveItemID="cv">
+
+  <div class="absolute top-5 right-5 flex gap-3">
+    <section
+      class="
+        inline-block px-3 py-2
+        bg-base-100
+        rounded-lg
+        shadow-md
+        border border-base-400
+        hover:shadow-lg
+        transition-shadow
+      "
+    >
+      <a 
+        href="/cv"
+        class="flex items-center gap-2 text-sm cursor-pointer"
+      >
+        <img src="/language/GB.svg" alt="Bandera de Reino Unido" class="w-5 h-5" />
+        <span>English</span>
+      </a>
+    </section>
+  
+    <section
+      class="
+        inline-block px-3 py-2
+        bg-base-100
+        rounded-lg
+        shadow-md
+        border border-base-400
+        hover:shadow-lg
+        transition-shadow
+      "
+    >
+      <a 
+        href="/cv-es"
+        class="flex items-center gap-2 text-sm cursor-pointer"
+      >
+        <img src="/language/SP.svg" alt="Bandera de España" class="w-5 h-5" />
+        <span>Español</span>
+      </a>
+    </section>
+  </div>
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Perfil</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Soy estudiante de tercero de Ingeniería Informática en la Universidad de Castilla-La Mancha, 
+    especializado en desarrollo de software y diseño de interfaces accesibles.
+    Apasionado por la creación de aplicaciones intuitivas y fáciles de usar, disfruto combinando mis conocimientos técnicos con principios de diseño 
+    para construir experiencias digitales atractivas e intuitivas para el usuario.
+    </div>
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Estudios</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Grado en Ingeniería Informática, modalidad bilingüe y con mención en Tecnologías de la Información (TIC)"
+      subtitle="Desde 2022 hasta 2026 en la Universidad de Castilla-La Mancha, Albacete, España"
+      description="Especialización centrada en la infraestructura de sistemas tecnológicos, ciberseguridad, redes y soluciones de software"
+    />
+    <TimeLineElement
+      title="Bachillerato español"
+      subtitle="Desde 2021 hasta 2022 en el Instituto Ramón y Cajal, Albacete, España"
+    />
+  </div>
+
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certificaciones</div>
+  </div>
+
+  <ul class="list-disc mx-6 mb-10 grid gap-2">
+    <li>
+      <a href="https://www.uclm.es/estudios/propios/curso-universitario-formacion-avanzada-herramientas-dig-aplicadas-transporte-logistica" target="_blank">
+        Curso Universitario Avanzado en Logística y Transporte - UCLM
+      </a>
+      <br>
+      <span class="text-sm italic">Certificado por la Universidad de Castilla-La Mancha (UCLM), cursando actualmente</span>
+  </li>
+    <li>
+        <a href="/docs/certificadoB1.pdf" target="_blank">Certificación B1 (con enlace)</a>
+        <br>
+        <span class="text-sm italic">Certificado por la Universidad de Castilla-La Mancha (UCLM)</span>
+    </li>
+    <li>
+        <a target="_blank">Permiso de conducir categoría B</a>
+    </li>
+</ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experiencia de Voluntariado</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Mentor de estudiantes de primer curso"
+      subtitle="Desde Septiembre, 2024 hasta Julio, 2025 en la Universidad de Castilla-La Mancha, Albacete, España"
+    >
+    Guié y apoyé a los estudiantes de primer año en su adaptación a la universidad, brindando orientación académica y sobre el campus. 
+    Además, asistí en sesiones de bienvenida, resolví dudas sobre asignaturas y facilité su integración ayudándolos a encontrar su grupo de compañeros rápidamente.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Representante estudiantil a nivel estatal de la UCLM en RITSI (Reunión de Estudiantes de Ingenierías Técnicas y Superiores en Informática)."
+      subtitle="Desde Octubre, 2022 hasta Julio, 2025 en RITSI, España"
+    >
+    Como representante estatal, participé en reuniones nacionales en ciudades como Ourense, A Coruña y Barcelona, defendiendo los intereses de los estudiantes de Ingeniería Informática 
+    de la UCLM. Mi labor incluyó impulsar mejoras académicas, fomentar la colaboración entre universidades y contribuir a la toma de decisiones a nivel nacional sobre asuntos 
+    estudiantiles, promoviendo iniciativas para mejorar la experiencia educativa.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Estudiante voluntario"
+      subtitle="Agosto, 2024 en Avada, Santiago de Compostela, España"
+    >
+    Participé en la restauración de un área natural, centrándome en la limpieza y eliminación de residuos para preservar el medio ambiente.
+    El área fue acondicionada y convertida en una zona de descanso, proporcionando un espacio limpio y acogedor para los viajeros, al tiempo que fomentaba la conciencia ambiental.
+    Trabajé en equipo para garantizar que el área se mantuviera sostenible y accesible para el uso público.
+    </TimeLineElement>
+    
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Habilidades</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6 gap-x-6">
+    <li>Android Studio</li>
+    <li>GitHub</li>
+    <li>C/C#</li>
+    <li>Java</li>
+    <li>Visual Studio</li>
+    <li>Figma</li>
+    <li>Manejo de Proyectos</li>
+    <li>Habilidades Analíticas</li>
+    <li>Pensamiento Estratégico</li>
+    <li>Liderazgo de Equipo</li>
+    <li>Gestión de Eventos</li>
+  </ul>
+</BaseLayout>
