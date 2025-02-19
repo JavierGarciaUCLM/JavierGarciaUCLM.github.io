@@ -56,9 +56,9 @@ Participated in the restoration of a natural area, focusing on cleaning and remo
     bg-transparent
   "> <p class="font-semibold text-base-content bg-base-100/70 px-2 py-1 rounded-md">
 Do you want more information?
-</p> <div class="flex space-x-2"> <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg"> <button class="px-3 py-2 text-sm cursor-pointer inline-block" onClick="respuestaSi()">
+</p> <div class="flex space-x-2"> <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg"> <button class="px-3 py-2 text-sm cursor-pointer inline-block" onclick="respuestaSi()">
 Show me!
-</button> </section> <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg"> <button class="px-3 py-2 text-sm cursor-pointer inline-block" onClick="respuestaNo()">
+</button> </section> <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg"> <button class="px-3 py-2 text-sm cursor-pointer inline-block" onclick="respuestaNo()">
 No, thanks
 </button> </section> </div> <model-viewer src="/3DModels/BackedModel.glb" alt="Mi modelo 3D" camera-controls="true" autoplay style="w-[160px] h-auto; --progress-bar-color: transparent;"></model-viewer> </div> <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> <script is:client>
   
@@ -78,14 +78,24 @@ No, thanks
   }
   
 
-  // Muestra el modal en la primera carga
-  window.addEventListener('load', () => {
+  // Muestra el modal en la primera carga. 3 segs
+  function triggerModal() {
     setTimeout(mostrarModal, 1000);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded fired');
+    triggerModal();
   });
 
-  // Muestra el modal en cada cambio de página en Astro (Astro carga las páginas con SPA (No se bienq ue significa, pero una vez cargada la página, no se recarga al cambiar de página))
+  window.addEventListener('load', () => {
+    console.log('load fired');
+    triggerModal();
+  });
+
   document.addEventListener('astro:after-swap', () => {
-    setTimeout(mostrarModal, 1000);
+    console.log('astro:after-swap fired');
+    triggerModal();
   });
 
   function respuestaSi() {
