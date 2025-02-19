@@ -17,17 +17,38 @@ const last_posts = posts.slice(0, 3);
   img="/social_fondo.webp"
   >
   
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Javier García</div>
-    <div class="text-3xl py-3 font-bold">Computer Science student</div>
-    <div class="py-2">
-      <text class="text-lg">
-        This is my personal <b>Portfolio</b>, a place where all my projects and creations will be published.
-        A small website to storage, share and trace several programming projects through the years. I hope you find it useful!
-      </text>
+  <!-- Contenedor superior (Texto + Modelo) -->
+  <div class="flex items-start gap-2 p-1">
+    <!-- Columna de texto -->
+    <div class="m-0 p-0">
+      <div class="text-xl py-1">Hey there 👋</div>
+      <div class="text-5xl font-bold leading-tight m-0 p-0">I'm Javier García</div>
+      <div class="text-3xl font-bold leading-tight m-0 p-0">Computer Science student</div>
     </div>
-    <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg">
+  
+    <!-- Columna del modelo -->
+    <div class="relative -mt-1 ">
+      <model-viewer
+        src="/3DModels/SittingModel.glb"
+        alt="Mi modelo 3D"
+        autoplay
+        camera-orbit="330deg 110deg 3.5m"
+        class="w-[140px] h-140"
+        style="--progress-bar-color: transparent;">
+      </model-viewer>
+    </div>
+  </div>
+  
+  <!-- Bloque inferior (Párrafo) -->
+  <div class="py-2">
+    <p class="text-lg">
+      This is my personal <b>Portfolio</b>, a place where all my projects and creations will be published.
+      A small website to storage, share and trace several programming projects through the years.
+      I hope you find it useful!
+    </p>
+  </div>
+  
+    <section class="my-4 inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg">
       <a 
         href="https://x.com/Jaleo_ab" 
         target="_blank" 
@@ -89,3 +110,4 @@ const last_posts = posts.slice(0, 3);
     ))
   }
 </BaseLayout>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
