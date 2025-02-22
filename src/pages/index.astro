@@ -25,9 +25,8 @@ const last_posts = posts.slice(0, 3);
       <div class="text-5xl font-bold leading-tight m-0 p-0">I'm Javier García</div>
       <div class="text-3xl font-bold leading-tight m-0 p-0">Computer Science student</div>
     </div>
-  
-    <!-- Columna del modelo -->
-    <div class="relative -mt-1 hidden md:block ">
+
+    <div class="relative -mt-1 hidden md:block group">
       <model-viewer
         src="/3DModels/SittingModel.glb"
         alt="Mi modelo 3D"
@@ -36,10 +35,19 @@ const last_posts = posts.slice(0, 3);
         class="w-[140px] h-140"
         style="--progress-bar-color: transparent;">
       </model-viewer>
+  
+      <!-- El texto extra que -->
+      <div
+        class="absolute left-1/2 -top-8 -translate-x-1/2
+               px-2 py-1 bg-gray-700 text-white text-sm
+               rounded opacity-0 group-hover:opacity-100
+               transition-opacity duration-300"
+      >
+        Hey! I'm Javi's 3D model, ready to help!
+      </div>
     </div>
   </div>
   
-  <!-- Bloque inferior (Párrafo) -->
   <div class="py-2">
     <p class="text-lg">
       This is my personal <b>Portfolio</b>, a place where all my projects and creations will be published.
