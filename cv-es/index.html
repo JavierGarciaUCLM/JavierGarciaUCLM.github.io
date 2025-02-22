@@ -77,12 +77,12 @@ No, gracias
 
   // Muestra el modal en la primera carga
   window.addEventListener('load', () => {
-    setTimeout(mostrarModal, 1000);
+    setTimeout(mostrarModal, 5000);
   });
 
   // Muestra el modal en cada cambio de página en Astro (Astro carga las páginas con SPA (No se bienq ue significa, pero una vez cargada la página, no se recarga al cambiar de página))
   document.addEventListener('astro:after-swap', () => {
-    setTimeout(mostrarModal, 1000);
+    setTimeout(mostrarModal, 5000);
   });
 
   function respuestaSi() {
