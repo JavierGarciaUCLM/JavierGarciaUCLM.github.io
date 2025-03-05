@@ -217,20 +217,22 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </ul>
         </section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🖥️</span> Organización de Computadores (En proceso...)
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Primero/Fisica/GeneralOC.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
+        <div class="relative">
+          <!-- Mantén la sección tal cual la tenías, sin cambios en su contenido -->
+          <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
+            <h3 class="text-2xl font-semibold text-base-content flex items-center">
+              <span class="mr-2">🖥️</span> Organización de Computadores (En proceso...)
+            </h3>
+            <ul class="list-disc list-inside pl-5 text-base-content">
+              <li>
+                <a
+                  href="/notes/Primero/Fisica/GeneralOC.pdf"
+                  target="_blank"
+                  class="text-blue-500 underline hover:text-blue-800 transition"
+                >
+                  Apuntes + Ejercicios + Exámenes
+                </a>
+              </li>
               <details class="bg-base-0 rounded-lg shadow-sm">
                 <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
                   Prácticas
@@ -290,6 +292,19 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             </li>
           </ul>
         </section>
+        
+          <!-- Aquí va tu modelo 3D, posicionado de forma absoluta a la derecha -->
+          <div class="hidden md:block absolute top-0 right-[-180px] z-50">
+            <model-viewer
+            src="/3DModels/FightingModel.glb"
+            alt="Mi modelo 3D"
+            autoplay
+            camera-orbit="30deg 100deg 5m"
+            class="w-[140px] h-140"
+            style="--progress-bar-color: transparent;"
+            ></model-viewer>
+          </div>
+        </div>
 
         <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
           <h3 class="text-2xl font-semibold text-base-content flex items-center">
@@ -670,3 +685,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     </div>
   </div>
 </BaseLayout>
+
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
