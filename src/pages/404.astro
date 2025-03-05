@@ -2,11 +2,32 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title = "404: Not Found" includeSidebar={false}>
-  <div class="text-center">
-    <h1 class="text-9xl font-bold mb-4">🏝</h1>
-    <h1 class="text-9xl font-bold mb-2">404</h1>
-    <h3 class="text-2xl">The page you're looking for couldn't be found.</h3>
-    <a class="btn btn-accent mt-9" href="/">Home</a>
+<BaseLayout title="404: Not Found" includeSidebar={false}>
+  <div class="flex flex-col items-center justify-center text-center h-[70vh]">
+    <img 
+      src="/Error.png" 
+      alt="Error Illustration" 
+      class="mb-8 w-48 h-auto"
+    />
+
+    <h1 class="text-9xl font-extrabold text-red-600 mb-4">404</h1>
+    <p class="text-xl font-semibold mb-6">
+      Oops! We could not found the page you are looking for.
+    </p>
+    <p class="text-gray-600 mb-6">
+      It is possible that the URL was bad-writen or it was moved to another URL.
+      Press the buttom to get back to the home page.
+    </p>
+    
+    <section class="my-4 inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg">
+      <a 
+        href="/" 
+        target="" 
+        rel="noopener noreferrer" 
+        class="px-3 py-2 text-sm cursor-pointer inline-block"
+      >
+        Home page
+      </a>
+    </section>
   </div>
 </BaseLayout>
