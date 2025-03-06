@@ -294,7 +294,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </section>
         
           <!-- Aquí va tu modelo 3D, posicionado de forma absoluta a la derecha -->
-          <div class="hidden md:block absolute top-0 right-[-180px] z-50">
+          <div class="hidden md:block absolute top-0 right-[-180px] z-50 group">
             <model-viewer
             src="/3DModels/FightingModel.glb"
             alt="Mi modelo 3D"
@@ -303,6 +303,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
             class="w-[140px] h-140"
             style="--progress-bar-color: transparent;"
             ></model-viewer>
+            <div
+              class="absolute left-1/2 -top-8 -translate-x-1/2
+               px-1 py-2 bg-gray-700 text-white text-sm
+               rounded opacity-0 group-hover:opacity-60
+               transition-opacity duration-300 whitespace-nowrap"
+            >
+                Peleón peleón
+            </div>
           </div>
         </div>
 

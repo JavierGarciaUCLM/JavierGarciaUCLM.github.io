@@ -16,7 +16,7 @@ let playerPoints = 0;
 
 function setup() {
   createCanvas(screenWidth, screenHeight);
-  frameRate(90);
+  frameRate(60);
   
   // Inicializamos la pelota: (x, y, ancho, alto)
   ball = {
