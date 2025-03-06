@@ -12,7 +12,7 @@ function preload() {
 
 function setup() {
   createCanvas(600, 500);
-  frameRate(120);
+  frameRate(60);
   resetGame();
 }
 
