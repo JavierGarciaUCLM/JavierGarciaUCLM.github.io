@@ -15,7 +15,6 @@ canvas {
     display: inline-block;
     color: #00ff00;
     font-family: Menlo, Consolas, monospace;
-    white-space: nowrap;
   }
   
   /* Texto clon en pseudo-elementos para crear el “glitch” */
@@ -23,7 +22,6 @@ canvas {
   .glitch-effect::after {
     content: attr(data-text);
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -59,27 +57,4 @@ canvas {
     60%  { clip: rect(9999px, 9999px, 9999px, 0); transform: translate(-1px, 2px);}
     80%  { clip: rect(0, 9999px, 9999px, 0);      transform: translate(1px, -2px);}
     100% { clip: rect(9999px, 9999px, 9999px, 0); transform: translate(0, 0);}
-  }
-
-  @media (max-width: 640px) {
-    @keyframes glitch-anim {
-      0% {
-        transform: translate(-0.5px, -0.5px);
-      }
-      20% {
-        transform: translate(0.5px, 0.5px);
-      }
-      40% {
-        transform: translate(-0.5px, 0.5px);
-      }
-      60% {
-        transform: translate(0.5px, -0.5px);
-      }
-      80% {
-        transform: translate(-1px, 1px);
-      }
-      100% {
-        transform: translate(0, 0);
-      }
-    }
   }
