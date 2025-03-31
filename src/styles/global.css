@@ -13,7 +13,7 @@ canvas {
 .glitch-effect {
     position: relative;
     display: inline-block;
-    color: #00ff00;
+    color: #ff00ff;
     font-family: Menlo, Consolas, monospace;
   }
   
@@ -25,18 +25,18 @@ canvas {
     left: 0;
     width: 100%;
     overflow: hidden;
-    color: #00ff00;
+    color: #ff00ff;
     font-family: inherit;
 
   }
   
   .glitch-effect::before {
-    text-shadow: -1px 0 red;
+    text-shadow: -1px 0 rgb(0, 255, 255);
     clip: rect(0, 900px, 0, 0);
     animation: glitch-anim 2s infinite ease-in-out alternate-reverse;
   }
   .glitch-effect::after {
-    text-shadow: 1px 0 blue;
+    text-shadow: 1px 0 rgb(255, 255, 0);
     clip: rect(0, 900px, 0, 0);
     animation: glitch-anim2 2s infinite ease-in-out alternate-reverse;
   }

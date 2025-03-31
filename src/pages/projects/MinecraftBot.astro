@@ -1,0 +1,177 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Minecraft Chatbot: Integration & Functionality" sideBarActiveItemID="projects">
+  <div class="w-full max-w-4xl px-6 py-8 mx-auto">
+    <h1 class="text-4xl font-bold mb-4">Minecraft Chatbot</h1>
+
+    <div class="text-lg leading-relaxed space-y-4">
+      <p>
+        A robust solution that connects a Minecraft server with Discord. The chatbot enables dynamic community interaction and an in-game economy where players earn coins by executing commands.
+      </p>
+
+      <h2 class="text-2xl font-bold mb-4">Core Features</h2>
+    <section class="my-4 inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg h-50 w-full max-w-3xl flex flex-col">
+      <h3 class="text-xl font-bold mb-2">Minecraft-Discord Integration</h3>
+      <p class="mb-2 flex-grow">
+        Uses <code>mineflayer</code> for Minecraft and <code>discord.js</code> for Discord notifications (e.g. player join/leave).
+      </p>
+      <div class="bg-base-200 p-3 rounded-md overflow-auto">
+        <pre class="text-sm">
+[marcosgo16] has joined the server.
+[chipinazo] has left the server.
+        </pre>
+      </div>
+    </section>
+    
+
+    <section class="my-4 inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg h-50 w-full max-w-3xl flex flex-col">
+      <h3 class="text-xl font-bold mb-2">In-Game Economy</h3>
+      <p class="mb-2 flex-grow">
+        Players earn 25 Coins every 8 hours with <code>!inq</code> and can check their balance using <code>!bank</code>. The economy data is stored in a MongoDB database.
+      </p>
+      <div class="bg-base-200 p-3 rounded-md overflow-auto">
+        <pre class="text-sm">
+    Minecraft
+    [marcosgo16] !inq
+    [Minecraft Bot] marcosgo16, you have received 25 InquiCoins. Your total bank account is 25
+    
+    MongoDB
+    _id: ObjectId('67e563d45b81ba1690ee97ba')
+    username: "marcosgo16"
+    points: 25
+    lastInquisition: 1743086548950
+    __v: 0
+        </pre>
+      </div>
+      <div class="mt-4 flex space-x-6">
+        <span class="text-black-600 underline cursor-pointer hover:text-black-800 mr-6" onclick="openModal('modalDB')">View Minecraft Example</span>
+        <span class="text-black-600 underline cursor-pointer hover:text-black-800" onclick="openModal('modalDB2')">View Database Example</span>
+      </div>
+    </section>
+    
+    <!-- Modal BBDD, ModalDB -->
+    <div id="modalDB" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalDB')">
+      <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
+        <span class="absolute top-1 right-1 text-xl cursor-pointer" onclick="closeModal('modalDB')">×</span>
+        <img src="/MinecraftBotImages/MoneyRequest.jpg" alt="Minecraft Example" class="w-full rounded-lg shadow-md" />
+      </div>
+    </div>
+    
+    <!-- Modal BBDD, ModalDB2 -->
+    <div id="modalDB2" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalDB2')">
+      <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
+        <span class="absolute top-1 right-1 text-xl cursor-pointer" onclick="closeModal('modalDB2')">×</span>
+        <img src="/MinecraftBotImages/DataBaseExample.jpg" alt="Database Example" class="w-full rounded-lg shadow-md" />
+      </div>
+    </div>
+    
+    <section class="my-4 inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg h-50 w-full max-w-3xl flex flex-col">
+      <h3 class="text-xl font-bold mb-2">Automated Messaging</h3>
+      <p class="mb-2 flex-grow">
+        Sends random messages in Minecraft and welcomes players with personalized greetings.
+      </p>
+      <div class="bg-base-200 p-3 rounded-md overflow-auto">
+        <pre class="text-sm">
+[Bot de Minecraft] Events? But wait for Diakhaba
+[Bot de Minecraft] Creator! Welcome back genius.
+        </pre>
+      </div>
+      <p class="text-black-600 underline cursor-pointer hover:text-black-800 mr-6" onclick="openModal('modalJM')">View Minecraft Example</p>
+    </section>
+    <div id="modalJM" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalJM')">
+      <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
+        <span class="absolute top-1 right-1 text-xl cursor-pointer" onclick="closeModal('modalJM')">×</span>
+        <img src="/MinecraftBotImages/WelcomeBack.jpg" alt="Economy Diagram" class="w-full rounded-lg shadow-md" />
+      </div>
+    </div>
+    </section>
+    
+    <section class="my-4 inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg h-30 w-full max-w-3xl flex flex-col">
+      <h3 class="text-xl font-bold mb-2">Event Notifications</h3>
+      <p class="flex-grow">
+        Announces key server events on both Minecraft and Discord, fostering an active and engaged community.
+      </p>
+      <div class="mt-4">
+        <span class="text-black-600 underline cursor-pointer hover:text-black-800 mr-6" onclick="openModal('modalM')">
+          View Minecraft Example
+        </span>
+        <span class="text-black-600 underline cursor-pointer hover:text-black-800" onclick="openModal('modalD')">
+          View Discord Example
+        </span>
+      </div>
+    </section>
+    
+    <!-- Minecraft, modaM -->
+    <div id="modalM" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalM')">
+      <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
+        <span class="absolute top-4 right-4 text-xl cursor-pointer" onclick="closeModal('modalM')">×</span>
+        <img src="/MinecraftBotImages/MinecraftExample.jpg" alt="Minecraft Example" class="w-full rounded-lg shadow-md" />
+      </div>
+    </div>
+    
+    <!-- Discord, modalD -->
+    <div id="modalD" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalD')">
+      <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
+        <span class="absolute top-4 right-4 text-xl cursor-pointer" onclick="closeModal('modalD')">×</span>
+        <img src="/MinecraftBotImages/DiscordExample.jpg" alt="Discord Example" class="w-full rounded-lg shadow-md" />
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-4">Technical Implementation</h2>
+    <p>
+      The technical implementation uses a modular Node.js architecture: <code>mineflayer</code> manages the Minecraft bot, while <code>discord.js</code> 
+      handles Discord commands. Economy data is now stored in a MongoDB database, a NoSQL database built primarily in <code>C++</code>, , and all sensitive configurations 
+      (tokens, hostnames, ports, etc.) are secured in a <code>.env</code> file.
+    </p>
+    
+      <h2 class="text-2xl font-bold mb-4">Communication Flow</h2>
+      <p>
+        The communication is made from the Minecraft Server to the Discord Group Chat. The messages that are sent in the Server are moved to a private group chat
+        of Discord where it is possible to make a fluent reading in real time of the game chat. The Discord user is able to participate into the Minecraft conversation
+        using the !say command.
+      </p>
+
+      <h2 class="text-2xl font-bold mb-4">Deployment & Scalability</h2>
+      <p>
+        Bot fully deployed in <a href="https://Render.com" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800">
+          <strong>Render.com</strong>
+        </a>, with plans to implement a private Linux server in the future to reduce maintenance costs. For persistent storage of economy data, a MongoDB free resource is used, 
+        open-source NoSQL database management system. MongoDB's flexibility and scalability allows to efficiently store and retrieve real-time user economy 
+        data without incurring additional costs. Modular architectture and cloud deployment ensuring scalability and resilience.
+      </p>
+    </div>
+    <div class="w-full max-w-4xl mx-auto mt-10">
+      <h2 class="text-2xl font-bold mb-4">Project Repository</h2>
+      <div id="github-repo" class="p-6 border rounded-lg shadow-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
+        <p>Loading repository data...</p>
+      </div>
+    
+      <script>
+        async function fetchGitHubRepo() {
+          const response = await fetch('https://api.github.com/repos/JavierGarciaUCLM/MinecraftBot');
+          const repoData = await response.json();
+    
+          document.getElementById('github-repo').innerHTML = `
+            <h3 class="text-xl font-semibold">${repoData.full_name}</h3>
+            <p>${repoData.description || 'No description available.'}</p>
+            <p><strong>Last updated:</strong> ${new Date(repoData.updated_at).toLocaleDateString()}</p>
+            <p><strong>Stars:</strong> ${repoData.stargazers_count} ⭐</p>
+            <a href="${repoData.html_url}" target="_blank" class="text-blue-600 underline hover:text-blue-800 dark:text-blue-400">View on GitHub</a>
+          `;
+        }
+        fetchGitHubRepo();
+      </script>
+    </div>
+  </div>
+</BaseLayout>
+
+<script client:load>
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+</script>
