@@ -1,0 +1,16 @@
+---
+const {
+  src,
+  alt
+} = Astro.props;
+---
+
+<model-viewer
+  src={src}
+  alt={alt}
+  autoplay
+  camera-orbit="330deg 110deg 3.5m"
+  class="w-[140px] h-140"
+  style="--progress-bar-color: transparent;"
+>
+</model-viewer>
