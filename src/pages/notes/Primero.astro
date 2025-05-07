@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import Collapsible from "../../components/Collapsible.astro";
+import ResourceLink from "../../components/ResourceLink.astro";
 ---
 <BaseLayout title="Primer curso: ESIIAB" sideBarActiveItemID="notes">
   <div class="w-full max-w-4xl px-6 py-8 mx-auto">
@@ -10,361 +13,72 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <h2 class="text-2xl font-semibold mt-6">Material disponible</h2>
 
       <div class="space-y-8">
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">📘</span> Cálculo y Métodos Numéricos
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Primero/Calculo/GeneralCalculo.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Presentaciones Matlab
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Primero/Calculo/Presentacion1.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                    Presentación 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/Calculo/Presentacion2.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Presentación 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/Calculo/Presentacion3.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Presentación 3
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/Calculo/Presentacion4.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Presentación 4
-                    </a>
-                  </li>
-          </ul>
-        </section>
+        <Section title="Cálculo y Métodos Numéricos" icon="📘">
+          <ResourceLink href="/notes/Primero/Calculo/GeneralCalculo.pdf" text="Apuntes + Ejercicios + Exámenes" />
+          
+          <Collapsible title="Presentaciones Matlab">
+            <ResourceLink href="/notes/Primero/Calculo/Presentacion1.pdf" text="Presentación 1" />
+            <ResourceLink href="/notes/Primero/Calculo/Presentacion2.pdf" text="Presentación 2" />
+            <ResourceLink href="/notes/Primero/Calculo/Presentacion3.pdf" text="Presentación 3" />
+            <ResourceLink href="/notes/Primero/Calculo/Presentacion4.pdf" text="Presentación 4" />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">💼</span> Fundamentos de Gestión Empresarial
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Primero/Empresas/GeneralEmpresas.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Fundamentos de Gestión Empresarial" icon="💼">
+          <ResourceLink href="/notes/Primero/Empresas/GeneralEmpresas.pdf" text="Apuntes + Ejercicios + Exámenes" />
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">💻</span> Fundamentos de Programación I/II
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Primero/Programacion/GeneralProgramacion.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes genéricos
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Primero/Programacion/FPII/ExplicacionTests.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Explicación tests FPII
-              </a>
-            </li>
-          </ul>
-          <ul class="space-y-4 pl-5 text-base-content">
-            <li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Trabajo en grupo FPII (Farmacia)
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Primero/Programacion/FPII/Proyecto/Enunciado.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Enunciado
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/Programacion/FPII/Proyecto/PaqG13_Project-Final.7z"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Trabajo acabado
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Prácticas FPII
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Primero/Programacion/FPII/Practicas/Lab1Project.7z"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/Programacion/FPII/Practicas/Lab02bueno.rar"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/Programacion/FPII/Practicas/Lab3Extended.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 3
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/Programacion/FPII/Practicas/calculadoraLab4Grupo19.7z"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 4
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </section>
+        <Section title="Fundamentos de Programación I/II" icon="💻">
+          <ResourceLink href="/notes/Primero/Programacion/GeneralProgramacion.pdf" text="Apuntes genéricos" />
+          <ResourceLink href="/notes/Primero/Programacion/FPII/ExplicacionTests.pdf" text="Explicación tests FPII" />
+          
+          <Collapsible title="Trabajo en grupo FPII (Farmacia)">
+            <ResourceLink href="/notes/Primero/Programacion/FPII/Proyecto/Enunciado.pdf" text="Enunciado" />
+            <ResourceLink href="/notes/Primero/Programacion/FPII/Proyecto/PaqG13_Project-Final.7z" text="Trabajo acabado" download={true} />
+          </Collapsible>
+          
+          <Collapsible title="Prácticas FPII">
+            <ResourceLink href="/notes/Primero/Programacion/FPII/Practicas/Lab1Project.7z" text="Práctica 1" download={true} />
+            <ResourceLink href="/notes/Primero/Programacion/FPII/Practicas/Lab02bueno.rar" text="Práctica 2" download={true} />
+            <ResourceLink href="/notes/Primero/Programacion/FPII/Practicas/Lab3Extended.zip" text="Práctica 3" download={true} />
+            <ResourceLink href="/notes/Primero/Programacion/FPII/Practicas/calculadoraLab4Grupo19.7z" text="Práctica 4" download={true} />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">⚛️</span> Fundamentos Físicos de la Informática
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Primero/Fisica/GeneralFisica.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Primero/Fisica/Examenes.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Exámenes resueltos
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Fundamentos Físicos de la Informática" icon="⚛️">
+          <ResourceLink href="/notes/Primero/Fisica/GeneralFisica.pdf" text="Apuntes + Ejercicios + Exámenes" />
+          <ResourceLink href="/notes/Primero/Fisica/Examenes.pdf" text="Exámenes resueltos" />
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🖥️</span> Tecnología de Computadores
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Primero/TC/GeneralTC.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Tecnología de Computadores" icon="🖥️">
+          <ResourceLink href="/notes/Primero/TC/GeneralTC.pdf" text="Apuntes + Ejercicios + Exámenes" />
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">➗</span> Álgebra y Matemática Discreta
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Primero/Algebra/GeneralAlgebra.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Trabajo + Apuntes + Ejercicios + Exámenes 
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Álgebra y Matemática Discreta" icon="➗">
+          <ResourceLink href="/notes/Primero/Algebra/GeneralAlgebra.pdf" text="Trabajo + Apuntes + Ejercicios + Exámenes" />
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🖧</span> Estructura de Computadores
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            
-            <li>
-              <a
-                href="/notes/Primero/EC/GeneralEC.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes pobres
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Primero/EC/LucesLed.txt"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Segundo examen luces LED
-              </a>
-            </li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Prácticas
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Primero/EC/Practica4.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 4
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/EC/Practica5.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 5
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/EC/Practica6.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 6
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/EC/Practica8.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 8
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/EC/Practica9.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 9
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Primero/EC/Practica10.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 10
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </section>
+        <Section title="Estructura de Computadores" icon="🖧">
+          <ResourceLink href="/notes/Primero/EC/GeneralEC.pdf" text="Apuntes pobres" />
+          <ResourceLink href="/notes/Primero/EC/LucesLed.txt" text="Segundo examen luces LED" />
+          
+          <Collapsible title="Prácticas">
+            <ResourceLink href="/notes/Primero/EC/Practica4.pdf" text="Práctica 4" />
+            <ResourceLink href="/notes/Primero/EC/Practica5.pdf" text="Práctica 5" />
+            <ResourceLink href="/notes/Primero/EC/Practica6.pdf" text="Práctica 6" />
+            <ResourceLink href="/notes/Primero/EC/Practica8.pdf" text="Práctica 8" />
+            <ResourceLink href="/notes/Primero/EC/Practica9.pdf" text="Práctica 9" />
+            <ResourceLink href="/notes/Primero/EC/Practica10.pdf" text="Práctica 10" />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🌐</span> Redes de Computadores I
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                En proceso...
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Redes de Computadores I" icon="🌐">
+          <ResourceLink href="#" text="En proceso..." />
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">📊</span> Sistemas de Información
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Primero/Sistemas/GeneralSistemas.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Sistemas de Información" icon="📊">
+          <ResourceLink href="/notes/Primero/Sistemas/GeneralSistemas.pdf" text="Apuntes + Ejercicios + Exámenes" />
+        </Section>
       </div>
     </div>
 
