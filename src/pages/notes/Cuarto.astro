@@ -1,7 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import Collapsible from "../../components/Collapsible.astro";
+import ResourceLink from "../../components/ResourceLink.astro";
 ---
-<BaseLayout title="Tercer curso: ESIIAB" sideBarActiveItemID="notes">
+<BaseLayout title="Cuarto curso: ESIIAB" sideBarActiveItemID="notes">
   <div class="w-full max-w-4xl px-6 py-8 mx-auto">
     <h1 class="text-4xl font-bold mb-2">Cuarto curso</h1>
     <p class="text-gray-500 text-md mb-4">Consulta los materiales disponibles para cuarto.</p>
@@ -10,63 +13,35 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <h2 class="text-2xl font-semibold mt-6">Material disponible</h2>
       <div class="space-y-8">
         <!-- Sistemas Web -->
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🌐</span> Sistemas Web
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <ul class="list-disc list-inside pl-5 text-base-content">
-                <li>
-                  <a href="https://drive.google.com/file/d/1vl4fGeoqH2XR0hdU5nTOSt8KOns9YcqP/view?usp=drive_link"
-                  class="text-blue-500 underline hover:text-blue-800 transition">
-                  Laboratorios
-                  </a>
-                </li>
-            <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Entregables
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable1.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Entregable 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable3.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Entregable 3
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/Snippets-Seminar3.txt"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Entregable 3 (Snippets)
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable4.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Entregable 4
-                    </a>
-                  </li>
-                </ul>
-              </details>
-          </ul>
-        </section>
+        <Section title="Sistemas Web" icon="🌐">
+          <ResourceLink 
+            href="https://drive.google.com/file/d/1vl4fGeoqH2XR0hdU5nTOSt8KOns9YcqP/view?usp=drive_link" 
+            text="Laboratorios" 
+          />
+          
+          <Collapsible title="Entregables">
+            <ResourceLink 
+              href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable1.zip" 
+              text="Entregable 1" 
+              download={true} 
+            />
+            <ResourceLink 
+              href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable3.zip" 
+              text="Entregable 3" 
+              download={true} 
+            />
+            <ResourceLink 
+              href="/notes/Tercero/IPO/Snippets-Seminar3.txt" 
+              text="Entregable 3 (Snippets)" 
+              download={true} 
+            />
+            <ResourceLink 
+              href="/notes/Cuarto/SistemasWeb/Entregables/Deliverable4.zip" 
+              text="Entregable 4" 
+              download={true} 
+            />
+          </Collapsible>
+        </Section>
       </div>
     </div>
 
