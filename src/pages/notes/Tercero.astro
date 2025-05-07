@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import Collapsible from "../../components/Collapsible.astro";
+import ResourceLink from "../../components/ResourceLink.astro";
 ---
 <BaseLayout title="Tercer curso: ESIIAB" sideBarActiveItemID="notes">
   <div class="w-full max-w-4xl px-6 py-8 mx-auto">
@@ -10,922 +13,166 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <h2 class="text-2xl font-semibold mt-6">Material disponible</h2>
 
       <div class="space-y-8">
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🖥️</span> Arquitectura de Computadores
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Tercero/AC/GeneralAC.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Arquitectura de Computadores" icon="🖥️">
+          <ResourceLink href="/notes/Tercero/AC/GeneralAC.pdf" text="Apuntes + Ejercicios + Exámenes" />
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🛠️</span> Ingeniería del Software II
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Tercero/SoftwareII/SoftwareII.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Tercero/SoftwareII/CarmenSW.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Asignatura completa
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Ingeniería del Software II" icon="🛠️">
+          <ResourceLink href="/notes/Tercero/SoftwareII/SoftwareII.pdf" text="Apuntes + Ejercicios + Exámenes" />
+          <ResourceLink href="/notes/Tercero/SoftwareII/CarmenSW.pdf" text="Asignatura completa" />
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🖱️</span> Interacción Persona-Ordenador I
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content"></ul>
-          <ul class="space-y-4 pl-5 text-base-content">
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Actividades
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/Actividades/Actividad2.1.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Actividad 2.1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/Actividades/Actividad3.1.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Actividad 3.1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/Actividades/Actividad3.2.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Actividad 3.2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/Actividades/Actividad4.2.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Actividad 4.1
-                    </a>
-                  </li>
-                </ul>
-              </details>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Trabajo en grupo (Games development)
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/IPOGrupos.pptx"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Presentación
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/IPOTrabajo.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Guion
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Trabajo en grupo (Web Fundamentals)
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/IPO/WebFundamentals.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Presentación
-                  </a>
-                </li>
-              </ul>
-            </details>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Trabajo en pareja (Study of Interaction in Social Media)
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/SocialMediaPresentacion.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Presentación
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/SocialMedia.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Report
-                    </a>
-                  </li>
-                  
-                </ul>
-              </details>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Trabajo en pareja (Interaction and Ubiquitous Computing)
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/UbiquitousComputingPresentacion.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Presentación
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/UbiquitousComputing.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Report
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Proyecto
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="https://www.figma.com/design/4YMwA5oE2jgjmOuMvHdrr4/Jobder?m=auto&t=MmPtn4pfYbSeZMCc-1"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Prototipo
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/IPOHumanPart.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Human part
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/IPO/IPOComputerPart.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Computer part
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </section>
+        <Section title="Interacción Persona-Ordenador I" icon="🖱️">
+          <Collapsible title="Actividades">
+            <ResourceLink href="/notes/Tercero/IPO/Actividades/Actividad2.1.pdf" text="Actividad 2.1" />
+            <ResourceLink href="/notes/Tercero/IPO/Actividades/Actividad3.1.pdf" text="Actividad 3.1" />
+            <ResourceLink href="/notes/Tercero/IPO/Actividades/Actividad3.2.pdf" text="Actividad 3.2" />
+            <ResourceLink href="/notes/Tercero/IPO/Actividades/Actividad4.2.pdf" text="Actividad 4.1" />
+          </Collapsible>
+          
+          <Collapsible title="Trabajo en grupo (Games development)">
+            <ResourceLink href="/notes/Tercero/IPO/IPOGrupos.pptx" text="Presentación" />
+            <ResourceLink href="/notes/Tercero/IPO/IPOTrabajo.pdf" text="Guion" />
+          </Collapsible>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🌐</span> Sistemas Distribuidos
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Tercero/Distribuidos/DistribuidosPrimerParcial.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes primer parcial
-              </a>
-            </li>
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Apuntes segundo parcial
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/Distribuidos/Tema5.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Unidad 5
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/Distribuidos/Tema6.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Unidad 6
-                  </a>
-                </li>
-              </details>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Prácticas
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Tercero/Distribuidos/Practicas/Practica1.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/Distribuidos/Practicas/Practica2.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/Distribuidos/Practicas/Practica3.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 3
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/Distribuidos/Practicas/Practica4.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 4
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Tercero/Distribuidos/Practicas/Practica5.zip"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 5
-                    </a>
-                  </li>
-                </details>
-          </ul>
-        </section>
+          <Collapsible title="Trabajo en grupo (Web Fundamentals)">
+            <ResourceLink href="/notes/Tercero/IPO/WebFundamentals.pdf" text="Presentación" />
+          </Collapsible>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🤖</span> Sistemas Inteligentes
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="https://drive.google.com/file/d/1MEVR9SP7mud3ra7YAi1ef4EgdxmMF_gX/view?usp=drive_link"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Laboratorios
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Tercero/Inteligentes/EjerciciosPython.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Ejercicios Python
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Tercero/Inteligentes/Entregas.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Entregas
-              </a>
-            </li>
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Prácticas no continua
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="https://colab.research.google.com/drive/1XMuDCiQA56OimrHzj7XpWd8DIAPdKVzf?usp=sharing"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Laboratorio 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                  href="https://colab.research.google.com/drive/16oDufY1b_Sy4iCuueB2gPRlfDYfbAqdg?usp=sharing"
-                  class="text-blue-500 underline hover:text-blue-800 transition">
-                  Laboratorio 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                  href="/notes/Tercero/Inteligentes/ArchivosLabNoContinua.7z"
-                  download
-                  class="text-blue-500 underline hover:text-blue-800 transition">
-                  Archivos json para datos
-                  </a>
-                </li>
-              </ul>
-            </details>
-          </ul>
-        </section>
+          <Collapsible title="Trabajo en pareja (Study of Interaction in Social Media)">
+            <ResourceLink href="/notes/Tercero/IPO/SocialMediaPresentacion.pdf" text="Presentación" />
+            <ResourceLink href="/notes/Tercero/IPO/SocialMedia.pdf" text="Report" />
+          </Collapsible>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">📜</span> Aspectos Profesionales de la Informática
-          </h3>
-        
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Ejercicios y Casos Prácticos
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/API/Ejercicios/Tema1.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Ejercicios Tema 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/API/Ejercicios/Tema2RC.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Casos Prácticos Tema 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/API/Ejercicios/Tema3.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Ejercicios Tema 3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/API/Ejercicios/Tema4.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Ejercicios Tema 4
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/API/Ejercicios/Tema5.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Ejercicios Tema 5
-                  </a>
-                </li>
-              </ul>
-            </details>
-        
-            <details class="bg-base-0 rounded-lg shadow-sm mt-4">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Trabajo
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/API/Trabajo/BasuraElectronica.pptx"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Basura electrónica
-                  </a>
-                </li>
-              </ul>
-            </details>
-          </ul>
-        </section>
+          <Collapsible title="Trabajo en pareja (Interaction and Ubiquitous Computing)">
+            <ResourceLink href="/notes/Tercero/IPO/UbiquitousComputingPresentacion.pdf" text="Presentación" />
+            <ResourceLink href="/notes/Tercero/IPO/UbiquitousComputing.pdf" text="Report" />
+          </Collapsible>
+
+          <Collapsible title="Proyecto">
+            <ResourceLink href="https://www.figma.com/design/4YMwA5oE2jgjmOuMvHdrr4/Jobder?m=auto&t=MmPtn4pfYbSeZMCc-1" text="Prototipo" />
+            <ResourceLink href="/notes/Tercero/IPO/IPOHumanPart.pdf" text="Human part" />
+            <ResourceLink href="/notes/Tercero/IPO/IPOComputerPart.pdf" text="Computer part" />
+          </Collapsible>
+        </Section>
+
+        <Section title="Sistemas Distribuidos" icon="🌐">
+          <ResourceLink href="/notes/Tercero/Distribuidos/DistribuidosPrimerParcial.pdf" text="Apuntes primer parcial" />
+          
+          <Collapsible title="Apuntes segundo parcial">
+            <ResourceLink href="/notes/Tercero/Distribuidos/Tema5.pdf" text="Unidad 5" />
+            <ResourceLink href="/notes/Tercero/Distribuidos/Tema6.pdf" text="Unidad 6" />
+          </Collapsible>
+          
+          <Collapsible title="Prácticas">
+            <ResourceLink href="/notes/Tercero/Distribuidos/Practicas/Practica1.zip" text="Práctica 1" download={true} />
+            <ResourceLink href="/notes/Tercero/Distribuidos/Practicas/Practica2.zip" text="Práctica 2" download={true} />
+            <ResourceLink href="/notes/Tercero/Distribuidos/Practicas/Practica3.zip" text="Práctica 3" download={true} />
+            <ResourceLink href="/notes/Tercero/Distribuidos/Practicas/Practica4.zip" text="Práctica 4" download={true} />
+            <ResourceLink href="/notes/Tercero/Distribuidos/Practicas/Practica5.zip" text="Práctica 5" download={true} />
+          </Collapsible>
+        </Section>
+
+        <Section title="Sistemas Inteligentes" icon="🤖">
+          <ResourceLink href="https://drive.google.com/file/d/1MEVR9SP7mud3ra7YAi1ef4EgdxmMF_gX/view?usp=drive_link" text="Laboratorios" />
+          <ResourceLink href="/notes/Tercero/Inteligentes/EjerciciosPython.7z" text="Ejercicios Python" download={true} />
+          <ResourceLink href="/notes/Tercero/Inteligentes/Entregas.7z" text="Entregas" download={true} />
+          
+          <Collapsible title="Prácticas no continua">
+            <ResourceLink href="https://colab.research.google.com/drive/1XMuDCiQA56OimrHzj7XpWd8DIAPdKVzf?usp=sharing" text="Laboratorio 1" />
+            <ResourceLink href="https://colab.research.google.com/drive/16oDufY1b_Sy4iCuueB2gPRlfDYfbAqdg?usp=sharing" text="Laboratorio 2" />
+            <ResourceLink href="/notes/Tercero/Inteligentes/ArchivosLabNoContinua.7z" text="Archivos json para datos" download={true} />
+          </Collapsible>
+        </Section>
+
+        <Section title="Aspectos Profesionales de la Informática" icon="📜">
+          <Collapsible title="Ejercicios y Casos Prácticos">
+            <ResourceLink href="/notes/Tercero/API/Ejercicios/Tema1.pdf" text="Ejercicios Tema 1" />
+            <ResourceLink href="/notes/Tercero/API/Ejercicios/Tema2RC.pdf" text="Casos Prácticos Tema 2" />
+            <ResourceLink href="/notes/Tercero/API/Ejercicios/Tema3.pdf" text="Ejercicios Tema 3" />
+            <ResourceLink href="/notes/Tercero/API/Ejercicios/Tema4.pdf" text="Ejercicios Tema 4" />
+            <ResourceLink href="/notes/Tercero/API/Ejercicios/Tema5.pdf" text="Ejercicios Tema 5" />
+          </Collapsible>
+
+          <Collapsible title="Trabajo">
+            <ResourceLink href="/notes/Tercero/API/Trabajo/BasuraElectronica.pptx" text="Basura electrónica" />
+          </Collapsible>
+        </Section>
 
         <h2 class="text-2xl font-semibold mt-8">Intensificación Tecnologías de la Información</h2>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🔗</span> Integración de Sistemas Informáticos
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Problemas
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/ISI/ISI_EjerciciosTema1.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Problemas tema 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/ISI/ISI_EjerciciosTema3.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Problemas tema 3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/ISI/ISI_EjerciciosTema5II.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Problemas tema 5 parte 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/ISI/ISI_EjerciciosTema6.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Problemas tema 6
-                  </a>
-                </li>
-                </details>
-          </ul>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Prácticas
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/ISI/Practicas1.3.7z"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Prácticas 1-3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/ISI/Practica_4.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 4
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/ISI/Practica5.zip"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 5
-                  </a>
-                </li>
-                </details>
-          </ul>
-        </section>
-        
+        <Section title="Integración de Sistemas Informáticos" icon="🔗">
+          <Collapsible title="Problemas">
+            <ResourceLink href="/notes/Tercero/ISI/ISI_EjerciciosTema1.pdf" text="Problemas tema 1" />
+            <ResourceLink href="/notes/Tercero/ISI/ISI_EjerciciosTema3.pdf" text="Problemas tema 3" />
+            <ResourceLink href="/notes/Tercero/ISI/ISI_EjerciciosTema5II.pdf" text="Problemas tema 5 parte 2" />
+            <ResourceLink href="/notes/Tercero/ISI/ISI_EjerciciosTema6.pdf" text="Problemas tema 6" />
+          </Collapsible>
+          
+          <Collapsible title="Prácticas">
+            <ResourceLink href="/notes/Tercero/ISI/Practicas1.3.7z" text="Prácticas 1-3" download={true} />
+            <ResourceLink href="/notes/Tercero/ISI/Practica_4.pdf" text="Práctica 4" />
+            <ResourceLink href="/notes/Tercero/ISI/Practica5.zip" text="Práctica 5" download={true} />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🖱️</span> Interacción Persona-Ordenador II
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Actividades
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad1.1.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 1.1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad1.2.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 1.2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad1.3BrawlStars.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 1.3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad1.4.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 1.4
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad1.5.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 1.5
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad1.6.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 1.6
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad2.3.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 2.3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad2.4.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 2.4
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad2.6.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 2.6
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad3.8.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 3.8
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad4.2.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 4.2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Actividades/Actividad4.3.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Actividad 4.3
-                  </a>
-                </li>
-              </ul>
-            </details>
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Presentaciones
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Trabajos/Tarea1.7z"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Trabajo en equipo (Presentación 1)
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Trabajos/Tarea2.7z"
-                    download
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Cómo la gente lee e interpreta (Presentación 2)
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/IPOII/Trabajos/Tarea2Lucian.zip"
-                    download
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Psicología en la toma de decisiones (Presentación 2)
-                  </a>
-                </li>
-          </ul>
-        </section>
+        <Section title="Interacción Persona-Ordenador II" icon="🖱️">
+          <Collapsible title="Actividades">
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad1.1.pdf" text="Actividad 1.1" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad1.2.pdf" text="Actividad 1.2" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad1.3BrawlStars.pdf" text="Actividad 1.3" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad1.4.pdf" text="Actividad 1.4" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad1.5.pdf" text="Actividad 1.5" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad1.6.pdf" text="Actividad 1.6" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad2.3.pdf" text="Actividad 2.3" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad2.4.pdf" text="Actividad 2.4" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad2.6.pdf" text="Actividad 2.6" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad3.8.pdf" text="Actividad 3.8" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad4.2.pdf" text="Actividad 4.2" />
+            <ResourceLink href="/notes/Tercero/IPOII/Actividades/Actividad4.3.pdf" text="Actividad 4.3" />
+          </Collapsible>
+          
+          <Collapsible title="Presentaciones">
+            <ResourceLink href="/notes/Tercero/IPOII/Trabajos/Tarea1.7z" text="Trabajo en equipo (Presentación 1)" download={true} />
+            <ResourceLink href="/notes/Tercero/IPOII/Trabajos/Tarea2.7z" text="Cómo la gente lee e interpreta (Presentación 2)" download={true} />
+            <ResourceLink href="/notes/Tercero/IPOII/Trabajos/Tarea2Lucian.zip" text="Psicología en la toma de decisiones (Presentación 2)" download={true} />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🌐</span> Diseño y Gestión de Redes
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Prácticas
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica1.7z"
-                    download
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica2.7z"
-                    download
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica3.7z"
-                    download
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica4.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 4
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica5.pkt"
-                    download
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 5
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica6.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 6
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica7.pkt"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 7
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica8.7z"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 8
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica9.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 9
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/RedesIII/Practicas/Practica10.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                  Práctica 10
-                  </a>
-                </li>
-          </ul>
-          </details>
-          <details class="bg-base-0 rounded-lg shadow-sm">
-            <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-              Trabajo
-            </summary>
-            <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-              <li>
-                <a
-                  href="/notes/Tercero/RedesIII/Trabajos/Edificio8.pdf"
-                  target="_blank"
-                  class="text-blue-500 underline hover:text-blue-800 transition"
-                >
-                Edificio 8
-                </a>
-              </li>
-            </ul>
-          </details>
-        </section>
-        
+        <Section title="Diseño y Gestión de Redes" icon="🌐">
+          <Collapsible title="Prácticas">
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica1.7z" text="Práctica 1" download={true} />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica2.7z" text="Práctica 2" download={true} />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica3.7z" text="Práctica 3" download={true} />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica4.pdf" text="Práctica 4" />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica5.pkt" text="Práctica 5" download={true} />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica6.pdf" text="Práctica 6" />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica7.pkt" text="Práctica 7" download={true} />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica8.7z" text="Práctica 8" download={true} />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica9.pdf" text="Práctica 9" />
+            <ResourceLink href="/notes/Tercero/RedesIII/Practicas/Practica10.pdf" text="Práctica 10" />
+          </Collapsible>
+          
+          <Collapsible title="Trabajo">
+            <ResourceLink href="/notes/Tercero/RedesIII/Trabajos/Edificio8.pdf" text="Edificio 8" />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🗄️</span> Gestión de Sistemas de Información
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Entregas
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/GSI/Entregas/Entrega1Voluntaria.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Adquirir destrezas en planificación (voluntaria)
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/GSI/Entregas/DocumentoEDT.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    EDT de la metodología
-                  </a>
-                </li>
-                </details>
-          </ul>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Prácticas
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Tercero/GSI/Practicas/Practica1.zip"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/GSI/Practicas/Practica2.zip"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 2
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/GSI/Practicas/Practica3.zip"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/GSI/Practicas/Practica4.zip"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 4
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/GSI/Practicas/Practica5.zip"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 5
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Tercero/GSI/Practicas/Practica6.rar"
-                    download=""
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Práctica 6
-                  </a>
-                </li>
-                </details>
-          </ul>
-        </section>
+        <Section title="Gestión de Sistemas de Información" icon="🗄️">
+          <Collapsible title="Entregas">
+            <ResourceLink href="/notes/Tercero/GSI/Entregas/Entrega1Voluntaria.pdf" text="Adquirir destrezas en planificación (voluntaria)" />
+            <ResourceLink href="/notes/Tercero/GSI/Entregas/DocumentoEDT.pdf" text="EDT de la metodología" />
+          </Collapsible>
+          
+          <Collapsible title="Prácticas">
+            <ResourceLink href="/notes/Tercero/GSI/Practicas/Practica1.zip" text="Práctica 1" download={true} />
+            <ResourceLink href="/notes/Tercero/GSI/Practicas/Practica2.zip" text="Práctica 2" download={true} />
+            <ResourceLink href="/notes/Tercero/GSI/Practicas/Practica3.zip" text="Práctica 3" download={true} />
+            <ResourceLink href="/notes/Tercero/GSI/Practicas/Practica4.zip" text="Práctica 4" download={true} />
+            <ResourceLink href="/notes/Tercero/GSI/Practicas/Practica5.zip" text="Práctica 5" download={true} />
+            <ResourceLink href="/notes/Tercero/GSI/Practicas/Practica6.rar" text="Práctica 6" download={true} />
+          </Collapsible>
+        </Section>
       </div>
     </div>
 
@@ -940,7 +187,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </a>
     </div>
 
-    
     <div class="flex justify-end mt-10">
       <p class="text-gray-500 italic">
         Agradecimientos especiales a Lucian y Carmen Noblejas por compartir sus apuntes.
