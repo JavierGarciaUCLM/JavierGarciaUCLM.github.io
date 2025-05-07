@@ -2,18 +2,21 @@
 interface Props {
   href: string;
   text: string;
-  download?: boolean;
+  download?: boolean | string;
   target?: string;
 }
 
 const { href, text, download = false, target = "_blank" } = Astro.props;
+
+// Extraer el nombre del archivo de la ruta
+const fileName = href.split('/').pop();
 ---
 
 <li>
   <a
     href={href}
     target={target}
-    download={download}
+    download={download === true ? fileName : download || undefined}
     class="text-blue-500 underline hover:text-blue-800 transition"
   >
     {text}
