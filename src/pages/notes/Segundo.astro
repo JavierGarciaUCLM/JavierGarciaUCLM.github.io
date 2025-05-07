@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Section from "../../components/Section.astro";
+import Collapsible from "../../components/Collapsible.astro";
+import ResourceLink from "../../components/ResourceLink.astro";
 ---
 <BaseLayout title="Segundo curso: ESIIAB" sideBarActiveItemID="notes">
   <div class="w-full max-w-4xl px-6 py-8 mx-auto">
@@ -10,289 +13,55 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <h2 class="text-2xl font-semibold mt-6">Material disponible</h2>
 
       <div class="space-y-8">
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🔍</span> Lógica
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Segundo/Logica/LogicaCarmen.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Asignatura completa
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/Logica/tg1.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Trabajo guiado
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/Logica/ProLog.pptx"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Presentación ProLog
-              </a>
-            </li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Exámenes
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Segundo/Logica/Control1.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                    Control 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Segundo/Logica/Control1PLD.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Control 1 PLD
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Segundo/Logica/EjercicioControl2.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Ejercicio control 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Segundo/Logica/SimulacroRC.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Simulacro RC
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/notes/Segundo/Logica/RC.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      RC
-                    </a>
-                  </li>
-          </ul>
-        </section>
+        <Section title="Lógica" icon="🔍">
+          <ResourceLink href="/notes/Segundo/Logica/LogicaCarmen.pdf" text="Asignatura completa" />
+          <ResourceLink href="/notes/Segundo/Logica/tg1.pdf" text="Trabajo guiado" />
+          <ResourceLink href="/notes/Segundo/Logica/ProLog.pptx" text="Presentación ProLog" />
+          
+          <Collapsible title="Exámenes">
+            <ResourceLink href="/notes/Segundo/Logica/Control1.pdf" text="Control 1" />
+            <ResourceLink href="/notes/Segundo/Logica/Control1PLD.pdf" text="Control 1 PLD" />
+            <ResourceLink href="/notes/Segundo/Logica/EjercicioControl2.pdf" text="Ejercicio control 2" />
+            <ResourceLink href="/notes/Segundo/Logica/SimulacroRC.pdf" text="Simulacro RC" />
+            <ResourceLink href="/notes/Segundo/Logica/RC.pdf" text="RC" />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🗂️</span> Estructura de Datos
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Segundo/ED/GeneralED.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/ED/CarmenED.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Asignatura completa
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/ED/JavaProjects.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Ejercicios Java
-              </a>
-            </li>
-            <li>
-              <a
-              href="/notes/Segundo/ED/PracticasHaskell.7z"
-              download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Ejercicios Haskell
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/ED/PolishNotationED.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Apuntes Polish Notation
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Estructura de Datos" icon="🗂️">
+          <ResourceLink href="/notes/Segundo/ED/GeneralED.pdf" text="Apuntes + Ejercicios + Exámenes" />
+          <ResourceLink href="/notes/Segundo/ED/CarmenED.pdf" text="Asignatura completa" />
+          <ResourceLink href="/notes/Segundo/ED/JavaProjects.7z" text="Ejercicios Java" download={true} />
+          <ResourceLink href="/notes/Segundo/ED/PracticasHaskell.7z" text="Ejercicios Haskell" download={true} />
+          <ResourceLink href="/notes/Segundo/ED/PolishNotationED.pdf" text="Apuntes Polish Notation" />
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🛠️</span> Ingeniería del Software I
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Segundo/SWI/GeneralSoftwareI.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes + Ejercicios
-              </a>
-            </li>
-          </ul>
-          <ul class="space-y-4 pl-5 text-base-content">
-            <li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Prácticas
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Segundo/SWI/Proyecto/SRS1.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Primera entrega
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/SWI/Proyecto/ExamenSRS1.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Examen primera entrega
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/SWI/Proyecto/SRS2.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Segunda entrega
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/SWI/Proyecto/ExamenSRS2.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Examen segunda entrega
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/SWI/Proyecto/SRSOrdinario.pdf"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Examen ordinario
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </section>
+        <Section title="Ingeniería del Software I" icon="🛠️">
+          <ResourceLink href="/notes/Segundo/SWI/GeneralSoftwareI.pdf" text="Apuntes + Ejercicios" />
+          
+          <Collapsible title="Prácticas">
+            <ResourceLink href="/notes/Segundo/SWI/Proyecto/SRS1.pdf" text="Primera entrega" />
+            <ResourceLink href="/notes/Segundo/SWI/Proyecto/ExamenSRS1.pdf" text="Examen primera entrega" />
+            <ResourceLink href="/notes/Segundo/SWI/Proyecto/SRS2.pdf" text="Segunda entrega" />
+            <ResourceLink href="/notes/Segundo/SWI/Proyecto/ExamenSRS2.pdf" text="Examen segunda entrega" />
+            <ResourceLink href="/notes/Segundo/SWI/Proyecto/SRSOrdinario.pdf" text="Examen ordinario" />
+          </Collapsible>
+        </Section>
 
         <div class="relative">
-          <!-- Mantén la sección tal cual la tenías, sin cambios en su contenido -->
-          <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-            <h3 class="text-2xl font-semibold text-base-content flex items-center">
-              <span class="mr-2">🖥️</span> Organización de Computadores (En proceso...)
-            </h3>
-            <ul class="list-disc list-inside pl-5 text-base-content">
-              <li>
-                <a
-                  href="/notes/Primero/Fisica/GeneralOC.pdf"
-                  target="_blank"
-                  class="text-blue-500 underline hover:text-blue-800 transition"
-                >
-                  Apuntes + Ejercicios + Exámenes
-                </a>
-              </li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Prácticas
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Segundo/OC/Practicas/practica1oc.docx"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/OC/Practicas/practica2oc.docx"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Práctica 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/OC/Practicas/practica3oc.docx"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Práctica 3
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/OC/Practicas/practica4oc.docx"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Práctica 4
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/OC/Practicas/practica5oc.docx"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Práctica 5
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                     href="/notes/Segundo/OC/Practicas/practica6oc.docx"
-                      target="_blank"
-                      class="text-blue-500 underline hover:text-blue-800 transition">
-                      Práctica 6
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </section>
-        
+          <!-- Mantén la sección con modelo 3D -->
+          <Section title="Organización de Computadores (En proceso...)" icon="🖥️">
+            <ResourceLink href="/notes/Primero/Fisica/GeneralOC.pdf" text="Apuntes + Ejercicios + Exámenes" />
+            
+            <Collapsible title="Prácticas">
+              <ResourceLink href="/notes/Segundo/OC/Practicas/practica1oc.docx" text="Práctica 1" />
+              <ResourceLink href="/notes/Segundo/OC/Practicas/practica2oc.docx" text="Práctica 2" />
+              <ResourceLink href="/notes/Segundo/OC/Practicas/practica3oc.docx" text="Práctica 3" />
+              <ResourceLink href="/notes/Segundo/OC/Practicas/practica4oc.docx" text="Práctica 4" />
+              <ResourceLink href="/notes/Segundo/OC/Practicas/practica5oc.docx" text="Práctica 5" />
+              <ResourceLink href="/notes/Segundo/OC/Practicas/practica6oc.docx" text="Práctica 6" />
+            </Collapsible>
+          </Section>
+          
           <!-- Aquí va tu modelo 3D, posicionado de forma absoluta a la derecha -->
           <div class="hidden md:block absolute top-0 right-[-180px] z-50 group">
             <model-viewer
@@ -314,365 +83,85 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           </div>
         </div>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">⚙️</span> Sistemas Operativos I
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Segundo/Operativos/GeneralOperativos.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/Operativos/ResumenPrimerParcial.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes primer parcial
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/Operativos/Carpeta2Parcial.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Carpeta segundo parcial
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/Operativos/Practicas.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Carpeta prácticas
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/Operativos/TrabajoLinux.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Carpeta trabajo (Linux)
-              </a>
-            </li>
-            <details class="bg-base-0 rounded-lg shadow-sm">
-              <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                Ejercicios
-              </summary>
-              <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                <li>
-                  <a
-                    href="/notes/Segundo/Operativos/EjerciciosTema3.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Ejercicios tema 3
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Segundo/Operativos/EjerciciosTema4.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Ejercicios tema 4.1
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/notes/Segundo/Operativos/EjerciciosTema4.1.pdf"
-                    target="_blank"
-                    class="text-blue-500 underline hover:text-blue-800 transition"
-                  >
-                    Ejercicios tema 4.2
-                  </a>
-                </li>
-          </ul>
-        </section>
+        <Section title="Sistemas Operativos I" icon="⚙️">
+          <ResourceLink href="/notes/Segundo/Operativos/GeneralOperativos.pdf" text="Apuntes + Ejercicios + Exámenes" />
+          <ResourceLink href="/notes/Segundo/Operativos/ResumenPrimerParcial.pdf" text="Apuntes primer parcial" />
+          <ResourceLink href="/notes/Segundo/Operativos/Carpeta2Parcial.7z" text="Carpeta segundo parcial" download={true} />
+          <ResourceLink href="/notes/Segundo/Operativos/Practicas.7z" text="Carpeta prácticas" download={true} />
+          <ResourceLink href="/notes/Segundo/Operativos/TrabajoLinux.7z" text="Carpeta trabajo (Linux)" download={true} />
+          
+          <Collapsible title="Ejercicios">
+            <ResourceLink href="/notes/Segundo/Operativos/EjerciciosTema3.pdf" text="Ejercicios tema 3" />
+            <ResourceLink href="/notes/Segundo/Operativos/EjerciciosTema4.pdf" text="Ejercicios tema 4.1" />
+            <ResourceLink href="/notes/Segundo/Operativos/EjerciciosTema4.1.pdf" text="Ejercicios tema 4.2" />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">📊</span> Estadística (En R)
-          </h3>
-          <ul class="space-y-4 pl-5">
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Labs
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                    <li><a href="/notes/Segundo/Estadistica/Labs/Estadistica1.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Laboratorio 1</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Labs/Estadistica2.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Laboratorio 2</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Labs/Estadistica3.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Laboratorio 3</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Labs/Estadistica4.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Laboratorio 4</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Labs/Estadistica7.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Laboratorio 7</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Labs/Estadistica8.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Laboratorio 8</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Labs/Estadistica9.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Laboratorio 9</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Labs/Estadistica10.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Laboratorio 10</a></li>
-                </ul>
-              </details>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Exámenes
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li><a href="/notes/Segundo/Estadistica/Examenes/ExamenRandom1.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Examen 1</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Examenes/ExamenRandom2.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Examen 2</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Examenes/UnoDeLosExamenes2324.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Examen 23/24</a></li>
-                </ul>
-              </details>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Fórmulas
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                    <li><a href="/notes/Segundo/Estadistica/Formulas/AlgunaFuncionExamenEnR.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Fórmulas random</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Formulas/FormularioFumadon.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Fórmulas de todo</a></li>
-                    <li><a href="/notes/Segundo/Estadistica/Formulas/TestsR.7z" download class="text-blue-500 underline hover:text-blue-800 transition">Más fórmulas</a></li>
-                  </ul>
-                </ul>
-              </details>
-          </ul>
-        </section>
+        <Section title="Estadística (En R)" icon="📊">
+          <Collapsible title="Labs">
+            <ResourceLink href="/notes/Segundo/Estadistica/Labs/Estadistica1.pdf" text="Laboratorio 1" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Labs/Estadistica2.pdf" text="Laboratorio 2" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Labs/Estadistica3.pdf" text="Laboratorio 3" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Labs/Estadistica4.pdf" text="Laboratorio 4" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Labs/Estadistica7.pdf" text="Laboratorio 7" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Labs/Estadistica8.pdf" text="Laboratorio 8" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Labs/Estadistica9.pdf" text="Laboratorio 9" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Labs/Estadistica10.pdf" text="Laboratorio 10" />
+          </Collapsible>
+          
+          <Collapsible title="Exámenes">
+            <ResourceLink href="/notes/Segundo/Estadistica/Examenes/ExamenRandom1.pdf" text="Examen 1" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Examenes/ExamenRandom2.pdf" text="Examen 2" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Examenes/UnoDeLosExamenes2324.pdf" text="Examen 23/24" />
+          </Collapsible>
+          
+          <Collapsible title="Fórmulas">
+            <ResourceLink href="/notes/Segundo/Estadistica/Formulas/AlgunaFuncionExamenEnR.pdf" text="Fórmulas random" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Formulas/FormularioFumadon.pdf" text="Fórmulas de todo" />
+            <ResourceLink href="/notes/Segundo/Estadistica/Formulas/TestsR.7z" text="Más fórmulas" download={true} />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🗄️</span> Bases de Datos
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            
-            <li>
-              <a
-                href="/notes/Segundo/BBDD/CarmenBBDD.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Asignatura completa
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/BBDD/Trabajo.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-                Trabajo
-              </a>
-            </li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Prácticas
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li>
-                    <a
-                      href="/notes/Segundo/BBDD/Practicas/practica1.sql"
-                      download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 1
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica2.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 2
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica3.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 3
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica4.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 4
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica5.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 5
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica6.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 6
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica7.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 7
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica8.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 8
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica9.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 9
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                    href="/notes/Segundo/BBDD/Practicas/practica10.sql"
-                    download
-                      class="text-blue-500 underline hover:text-blue-800 transition"
-                    >
-                      Práctica 10
-                    </a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </section>
+        <Section title="Bases de Datos" icon="🗄️">
+          <ResourceLink href="/notes/Segundo/BBDD/CarmenBBDD.pdf" text="Asignatura completa" />
+          <ResourceLink href="/notes/Segundo/BBDD/Trabajo.7z" text="Trabajo" download={true} />
+          
+          <Collapsible title="Prácticas">
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica1.sql" text="Práctica 1" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica2.sql" text="Práctica 2" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica3.sql" text="Práctica 3" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica4.sql" text="Práctica 4" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica5.sql" text="Práctica 5" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica6.sql" text="Práctica 6" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica7.sql" text="Práctica 7" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica8.sql" text="Práctica 8" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica9.sql" text="Práctica 9" download={true} />
+            <ResourceLink href="/notes/Segundo/BBDD/Practicas/practica10.sql" text="Práctica 10" download={true} />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">💡</span> Metodología
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Segundo/Metodologia/GeneralMetodologia.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/Metodologia/CarmenMetodologia.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Asignatura completa
-              </a>
-            </li>
-              <details class="bg-base-0 rounded-lg shadow-sm">
-                <summary class="cursor-pointer text-lg font-semibold text-blue-600 hover:text-blue-800 transition">
-                  Trabajos
-                </summary>
-                <ul class="pl-6 mt-2 space-y-2 list-disc text-base-content">
-                  <li><a href="/notes/Segundo/Metodologia/Trabajos/TrabajoGreedy.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Greedy</a></li>
-                  <li><a href="/notes/Segundo/Metodologia/Trabajos/TrabajoDynamic.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Dynamic</a></li>
-                  <li><a href="/notes/Segundo/Metodologia/Trabajos/TrabajoBacktracking.pdf" target="_blank" class="text-blue-500 underline hover:text-blue-800 transition">Backtracking</a></li>
-                </ul>
-              </details>
-            </li>
-          </ul>
-        </section>
+        <Section title="Metodología" icon="💡">
+          <ResourceLink href="/notes/Segundo/Metodologia/GeneralMetodologia.pdf" text="Apuntes + Ejercicios + Exámenes" />
+          <ResourceLink href="/notes/Segundo/Metodologia/CarmenMetodologia.pdf" text="Asignatura completa" />
+          
+          <Collapsible title="Trabajos">
+            <ResourceLink href="/notes/Segundo/Metodologia/Trabajos/TrabajoGreedy.pdf" text="Greedy" />
+            <ResourceLink href="/notes/Segundo/Metodologia/Trabajos/TrabajoDynamic.pdf" text="Dynamic" />
+            <ResourceLink href="/notes/Segundo/Metodologia/Trabajos/TrabajoBacktracking.pdf" text="Backtracking" />
+          </Collapsible>
+        </Section>
 
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">⏱️</span> Programación Concurrente y Tiempo Real
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Segundo/Concurrentes/CarmenConcurrentes.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Asignatura completa
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/Concurrentes/Practicas.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Prácticas
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section class="p-6 bg-base-100 rounded-2xl shadow-md border border-base-400 hover:shadow-lg">
-          <h3 class="text-2xl font-semibold text-base-content flex items-center">
-            <span class="mr-2">🌐</span> Redes de Computadores II
-          </h3>
-          <ul class="list-disc list-inside pl-5 text-base-content">
-            <li>
-              <a
-                href="/notes/Segundo/RedesII/GeneralRedes.pdf"
-                target="_blank"
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Apuntes + Ejercicios + Exámenes
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/RedesII/Bloque1.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Bloque 1
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/RedesII/Bloque.7z"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Bloque 2
-              </a>
-            </li>
-            <li>
-              <a
-                href="/notes/Segundo/RedesII/LucianPracticoFinal.zip"
-                download
-                class="text-blue-500 underline hover:text-blue-800 transition"
-              >
-              Examen práctico final
-              </a>
-            </li>
-          </ul>
-        </section>
+        <Section title="Programación Concurrente y Tiempo Real" icon="⏱️">
+          <ResourceLink href="/notes/Segundo/Concurrentes/CarmenConcurrentes.pdf" text="Asignatura completa" />
+          <ResourceLink href="/notes/Segundo/Concurrentes/Practicas.7z" text="Prácticas" download={true} />
+        </Section>
+        
+        <Section title="Redes de Computadores II" icon="🌐">
+          <ResourceLink href="/notes/Segundo/RedesII/GeneralRedes.pdf" text="Apuntes + Ejercicios + Exámenes" />
+          <ResourceLink href="/notes/Segundo/RedesII/Bloque1.7z" text="Bloque 1" download={true} />
+          <ResourceLink href="/notes/Segundo/RedesII/Bloque2.7z" text="Bloque 2" download={true} />
+          <ResourceLink href="/notes/Segundo/RedesII/LucianPracticoFinal.zip" text="Examen práctico final" download={true} />
+        </Section>
       </div>
     </div>
 
@@ -686,6 +175,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         Enviar correo
       </a>
     </div>
+    
     <div class="flex justify-end mt-10">
       <p class="text-gray-500 italic">
         Agradecimientos especiales a Lucian y Carmen Noblejas por compartir sus apuntes.
@@ -694,5 +184,4 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   </div>
 </BaseLayout>
 
-
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
