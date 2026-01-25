@@ -2,7 +2,7 @@
 title: "When AI revives the past: Technological advancement or emotional dilemma?"
 description: "The emotional dilemma triggered by the implementation of AI in human interactions, blurring the boundaries of reality and potentially freezing emotional growth."
 pubDate: "Feb 01 2025"
-heroImage: "/FamiliarAI.jpg"
+heroImage: "/Blog/FamiliarAI.jpg"
 tags: ["AI"]
 ---
 
