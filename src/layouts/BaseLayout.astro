@@ -4,9 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
 import { ViewTransitions } from "astro:transitions";
-
 import { SITE_TITLE, SITE_DESCRIPTION, TRANSITION_API } from "../config";
-
 const {
   image,
   title = SITE_TITLE,
@@ -14,11 +12,11 @@ const {
   includeSidebar = true,
   sideBarActiveItemID,
   ogType,
+  lang = "en",
 } = Astro.props;
 ---
-
 <!doctype html>
-<html lang="en" data-theme="lofi">
+<html lang={lang} data-theme="lofi">
   <head>
     <link rel="apple-touch-icon" sizes="180x180" href="/iPhoneLogo.png">
 

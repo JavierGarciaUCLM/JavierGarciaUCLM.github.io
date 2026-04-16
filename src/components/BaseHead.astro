@@ -38,14 +38,12 @@ const defaultImage = '/social_fondo.webp';
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={new URL(image, Astro.site ?? Astro.url)} />
 
-<script type="application/ld+json" is:inline>
-{
+<script type="application/ld+json" is:inline set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Javier García Tercero",
-  "url": "https://javiergarciatercero.es",
-  "logo": "https://javiergarciatercero.es/favicon.png",
-  "image": "https://javiergarciatercero.es/favicon.png",
-"description": "Welcome to my personal portfolio, place to find all my projects and personal information!"
-}
-</script>
+  "url": Astro.site?.toString(),
+  "logo": new URL("/favicon.png", Astro.site).toString(),
+  "image": new URL("/favicon.png", Astro.site).toString(),
+  "description": description
+})} />
