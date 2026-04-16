@@ -55,37 +55,20 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
     <div class="w-full max-w-4xl mx-auto mt-10">
       <h2 class="text-2xl font-bold mb-4">Azure DevOps Project</h2>
-      <div id="devops-project" class="p-6 border rounded-lg shadow-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-200">
-        <p>Loading repository data...</p>
+      <div class="p-6 border rounded-lg shadow-md bg-base-100 text-base-content space-y-2">
+        <h3 class="text-xl font-semibold">SEIIProject</h3>
+        <p>Software Engineering II project developed by The Avengers team at UCLM.</p>
+        <p><strong>Organization:</strong> SE2425TheAvengers</p>
+        <p><strong>Stack:</strong> .NET (C#), Blazor, Azure DevOps, XUnit, Selenium</p>
+        <a
+          href="https://dev.azure.com/SE2425TheAvengers/SEIIProject"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-600 underline hover:text-blue-800"
+        >
+          View on Azure DevOps
+        </a>
       </div>
-
-      <script>
-        async function fetchAzureProject() {
-          const token = '6yXt6ztCVl5lMT5W7sLQxnD5uEjWplFgQA1HhkSLfi85sXrYJ6XGJQQJ99BAACAAAAAJsFPkAAASAZDOWTYs';  // Coloca aquí tu token de acceso personal
-          const response = await fetch('https://dev.azure.com/SE2425TheAvengers/_apis/projects/SEIIProject?api-version=7.0', {
-            method: 'GET',
-            headers: {
-              'Authorization': `Basic ${btoa(':' + token)}`,
-            }
-          });
-
-          if (!response.ok) {
-            document.getElementById('devops-project').innerHTML = `<p>Error fetching project data. Please check the token or project URL.</p>`;
-            return;
-          }
-
-          const projectData = await response.json();
-
-          document.getElementById('devops-project').innerHTML = `
-            <h3 class="text-xl font-semibold">${projectData.name}</h3>
-            <p>${projectData.description || 'No description available.'}</p>
-            <p><strong>Visibility:</strong> ${projectData.visibility}</p>
-            <p><strong>State:</strong> ${projectData.state}</p>
-            <a href="https://dev.azure.com/SE2425TheAvengers/SEIIProject" target="_blank" class="text-blue-600 underline hover:text-blue-800 dark:text-blue-400">View on Azure DevOps</a>
-          `;
-        }
-        fetchAzureProject();
-      </script>
     </div>
   </div>
 </BaseLayout>
