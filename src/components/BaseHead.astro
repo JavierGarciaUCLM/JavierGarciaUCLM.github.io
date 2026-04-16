@@ -29,14 +29,14 @@ const defaultImage = '/social_fondo.webp';
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(defaultImage, Astro.url)} />
+<meta property="og:image" content={new URL(image, Astro.site ?? Astro.url)} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:url" content={Astro.url} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={new URL(defaultImage, Astro.url)} />
+<meta name="twitter:image" content={new URL(image, Astro.site ?? Astro.url)} />
 
 <script type="application/ld+json" is:inline>
 {
