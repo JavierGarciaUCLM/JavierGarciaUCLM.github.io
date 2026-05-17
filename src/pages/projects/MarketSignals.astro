@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Market Signals Bot: A Builder’s Take on Position Discovery" sideBarActiveItemID="projects">
+  <div class="w-full max-w-4xl px-6 py-8 mx-auto">
+    <h1 class="text-4xl font-bold mb-2">Market Signals Bot</h1>
+    <p class="text-gray-500 text-md mb-6">
+      A real-time market analysis bot built for signal filtering, position discovery, and execution-grade reliability.
+    </p>
+
+    <div class="text-lg leading-relaxed space-y-4">
+      <p>
+        I built <strong>Market Signals Bot</strong> because “market research” often breaks at the exact moment it matters:
+        feeds get noisy, quotes go stale, tick sizes change, and timeouts make outcomes ambiguous. This project is my
+        builder-style answer: a tight loop that turns real-time market data into <strong>structured decisions</strong> you can
+        audit, replay, and iterate on.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">What it does</h2>
+      <p>
+        The bot runs continuously and operates in discrete <strong>5-minute windows</strong>. For each window it:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Snapshots the open price</strong> and tracks the window move in real time.</li>
+        <li><strong>Maintains top-of-book quotes</strong> via a persistent WebSocket connection (with heartbeat + reconnect logic).</li>
+        <li><strong>Filters and ranks entries</strong> using freshness checks, time gating, and price constraints.</li>
+        <li><strong>Executes with guardrails</strong> (slippage protection, tick-size alignment, and timeout reconciliation).</li>
+        <li><strong>Logs everything</strong> as JSONL for fast analysis: skips, entries, fills, and end-of-window outcomes.</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold mt-6">How it’s built (the parts I cared about)</h2>
+
+      <h3 class="text-xl font-semibold mt-4">1) Data correctness over “more data”</h3>
+      <p>
+        I treat quotes as perishable. The decision engine refuses to act on stale top-of-book data and falls back safely
+        when quotes are missing or invalid. This keeps the bot from “hallucinating” entries from frozen feeds.
+      </p>
+
+      <h3 class="text-xl font-semibold mt-4">2) Windowed decision-making</h3>
+      <p>
+        The strategy is intentionally lightweight: compute the window delta, wait for a specific time-to-close range,
+        and only enter when the move clears a minimum threshold. On top of that, I added anti-churn filters to avoid
+        repeatedly taking the same direction in a short span unless the signal is strong.
+      </p>
+
+      <h3 class="text-xl font-semibold mt-4">3) Execution-grade guardrails</h3>
+      <p>
+        Execution is where most bots quietly die. This one:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Applies slippage caps</strong> based on the last observed ask and rounds to the current tick size.</li>
+        <li><strong>Handles runtime tick-size changes</strong> by consuming tick-update events and using the freshest tick at send time.</li>
+        <li><strong>Reconciles after timeouts</strong> so a slow response doesn’t get incorrectly recorded as a failed action.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mt-4">4) Observability built-in</h3>
+      <p>
+        Every decision includes a reason string (why it entered, or why it skipped). Trades and quotes are logged as
+        append-only JSONL so I can replay sessions, compute fill rates, inspect slippage, and iterate quickly.
+        I also compare <strong>estimated PnL</strong> against periodic <strong>balance snapshots</strong> for reality checks.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Stack</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>TypeScript</strong> runtime + scripts</li>
+        <li><strong>WebSockets</strong> for live top-of-book updates</li>
+        <li><strong>Execution client</strong> with FOK/FAK order modes and slippage protection</li>
+        <li><strong>On-chain reads</strong> for balance snapshots and reconciliation</li>
+        <li><strong>JSONL logs</strong> for analysis and reporting</li>
+      </ul>
+    </div>
+
+    <div class="flex justify-center my-6">
+      <a href="/MarketSignalsBotDemo.gif" target="_blank" rel="noopener noreferrer">
+        <img
+          src="/MarketSignalsBotDemo.gif"
+          alt="Market Signals Bot demo"
+          class="w-full max-w-md rounded-lg shadow-md"
+        />
+      </a>
+    </div>
+
+    <div class="w-full max-w-4xl mx-auto mt-10">
+      <h2 class="text-2xl font-bold mb-4">Project Links</h2>
+      <div class="p-6 border rounded-lg shadow-md bg-base-100 text-base-content space-y-2">
+        <h3 class="text-xl font-semibold">Market Signals Bot</h3>
+        <p>Real-time signal filtering and position discovery with execution-grade reliability.</p>
+        <p><strong>Highlights:</strong> quote freshness gating, tick-size drift handling, slippage caps, timeout reconciliation, JSONL observability</p>
+        <a
+          href="https://github.com/your-org/your-repo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-600 underline hover:text-blue-800"
+        >
+          View repository
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
