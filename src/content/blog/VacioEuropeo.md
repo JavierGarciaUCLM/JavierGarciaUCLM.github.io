@@ -40,7 +40,7 @@ Pero... Ante todos estos problemas y casos tan extremos, ¿qué nos ofrece la le
 </p>
 
 <p style="text-align: justify;">
-Pues sorprendentemente poco. El AI Act clasifica los sistemas de IA en niveles de riesgo, y los chatbots conversacionales (ChatGPT, Claude, Kimi...) están clasificados como sistemas de <strong>riesgo limitado</strong>. No aparecen en ninguna de las ocho categorías del Anexo III, que es la lista de sistemas considerados de alto riesgo. Esto significa que no están sujetos a evaluaciones de conformidad, ni a supervisión humana obligatoria, ni a gestión documentada de riesgos, ni a monitorización post-mercado. Lo único que se les exige es un aviso de transparencia simple, informar al usuario de que está hablando con una IA.
+Pues sorprendentemente poco. El AI Act clasifica los sistemas de IA en niveles de riesgo, y las IAs conversacionales (ChatGPT, Claude, Kimi...) están clasificados como sistemas de <strong>riesgo limitado</strong>. No aparecen en ninguna de las ocho categorías del Anexo III, que es la lista de sistemas considerados de alto riesgo. Esto significa que no están sujetos a evaluaciones de conformidad, ni a supervisión humana obligatoria, ni a gestión documentada de riesgos, ni a monitorización post-mercado. Lo único que se les exige es un aviso de transparencia simple, informar al usuario de que está hablando con una IA.
 </p>
 
 <figure style="text-align: center;">
