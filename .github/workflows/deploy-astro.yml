@@ -21,8 +21,7 @@ jobs:
 
       # 3) Instala dependencias (pnpm o npm)
       - name: Install dependencies
-        run: |
-          npm install  # o 'pnpm install' si prefieres pnpm
+        run: npm install --legacy-peer-deps
 
       # 4) Compila tu proyecto Astro (genera carpeta dist/)
       - name: Build
