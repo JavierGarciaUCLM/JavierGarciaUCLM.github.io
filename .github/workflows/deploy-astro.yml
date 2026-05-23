@@ -15,9 +15,9 @@ jobs:
 
       # 2) Usa Node (versión recomendada para Astro: >=16)
       - name: Use Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18  # o 16, ambas sirven
+          node-version: 22
 
       # 3) Instala dependencias (pnpm o npm)
       - name: Install dependencies
