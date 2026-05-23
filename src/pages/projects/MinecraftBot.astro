@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import MoneyRequest from "../../assets/MinecraftBotImages/MoneyRequest.jpg";
+import DataBaseExample from "../../assets/MinecraftBotImages/DataBaseExample.jpg";
+import WelcomeBack from "../../assets/MinecraftBotImages/WelcomeBack.jpg";
+import MinecraftExample from "../../assets/MinecraftBotImages/MinecraftExample.jpg";
+import DiscordExample from "../../assets/MinecraftBotImages/DiscordExample.jpg";
 ---
 
 <BaseLayout title="Minecraft Chatbot: Integration & Functionality" sideBarActiveItemID="projects">
@@ -55,7 +61,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div id="modalDB" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalDB')">
       <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
         <span class="absolute top-1 right-1 text-xl cursor-pointer" onclick="closeModal('modalDB')">×</span>
-        <img src="/MinecraftBotImages/MoneyRequest.jpg" alt="Minecraft Example" class="w-full rounded-lg shadow-md" />
+        <Image src={MoneyRequest} alt="Minecraft Economy Example" class="w-full rounded-lg shadow-md" loading="lazy" />
       </div>
     </div>
     
@@ -63,7 +69,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div id="modalDB2" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalDB2')">
       <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
         <span class="absolute top-1 right-1 text-xl cursor-pointer" onclick="closeModal('modalDB2')">×</span>
-        <img src="/MinecraftBotImages/DataBaseExample.jpg" alt="Database Example" class="w-full rounded-lg shadow-md" />
+        <Image src={DataBaseExample} alt="Database Example" class="w-full rounded-lg shadow-md" loading="lazy" />
       </div>
     </div>
     
@@ -83,7 +89,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div id="modalJM" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalJM')">
       <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
         <span class="absolute top-1 right-1 text-xl cursor-pointer" onclick="closeModal('modalJM')">×</span>
-        <img src="/MinecraftBotImages/WelcomeBack.jpg" alt="Economy Diagram" class="w-full rounded-lg shadow-md" />
+        <Image src={WelcomeBack} alt="Welcome Back Message" class="w-full rounded-lg shadow-md" loading="lazy" />
       </div>
     </div>
     </section>
@@ -107,7 +113,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div id="modalM" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalM')">
       <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
         <span class="absolute top-4 right-4 text-xl cursor-pointer" onclick="closeModal('modalM')">×</span>
-        <img src="/MinecraftBotImages/MinecraftExample.jpg" alt="Minecraft Example" class="w-full rounded-lg shadow-md" />
+        <Image src={MinecraftExample} alt="Minecraft Example" class="w-full rounded-lg shadow-md" loading="lazy" />
       </div>
     </div>
     
@@ -115,7 +121,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <div id="modalD" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden" onclick="closeModal('modalD')">
       <div class="bg-base-100 rounded-lg shadow-lg p-4 relative max-w-3xl" onclick="stopPropagation()">
         <span class="absolute top-4 right-4 text-xl cursor-pointer" onclick="closeModal('modalD')">×</span>
-        <img src="/MinecraftBotImages/DiscordExample.jpg" alt="Discord Example" class="w-full rounded-lg shadow-md" />
+        <Image src={DiscordExample} alt="Discord Example" class="w-full rounded-lg shadow-md" loading="lazy" />
       </div>
     </div>
 

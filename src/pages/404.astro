@@ -1,12 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import ErrorImg from "../assets/Error.png";
 ---
 
 <BaseLayout title="404: Not Found" includeSidebar={false}>
   <div class="flex flex-col items-center justify-center text-center h-[70vh]">
-    <img 
-      src="/Error.png" 
-      alt="Error Illustration" 
+    <Image
+      src={ErrorImg}
+      alt="Error Illustration"
       class="mb-8 w-48 h-auto"
     />
 
