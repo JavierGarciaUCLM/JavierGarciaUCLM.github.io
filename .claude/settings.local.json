@@ -3,7 +3,8 @@
     "allow": [
       "Bash(awk '{print $5, $9}')",
       "Bash(xargs wc *)",
-      "Bash(xargs grep *)"
+      "Bash(xargs grep *)",
+      "WebFetch(domain:www.linkedin.com)"
     ]
   }
 }

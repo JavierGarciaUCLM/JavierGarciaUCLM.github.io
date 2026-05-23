@@ -3,7 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="CV in English" sideBarActiveItemID="cv">
+<BaseLayout title="CV in English | Javier García" sideBarActiveItemID="cv">
+  <Fragment slot="head">
+    <link rel="alternate" hreflang="en" href={new URL('/cv', Astro.site)} />
+    <link rel="alternate" hreflang="es" href={new URL('/cv-es', Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/cv', Astro.site)} />
+  </Fragment>
   <!--El relative es para ser movido y el z-50 lo uso pa que ponga por encima de posibles elementos que lo tapan -->
   <div class="relative">
   <div class="absolute top-1 right-1 z-10 flex gap-3">
