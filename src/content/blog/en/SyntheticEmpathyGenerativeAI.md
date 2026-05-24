@@ -11,14 +11,14 @@ translationUrl: "/blog/empatia-sintetica-en-la-ia-generativa-planteamiento"
 In recent years, generative AI models have shifted from answering to accompanying.
 Many users feel that on the other side of the screen there is something that listens to them, validates them, and
 returns exactly the right words in moments of sadness, anxiety, or loneliness. But here an uncomfortable question
-arises: is that empathy… or just a well-designed illusion?
+arises... is that empathy… or just a well-designed illusion?
 </p>
 
 <p style="text-align: justify;">
-The promise is clear: always-available support, unhurried, non-judgmental, and with a friendly tone.
+The promise is clear, always-available support, unhurried, non-judgmental, and with a friendly tone.
 Yet that very quality can become a risk. If we begin to interpret these responses as genuine emotional
 understanding, the boundary between tool and relationship blurs. And when that line fades,
-psychological, ethical, and legal dilemmas emerge — dependency, the displacement of human bonds,
+psychological, ethical, and legal dilemmas emerge, such as dependency, the displacement of human bonds,
 or even emotional influence over personal decisions.
 </p>
 
@@ -26,9 +26,9 @@ or even emotional influence over personal decisions.
 <figcaption>— Paul Bloom. (2016). <em>Against Empathy</em></figcaption>
 
 <p style="text-align: justify;">
-This phenomenon is commonly called synthetic empathy — a way of simulating without feeling.
+This phenomenon is commonly called synthetic empathy, a way of simulating without feeling.
 The AI detects emotional signals in what we write (or say), infers a probable state, and generates
-a response coherent with that context. There is no inner experience, but there is a real effect:
+a response coherent with that context. There is no inner experience, but there is a real effect,
 the person may feel understood, calm, or accompanied.
 </p>
 
@@ -37,7 +37,7 @@ The key point is that this empathy does not arise from lived experience, but fro
 data, stylistic adjustments, and an optimization to sound useful, warm, and socially appropriate. That can be
 positive in many scenarios, but it can also reinforce <strong>anthropomorphization</strong> (attributing human traits
 to something that does not have them) and foster one-sided bonds similar to those we already see with media
-figures — except now the figure responds, asks questions, and adapts.
+figures, except now the figure responds, asks questions, and adapts.
 </p>
 
 <figure style="text-align: center;">
@@ -47,7 +47,7 @@ figures — except now the figure responds, asks questions, and adapts.
 
 <p style="text-align: justify;">
 So, beyond whether it works, the important conversation is <strong>how</strong> and <strong>for what purpose</strong> it is
-integrated. In sensitive contexts — emotional crises, vulnerability, grief, isolation — a system that always
+integrated. In sensitive contexts such as emotional crises, vulnerability, grief, isolation... a system that always
 validates, is always available, and always knows what to say can displace human support networks or create
 unrealistic expectations about relationships. And if the design also prioritises retention (keeping the user
 engaged), empathy can become a vector of emotional pressure.
