@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
 
 export async function GET(context) {
-  const blog = await getCollection("blog");
+  const blog = await getCollection("blog", ({ id }) => !id.startsWith('en/'));
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,

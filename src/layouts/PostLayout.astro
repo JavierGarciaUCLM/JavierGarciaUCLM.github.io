@@ -4,9 +4,11 @@ import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 
-export interface Props extends BlogSchema {}
+export interface Props extends BlogSchema {
+  lang?: string;
+}
 
-const { title, description, pubDate, updatedDate, heroImage, badge, tags = [] } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, badge, tags = [], lang, translationUrl } = Astro.props;
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(pubDate).format("ll")
 import { Image } from "astro:assets";
@@ -36,6 +38,27 @@ import { Image } from "astro:assets";
       "keywords": tags?.join(", ")
     })} />
   </Fragment>
+  <div class="relative">
+    {translationUrl && (
+      <div class="absolute top-1 right-1 z-10">
+        <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg transition-shadow">
+          <a href={translationUrl} class="flex items-center gap-2 text-sm cursor-pointer">
+            {lang === "en" ? (
+              <>
+                <img src="/language/SP.svg" alt="Bandera de España" class="w-5 h-5" />
+                <span>Leer en español</span>
+              </>
+            ) : (
+              <>
+                <img src="/language/GB.svg" alt="UK flag" class="w-5 h-5" />
+                <span>Read in English</span>
+              </>
+            )}
+          </a>
+        </section>
+      </div>
+    )}
+  </div>
   <main class="md:flex md:justify-center">
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {heroImage && <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6 max-w-[60%] mx-auto" />}

@@ -18,6 +18,7 @@ interface Props {
 
 const { entry } = Astro.props;
 const post: BlogSchema = entry.data;
+const lang = entry.id.startsWith('en/') ? 'en' : 'es';
 const { Content } = await render(entry);
 ---
 
@@ -29,6 +30,8 @@ const { Content } = await render(entry);
   updatedDate={post.updatedDate}
   badge={post.badge}
   tags={post.tags}
+  lang={lang}
+  translationUrl={post.translationUrl}
 >
   <Content />
 </PostLayout>

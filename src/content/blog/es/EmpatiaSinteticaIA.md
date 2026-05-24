@@ -4,6 +4,7 @@ description: "Los LLM y modelos multimodales han permitido crear IA que aparenta
 pubDate: "Jan 26 2026"
 heroImage: "/Blog/EmpatiaSinteticaIA.png"
 tags: ["AI", "Empatía Sintética", "Ética"]
+translationUrl: "/blog/synthetic-empathy-in-generative-ai-introduction"
 ---
 
 <p style="text-align: justify;">
