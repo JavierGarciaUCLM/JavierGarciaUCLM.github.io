@@ -1,9 +1,10 @@
 ---
-title: "When AI revives the past: Technological advancement or emotional dilemma?"
-description: "The emotional dilemma triggered by the implementation of AI in human interactions, blurring the boundaries of reality and potentially freezing emotional growth."
+title: "Cuando la IA revive el pasado: ¿Avance tecnológico o dilema emocional?"
+description: "El dilema emocional formado por la implementación de la IA en interacciones humanas, nublando los límites de la realidad y potencialmente congelando el crecimiento emocional."
 pubDate: "Feb 01 2025"
 heroImage: "/Blog/FamiliarAI.jpg"
 tags: ["AI", "Emociones"]
+translationUrl: "/blog/when-ai-revives-the-past-technological-advancement-or-emotional-dilemma"
 ---
 
 <p style="text-align: justify;">
