@@ -1,5 +1,6 @@
 ---
 title: "Empatia sintetica en la IA generativa. Planteamiento"
+slug: "empatia-sintetica-planteamiento"
 description: "Los LLM y modelos multimodales han permitido crear IA que aparenta empatía, lo que abre nuevos retos técnicos y también éticos, morales y legales."
 pubDate: "Jan 26 2026"
 heroImage: "/Blog/EmpatiaSinteticaIA.png"

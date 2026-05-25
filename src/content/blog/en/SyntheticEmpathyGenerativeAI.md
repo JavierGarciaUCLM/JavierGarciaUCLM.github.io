@@ -1,10 +1,11 @@
 ---
 title: "Synthetic Empathy in Generative AI. Introduction"
+slug: "synthetic-empathy-introduction"
 description: "LLMs and multimodal models have enabled AI that appears empathetic, raising new technical, ethical, moral, and legal challenges."
 pubDate: "Jan 26 2026"
 heroImage: "/Blog/EmpatiaSinteticaIA.png"
 tags: ["AI", "Synthetic Empathy", "Ethics"]
-translationUrl: "/blog/empatia-sintetica-en-la-ia-generativa-planteamiento"
+translationUrl: "/blog/empatia-sintetica-planteamiento"
 ---
 
 <p style="text-align: justify;">

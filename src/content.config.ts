@@ -12,6 +12,7 @@ const blogSchema = z.object({
         message: 'tags must be unique',
     }).optional(),
     translationUrl: z.string().optional(),
+    slug: z.string().optional(),
 });
 
 const storeSchema = z.object({

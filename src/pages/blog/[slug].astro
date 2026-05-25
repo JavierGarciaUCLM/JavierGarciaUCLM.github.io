@@ -6,32 +6,67 @@ import createSlug from "../../lib/createSlug"
 
 export async function getStaticPaths() {
   const postEntries = await getCollection("blog");
-  return postEntries.map((entry) => ({
-    params: { slug: createSlug(entry.data.title, entry.id) },
-    props: { entry },
-  }));
+  const paths = [];
+
+  for (const entry of postEntries) {
+    const titleSlug = createSlug(entry.data.title, entry.id);
+    const customSlug = entry.data.slug;
+
+    if (customSlug && customSlug !== titleSlug) {
+      paths.push({
+        params: { slug: customSlug },
+        props: { entry, redirectTo: null },
+      });
+      paths.push({
+        params: { slug: titleSlug },
+        props: { entry, redirectTo: `/blog/${customSlug}` },
+      });
+    } else {
+      paths.push({
+        params: { slug: titleSlug },
+        props: { entry, redirectTo: null },
+      });
+    }
+  }
+
+  return paths;
 }
 
 interface Props {
   entry: CollectionEntry<"blog">;
+  redirectTo: string | null;
 }
 
-const { entry } = Astro.props;
+const { entry, redirectTo } = Astro.props;
 const post: BlogSchema = entry.data;
-const lang = entry.id.startsWith('en/') ? 'en' : 'es';
+const lang = entry.filePath?.replace(/\\/g, '/').includes('/content/blog/en/') ? 'en' : 'es';
 const { Content } = await render(entry);
 ---
 
-<PostLayout
-  title={post.title}
-  description={post.description}
-  pubDate={post.pubDate}
-  heroImage={post.heroImage}
-  updatedDate={post.updatedDate}
-  badge={post.badge}
-  tags={post.tags}
-  lang={lang}
-  translationUrl={post.translationUrl}
->
-  <Content />
-</PostLayout>
+{redirectTo ? (
+  <html lang={lang}>
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="refresh" content={`0; url=${redirectTo}`} />
+      <link rel="canonical" href={redirectTo} />
+      <title>Redirecting...</title>
+    </head>
+    <body>
+      <p>This page has moved. <a href={redirectTo}>Click here if you are not redirected.</a></p>
+    </body>
+  </html>
+) : (
+  <PostLayout
+    title={post.title}
+    description={post.description}
+    pubDate={post.pubDate}
+    heroImage={post.heroImage}
+    updatedDate={post.updatedDate}
+    badge={post.badge}
+    tags={post.tags}
+    lang={lang}
+    translationUrl={post.translationUrl}
+  >
+    <Content />
+  </PostLayout>
+)}

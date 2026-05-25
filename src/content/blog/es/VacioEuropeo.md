@@ -1,6 +1,6 @@
 ---
 title: "Cuando la ley ya no puede salvarnos"
-slug: "empatia-sintetica-ai-act"
+slug: "la-ley-no-puede-salvarnos"
 description: "Cómo una ley de hace tan solo dos años, que aún no ha entrado totalmente en vigor, ya se ha quedado atrás."
 pubDate: "May 18 2026"
 heroImage: "/Blog/AIActParaguas.png"

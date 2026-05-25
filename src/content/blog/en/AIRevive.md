@@ -1,10 +1,11 @@
 ---
 title: "When AI revives the past: Technological advancement or emotional dilemma?"
+slug: "digital-necromancy"
 description: "The emotional dilemma triggered by the implementation of AI in human interactions, blurring the boundaries of reality and potentially freezing emotional growth."
 pubDate: "Feb 01 2025"
 heroImage: "/Blog/FamiliarAI.jpg"
 tags: ["AI", "Emociones"]
-translationUrl: "/blog/cuando-la-ia-revive-el-pasado-avance-tecnolgico-o-dilema-emocional"
+translationUrl: "/blog/necromancia-digital"
 ---
 
 <p style="text-align: justify;">

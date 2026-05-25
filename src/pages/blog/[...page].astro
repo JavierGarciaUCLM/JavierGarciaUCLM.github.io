@@ -5,7 +5,8 @@ import { getCollection } from "astro:content";
 import createSlug from "../../lib/createSlug"
 
 export async function getStaticPaths({ paginate }) {
-  const posts = await getCollection("blog", ({ id }) => !id.startsWith('en/'));
+  const posts = await getCollection("blog", ({ filePath }) =>
+    !filePath?.replace(/\\/g, '/').includes('/content/blog/en/'));
   posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   return paginate(posts, { pageSize: 10 });
 }
@@ -14,15 +15,19 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout title="Blog" sideBarActiveItemID="blog">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Blog</div>
+  <div class="mb-5 flex justify-between items-center">
+    <div class="text-3xl font-bold">Blog</div>
+    <a href="/blog/en/" class="flex items-center gap-2 text-sm px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-300 hover:shadow-lg transition-shadow whitespace-nowrap">
+      <img src="/language/GB.svg" alt="UK flag" class="w-5 h-5" />
+      <span>Read in English</span>
+    </a>
   </div>
 
   {
     page.data.length === 0 ? (
       <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
-        <p class="font-bold">Sorry!</p>
-        <p>There are no blog posts to show at the moment. Check back later!</p>
+        <p class="font-bold">¡Vaya!</p>
+        <p>No hay posts por el momento. ¡Vuelve pronto!</p>
       </div>
     ) : (
       <ul>
@@ -48,7 +53,6 @@ const { page } = Astro.props;
     {
       page.url.prev ? (
         <a href={page.url.prev} class="btn btn-ghost my-10 mx-5">
-          {" "}
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8"
             xmlns="http://www.w3.org/2000/svg"
@@ -57,8 +61,8 @@ const { page } = Astro.props;
             viewBox="0 0 24 24"
           >
             <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
-          </svg>{" "}
-          Recent posts
+          </svg>
+          Posts recientes
         </a>
       ) : (
         <div />
@@ -67,7 +71,7 @@ const { page } = Astro.props;
     {
       page.url.next ? (
         <a href={page.url.next} class="btn btn-ghost my-10 mx-5">
-          Older Posts{" "}
+          Posts anteriores
           <svg
             class="h-6 w-6 fill-current md:h-8 md:w-8"
             xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +79,6 @@ const { page } = Astro.props;
             height="24"
             viewBox="0 0 24 24"
           >
-            {" "}
             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
           </svg>
         </a>

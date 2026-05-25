@@ -1,10 +1,11 @@
 ---
 title: "Cuando la IA revive el pasado: ¿Avance tecnológico o dilema emocional?"
+slug: "necromancia-digital"
 description: "El dilema emocional formado por la implementación de la IA en interacciones humanas, nublando los límites de la realidad y potencialmente congelando el crecimiento emocional."
 pubDate: "Feb 01 2025"
 heroImage: "/Blog/FamiliarAI.jpg"
 tags: ["AI", "Emociones"]
-translationUrl: "/blog/when-ai-revives-the-past-technological-advancement-or-emotional-dilemma"
+translationUrl: "/blog/digital-necromancy"
 ---
 
 
