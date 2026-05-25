@@ -17,7 +17,7 @@ canvas {
     font-family: Menlo, Consolas, monospace;
   }
   
-  /* Texto clon en pseudo-elementos para crear el “glitch” */
+  /* Texto clon en pseudo-elementos para crear el glitch */
   .glitch-effect::before,
   .glitch-effect::after {
     content: attr(data-text);

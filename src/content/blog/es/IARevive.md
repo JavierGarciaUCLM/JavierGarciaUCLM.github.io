@@ -7,48 +7,38 @@ tags: ["AI", "Emociones"]
 translationUrl: "/blog/when-ai-revives-the-past-technological-advancement-or-emotional-dilemma"
 ---
 
+
 <p style="text-align: justify;">
-In recent years technology has broken into the realm of human emotions and memory preservation. 
-One of the most widely discussed topics is the use of AI to digitally simulate the presence of deceased loved ones. 
-The integration of machine learning algorithms related to natural language processing mimicking human behaviour, 
-creating an online avatar of our loved people and even us. While technology can be oriented to become a emotion-healer, 
-new aspects related to AI can transform that reaching point into something ghastly.
+En los últimos años, la tecnología ha irrumpido en el ámbito de las emociones humanas y la preservación de la memoria. Uno de los temas más debatidos es el uso de la IA para simular digitalmente la presencia de seres queridos fallecidos. La integración de algoritmos de aprendizaje automático relacionados con el procesamiento del lenguaje natural permite imitar el comportamiento humano, creando un avatar digital de nuestros seres queridos e incluso de nosotros mismos. Aunque la tecnología puede orientarse a convertirse en un sanador emocional, nuevos aspectos relacionados con la IA pueden transformar ese punto de llegada en algo siniestro.
 </p>
 
 <p style="text-align: justify;">
-While such technological advancements hold the promise of offering comfort by easing emotional distress, 
-they also prompt significant concerns. The replication of human presence in digital form may blur the boundaries between 
-life and death, raising complex ethical and psychological questions. As AI continues to evolve, it is imperative to carefully 
-consider its implications on interpersonal relationships and personal growth, ensuring that the pursuit of technological 
-progress does not inadvertently curb natural emotional development.
+Si bien estos avances tecnológicos prometen ofrecer consuelo aliviando el malestar emocional, también plantean preocupaciones significativas. La réplica de la presencia humana en formato digital puede difuminar los límites entre la vida y la muerte, generando complejas cuestiones éticas y psicológicas. A medida que la IA continúa evolucionando, es imperativo considerar cuidadosamente sus implicaciones en las relaciones interpersonales y el crecimiento personal, asegurando que la búsqueda del progreso tecnológico no frene inadvertidamente el desarrollo emocional natural.
 </p>
 
-<blockquote>Technology is merely magic that we have learned to understand.</blockquote>
+<blockquote>La tecnología no es más que magia que hemos aprendido a entender.</blockquote>
 <figcaption>— David Copperfield</figcaption>
 
 <p style="text-align: justify;">
-With the intervention of AI and technology in the management of deceased individuals the new term <strong>digital necromancy</strong>
-has been defined. This term could also refer to the use of Computer-Generated Imagery (CGI), which is not directly related to AI, but 
-is becoming more connected every day. For years, this technique has been applied to deceased famous people such as <a href="https://www.youtube.com/watch?v=BxlPCLRfk8U" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>Dalí</strong></a> or
-<a href="https://www.youtube.com/shorts/jVow2456-uQ" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>Morgan Freeman</strong></a>, but due to the easy access to these technologies, it has taken a step further, allowing people to start using the technology itself to communicate with deceased loved ones.
+Con la intervención de la IA y la tecnología en la gestión de personas fallecidas, se ha acuñado el nuevo término <strong>necromancia digital.</strong> Este término también podría referirse al uso de imágenes generadas por ordenador (CGI), que no está directamente relacionado con la IA pero cada día está más conectado. Durante años, esta técnica se ha aplicado a personas famosas fallecidas como <a href="https://www.youtube.com/watch?v=BxlPCLRfk8U" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>Dalí</strong></a> o
+<a href="https://www.youtube.com/shorts/jVow2456-uQ" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>Morgan Freeman</strong></a>, pero debido al fácil acceso a estas tecnologías, se ha dado un paso más allá, permitiendo que la gente empiece a usar la propia tecnología para comunicarse con seres queridos fallecidos.
 </p>
 
 <p style="text-align: justify;">
-One of the biggest milestones was achieved in 2020, the South Korean network MBC aired the documentary "I Met You," in which a mother, was able to "reunite" with her daughter, who had passed away in 2016 at the age of 7 due to a rare illness.
-In the documentary we can observe several moments in which the mother is fully covered of green screen and then the frame changes into the VR world, where she reunites with her daughter.
+Uno de los mayores hitos se alcanzó en 2020, cuando la cadena surcoreana MBC emitió el documental "I Met You", en el que una madre pudo "reencontrarse" con su hija, fallecida en 2016 a los 7 años debido a una enfermedad rara. En el documental podemos observar varios momentos en los que la madre está completamente cubierta con equipamiento de croma, y después el plano cambia al mundo de realidad virtual, donde se reúne con su hija.
 </p>
 <figure>
   <img src="/Blog/AIMother.jpg" alt="Mother with her digital daughter" title="Mother and digital daughter">
-  <figcaption>Figure 1: Mother with her digital daughter.</figcaption>
+  <figcaption>Figura 1: Madre con su hija digital.</figcaption>
 </figure>
 
 <p style="text-align: justify;">
-Diving deeper into the topic of AI, new ways of reviving our deceased loved ones have been created. Due to the possibility of creating GPTs of OpenAI with our personal data, training new models with all the information of our beloveds, voice, way of thinking, beliefs... Involving this the way that we structure our own way of communication, expressions... Basically creating a perfect copy of the things that make us unique, transforming the popular phrase of 'each person is unique and different' into 'each person is different but replicable'
+Profundizando más en el tema de la IA, se han creado nuevas formas de revivir a nuestros seres queridos fallecidos. Gracias a la posibilidad de crear GPTs personalizados en OpenAI con nuestros datos personales, entrenando nuevos modelos con toda la información de nuestros seres queridos como voz, forma de pensar, creencias... Esto implica la forma en que estructuramos nuestra propia comunicación, expresiones... Básicamente creando una copia perfecta de las cosas que nos hacen únicos, transformando la popular frase "cada persona es única y diferente" en "cada persona es diferente pero replicable".
 </p>
 
 <p style="text-align: justify;">
-In the following blog, this topic is addressed, as a user of the blog replicated his friend using some tweets, books... The user compares this new life trend to an episode of the Netflix series 'Black Mirror'. In the series, the episode titled 
-<a href="https://www.imdb.com/es-es/title/tt2290780/" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>'Be Right Back'</strong></a> shows the life of Martha, a girl who lost her partner, Ash. Eventually, the digital copy of him becomes the new Ash.
+En el siguiente blog se aborda este tema, ya que un usuario replicó a su amigo usando algunos tweets, libros... El usuario compara esta nueva tendencia vital con un episodio de la serie de Netflix Black Mirror. En la serie, el episodio titulado 
+<a href="https://www.imdb.com/es-es/title/tt2290780/" target="_blank" rel="noopener noreferrer" class="text-black-600 underline hover:text-black-800"> <strong>'Be Right Back'</strong></a> muestra la vida de Martha, una chica que perdió a su pareja, Ash. Finalmente, la copia digital de él se convierte en el nuevo Ash.
 </p>
 
 <iframe 
@@ -62,11 +52,11 @@ In the following blog, this topic is addressed, as a user of the blog replicated
 </iframe>
 
 <p style="text-align: justify;">
-As AI continues to evolve, we move closer to a dystopian reality where the only difference between humanity and technology is the fact that we are the original version, the first of many copies that can be created. This will also affect how humans cope with the grief of losing a loved one, potentially leading to significant emotional challenges in the future. As AI advances in replicating our thoughts, behaviors, and even subtle emotional characteristics, we risk entering a reality where individuality and uniqueness lose their value. The concept of being 'one of a kind' could soon be replaced by 'one of many,' raising deep questions about identity, authenticity, and the true essence of being human.
+A medida que la IA continúa evolucionando, nos acercamos a una realidad distópica donde la única diferencia entre la humanidad y la tecnología es el hecho de que somos la versión original, la primera de muchas copias que pueden crearse. Esto también afectará a cómo los seres humanos afrontan el duelo por la pérdida de un ser querido, pudiendo generar importantes desafíos emocionales en el futuro. A medida que la IA avanza en la réplica de nuestros pensamientos, comportamientos e incluso características emocionales sutiles, corremos el riesgo de entrar en una realidad donde la individualidad y la unicidad pierden su valor. El concepto de ser único en su especie podría pronto ser reemplazado por uno de muchos, planteando profundas cuestiones sobre identidad, autenticidad y la verdadera esencia de ser humano.
 </p>
 
 <p style="text-align: justify;">
-As AI progresses and transforms our understanding of life and death, we must consider: <strong>are we prepared for a future where death no longer marks a final boundary but becomes the beginning of digital preservation?</strong> And what price will our humanity pay for this shift?
+A medida que la IA avanza y transforma nuestra comprensión de la vida y la muerte, debemos plantearnos: <strong>¿estamos preparados para un futuro en el que la muerte ya no marque un límite definitivo, sino que se convierta en el inicio de la preservación digital?</strong> ¿Y qué precio pagará nuestra humanidad por este cambio?
 </p>
 
 <section 
@@ -76,7 +66,7 @@ As AI progresses and transforms our understanding of life and death, we must con
     id="share-link-button" 
     class="px-3 py-2 text-sm cursor-pointer"
   >
-    🔗 Liked it? Share with friends!
+    🔗 ¿Te ha gustado? ¡Compártelo!
   </button>
 </section>
 
