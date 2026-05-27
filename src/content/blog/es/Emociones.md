@@ -3,7 +3,7 @@ title: "Emocionados sin sentir. Sentir sin vivir"
 description: "Cada vez son más los aspectos humanos que quedan reflejados en el comportamiento de los agentes que comparten con nosotros el día a día. ¿Dónde nos encontramos?"
 pubDate: "Apr 20 2026"
 heroImage: "/Blog/Emociones.png"
-tags: ["AI", "Emociones"]
+tags: ["IA", "Emociones"]
 ---
 
 <p style="text-align: justify;">

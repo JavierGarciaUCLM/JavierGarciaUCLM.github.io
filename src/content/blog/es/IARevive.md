@@ -4,7 +4,7 @@ slug: "necromancia-digital"
 description: "El dilema emocional formado por la implementación de la IA en interacciones humanas, nublando los límites de la realidad y potencialmente congelando el crecimiento emocional."
 pubDate: "Feb 01 2025"
 heroImage: "/Blog/FamiliarAI.jpg"
-tags: ["AI", "Emociones"]
+tags: ["IA", "Emociones"]
 translationUrl: "/blog/digital-necromancy"
 ---
 

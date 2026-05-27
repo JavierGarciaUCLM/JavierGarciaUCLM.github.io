@@ -4,11 +4,12 @@ slug: "la-ley-no-puede-salvarnos"
 description: "Cómo una ley de hace tan solo dos años, que aún no ha entrado totalmente en vigor, ya se ha quedado atrás."
 pubDate: "May 18 2026"
 heroImage: "/Blog/AIActParaguas.png"
-tags: ["AI", "Unión Europea", "Legal"]
+tags: ["IA", "Unión Europea", "Legal"]
+translationUrl: "/blog/law-can-not-help-us"
 ---
 
 <p style="text-align: justify;">
-La Unión Europea nos está dejando fuera del paraguas de su protección legal
+La Unión Europea nos está dejando fuera del paraguas de su protección legal.
 </p>
 
 <p style="text-align: justify;">

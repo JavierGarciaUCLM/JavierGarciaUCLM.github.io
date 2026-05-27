@@ -4,7 +4,7 @@ slug: "empatia-sintetica-planteamiento"
 description: "Los LLM y modelos multimodales han permitido crear IA que aparenta empatía, lo que abre nuevos retos técnicos y también éticos, morales y legales."
 pubDate: "Jan 26 2026"
 heroImage: "/Blog/EmpatiaSinteticaIA.png"
-tags: ["AI", "Empatía Sintética", "Ética"]
+tags: ["IA", "Empatía Sintética", "Ética"]
 translationUrl: "/blog/synthetic-empathy-in-generative-ai-introduction"
 ---
 
