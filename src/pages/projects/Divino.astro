@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LanguageToggle from "../../components/LanguageToggle.astro";
+---
+
+<BaseLayout title="Divino, The Map of Spanish Wine" sideBarActiveItemID="projects">
+  <LanguageToggle lang="en" translationUrl="/projects/es/Divino" />
+  <div class="w-full max-w-4xl px-6 py-8 mx-auto">
+    <h1 class="text-4xl font-bold mb-2">Divino</h1>
+    <p class="text-gray-500 text-md mb-4">The map of Spanish wine</p>
+
+    <div class="text-lg leading-relaxed space-y-4">
+      <p>
+        <strong>Divino</strong> is an interactive map to discover Spanish wineries. The idea came from a
+        frustration, in which in the wine world you always see the same four names and the same denominations, while
+        hundreds of small wineries that deserve attention remain invisible. In Divino every winery takes up the same
+        space on the map, regardless of its size, and whoever discovers one lands directly on its own page.
+        It is, above all, a project about giving visibility to those who normally do not have it. What started
+        as a map with a few pins ended up being an engineering exercise from start to finish, and what follows
+        is how it is built and why I made each decision.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Architecture: Next.js 16 rendered at the edge</h2>
+      <p>
+        The application is <strong>Next.js 16</strong> with <strong>React 19</strong> (Server Components and server-side
+        rendering), but it does not run on a traditional always-on Node server. It is compiled with the
+        <strong>OpenNext</strong> adapter and deployed on <strong>Cloudflare Workers</strong>, running at the edge,
+        close to the user. I chose this model over a classic Node backend for three reasons: it scales to zero (I
+        do not pay for an idle machine), latency drops by being served from the nearest node, and it forces
+        more disciplined code. In the edge runtime you do not have the
+        Node standard library, only standard web APIs. That is why, for example, the cryptography in the project uses
+        <strong>Web Crypto</strong> (<code>crypto.subtle</code>) instead of <code>node:crypto</code>. Working with
+        that constraint is the closest I have come to touching the real trade-offs of serverless computing
+        instead of just reading about them.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Data: SQLite at the edge with Cloudflare D1</h2>
+      <p>
+        The database of wineries and denominations is <strong>Cloudflare D1</strong>, which is managed SQLite
+        co-located with the Workers. A traditional managed Postgres was intentionally discarded, since for a read-dominated
+        workload and a modest schema, an always-on Postgres is overengineering the problem and adds another piece
+        of infrastructure to maintain. D1 lives on the same platform as everything else, there is no
+        server to administer and queries use prepared and parameterised statements
+        (<code>prepare().bind()</code>), which also closes the door to SQL injection by design. Real-world data is a mess, for example,
+        the same region written five different ways,
+        inconsistent labels, duplicates..., so I built a <strong>normalisation and integrity</strong> process
+        (cleaning, deduplication and reconciliation against a single source of truth) before trusting anything on the
+        map. Treating data quality is key to management.
+      </p>
+
+      <figure style="text-align: center;">
+        <img src="/DivinoWebAdmin.png" alt="Divino admin panel" title="Divino admin panel" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <figcaption>Figure 1: <em>Divino</em> admin panel.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-semibold mt-6">The map: vector tiles over WebGL</h2>
+      <p>
+        The map combines <strong>Leaflet</strong> (for the interaction layer, markers and controls) with
+        <strong>MapLibre GL</strong> as a <strong>vector tile</strong> renderer over WebGL, without rasterising any
+        image. With vectors the map stays sharp at any zoom or
+        pixel density, restyling happens on the client from a single style file, and zoom and
+        panning are smooth because drawing is handled by the GPU. The tiles are served by <strong>OpenFreeMap</strong>
+        (OpenStreetMap data). I ruled out paid map providers like
+        Mapbox or Stadia to avoid depending on an API key with limits and usage-based billing. Instead I start from
+        OpenFreeMap's Positron style and restyle it entirely in code to nail the Alidade Smooth
+        look I wanted, palette, administrative boundaries, labels in Spanish, self-hosted typography...
+      </p>
+
+      <figure style="text-align: center;">
+        <img src="/DivinoWeb.png" alt="Divino, the map of Spanish wine" title="Divino, the map of Spanish wine" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <figcaption>Figure 2: <em>Divino</em>, interactive map of Spanish wineries.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-semibold mt-6">Real denomination boundaries</h2>
+      <p>
+        On top of the base map I draw the <strong>real boundaries of each denomination of origin</strong> as
+        geospatial polygons (GeoJSON), not as approximate circles. The level of detail adapts to zoom so that
+        coasts and borders stay sharp up close and fade gracefully when zooming out. The key here
+        is finding the balance between quality and resource cost. The polygons had to be simplified without destroying
+        their shape and the
+        payloads had to stay small to avoid penalising startup. I had never touched geospatial data before
+        (projections, geometry simplification, the balance between fidelity and weight), solving them as
+        concrete problems.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Transactional email and deliverability</h2>
+      <p>
+        Divino also communicates with wineries, which pulled me down the rabbit hole of getting email to
+        <em>actually arrive</em>. Sending a message programmatically is easy, getting it past spam filters and
+        into the inbox is a small systems problem in its own right. Sending is done with
+        <strong>Resend</strong>, configuring the full authentication stack on a custom domain,
+        <strong>SPF, DKIM and DMARC</strong>, and dealing practically with
+        how DNS propagation and negative caching work (the same record can be visible on one
+        resolver and invisible on another for a while). On the app side, delivery status arrives via
+        <strong>signed webhooks</strong>. Before trusting an event I verify its
+        <strong>HMAC-SHA256 signature with Web Crypto</strong>, reject timestamps outside tolerance to prevent
+        <em>replays</em> and compare the signature in constant time.
+      </p>
+
+      <figure style="text-align: center;">
+        <img src="/DivinoWebMail.png" alt="Divino internal mail system" title="Divino internal mail system" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <figcaption>Figure 3: <em>Divino</em> internal mail system.</figcaption>
+      </figure>
+
+
+      <h2 class="text-2xl font-semibold mt-6">Front-end: built for everyone, mobile-first</h2>
+      <p>
+        The interface is built with <strong>React 19</strong> and <strong>Tailwind CSS 4</strong>, with a
+        <strong>responsive and mobile-first</strong> approach. The filtering, map interactions and design had to
+        feel native on mobile, not forced adaptations, so the design had to be planned almost from scratch too.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">What I take away</h2>
+      <p>
+        Divino is the project where all the theory from the degree comes together. Edge computing, serverless
+        databases, geospatial rendering over WebGL, data modelling and cleaning, DNS and email protocols,
+        applied cryptography, front-end performance… I take away a way of thinking about building software from
+        start to finish.
+      </p>
+
+      <p>
+        Now, to keep maintaining and expanding the website's features. I will add an embed of the site
+        here later, when I expand the development for third-party use. In the meantime, it can be seen at
+        <a
+          href="https://mapa.wine"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary underline underline-offset-2 hover:opacity-80"
+        >mapa.wine</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

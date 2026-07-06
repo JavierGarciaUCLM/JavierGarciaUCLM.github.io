@@ -1,0 +1,135 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import LanguageToggle from "../../../components/LanguageToggle.astro";
+---
+
+<BaseLayout title="Divino, el mapa del vino español" sideBarActiveItemID="projects">
+  <LanguageToggle lang="es" translationUrl="/projects/Divino" />
+  <div class="w-full max-w-4xl px-6 py-8 mx-auto">
+    <!-- Título y subtítulo -->
+    <h1 class="text-4xl font-bold mb-2">Divino</h1>
+    <p class="text-gray-500 text-md mb-4">El mapa del vino español</p>
+
+    <!-- Qué es el proyecto -->
+    <div class="text-lg leading-relaxed space-y-4">
+      <p>
+        <strong>Divino</strong> es un mapa interactivo para descubrir bodegas españolas. La idea nació de una
+        frustración, en la cual en el mundo del vino siempre ves los mismos cuatro nombres y las mismas denominaciones, mientras
+        cientos de bodegas pequeñas que merecen la pena se quedan invisibles. En Divino cada bodega ocupa el mismo
+        espacio en el mapa, sin importar su tamaño, y quien descubre una aterriza directamente en su propia página.
+        Es, por encima de todo, un proyecto sobre dar visibilidad a quienes normalmente no la tienen. Lo que empezó
+        como un mapa con unas chinchetas acabó siendo un ejercicio de ingeniería de principio a fin, y lo que sigue
+        es cómo está construido y por qué tomé cada decisión.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Arquitectura: Next.js 16 renderizado en el edge</h2>
+      <p>
+        La aplicación es <strong>Next.js 16</strong> con <strong>React 19</strong> (Server Components y renderizado
+        en servidor), pero no corre en un servidor Node tradicional siempre encendido. Se compila con el adaptador
+        <strong>OpenNext</strong> y se despliega sobre <strong>Cloudflare Workers</strong>, ejecutándose en el edge,
+        cerca del usuario. Elegí este modelo frente a un backend Node clásico por tres motivos: escala a cero (no
+        pago por una máquina ociosa), la latencia baja al servirse desde el nodo más cercano, y me obliga a un
+        código más disciplinado. En el runtime del edge no se tiene la
+        librería estándar de Node, solo APIs web estándar. Por eso, por ejemplo, la criptografía del proyecto usa
+        <strong>Web Crypto</strong> (<code>crypto.subtle</code>) en lugar de <code>node:crypto</code>. Trabajar con
+        esa restricción es lo más cerca que he estado de tocar los compromisos reales de la computación serverless
+        en vez de solo leer sobre ellos.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Datos: SQLite en el edge con Cloudflare D1</h2>
+      <p>
+        La base de datos de bodegas y denominaciones es <strong>Cloudflare D1</strong>, que es SQLite gestionado y
+        co-localizado con los Workers. Se descartó un Postgres gestionado tradicional a propósito, ya que para una carga
+        dominada por lecturas y un esquema modesto, un Postgres siempre encendido es sobredimensionar el problema y
+        añade otra pieza de infraestructura que mantener. D1 vive en la misma plataforma que el resto, no hay
+        servidor que administrar y las consultas van con sentencias preparadas y parametrizadas
+        (<code>prepare().bind()</code>), lo que además cierra la puerta a inyección SQL por diseño. Los datos del mundo real son un caos, como por ejemplo,
+        la misma región escrita de cinco formas,
+        etiquetas inconsistentes, duplicados..., así que construí un proceso de <strong>normalización e integridad</strong>
+        (limpieza, deduplicado y reconciliación contra una única fuente de verdad) antes de fiarme de nada en el
+        mapa. Tratar la calidad del dato es clave para la gestión.
+      </p>
+
+      <figure style="text-align: center;">
+        <img src="/DivinoWebAdmin.png" alt="Panel de administración de Divino" title="Panel de administración de Divino" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <figcaption>Figura 1: Panel de administración de <em>Divino</em>.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-semibold mt-6">El mapa: teselas vectoriales sobre WebGL</h2>
+      <p>
+        El mapa combina <strong>Leaflet</strong> (para la capa de interacción, marcadores y controles) con
+        <strong>MapLibre GL</strong> como renderizador de <strong>teselas vectoriales</strong> sobre WebGL, sin rasterizar ningun
+        imagen. Con vectores el mapa se mantiene nítido a cualquier zoom o
+        densidad de píxeles, el reestilizado ocurre en el cliente sobre un único fichero de estilo, y el zoom y el
+        paneo son fluidos porque el dibujado lo hace la GPU. Las teselas las sirve <strong>OpenFreeMap</strong>
+        (datos de OpenStreetMap). Descarté los proveedores de mapas de pago tipo
+        Mapbox o Stadia para no depender de una API key con límites y facturación por uso. En su lugar parto del
+        estilo Positron de OpenFreeMap y lo reestilizo por completo en código para clavar el look Alidade Smooth
+        que quería, paleta, límites administrativos, etiquetas en español, tipografía servida <em>self-hosted</em>...
+      </p>
+
+      <figure style="text-align: center;">
+        <img src="/DivinoWeb.png" alt="Divino, el mapa del vino español" title="Divino, el mapa del vino español" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <figcaption>Figura 2: <em>Divino</em>, mapa interactivo de bodegas españolas.</figcaption>
+      </figure>
+
+      <h2 class="text-2xl font-semibold mt-6">Límites reales de las denominaciones</h2>
+      <p>
+        Sobre el mapa base dibujo las <strong>fronteras reales de cada denominación de origen</strong> como
+        polígonos geoespaciales (GeoJSON), no como círculos aproximados. El nivel de detalle se adapta al zoom para
+        que costas y fronteras se mantengan nítidas de cerca y se difuminen con elegancia al alejarse. La clave aquí
+        está en encontrar el equilibrio entre calidad y coste de recursos. Hubo que simplificar los polígonos sin destrozar 
+        su forma y mantener las
+        cargas pequeñas para no penalizar el arranque. Nunca antes toqué datos geoespaciales
+        (proyecciones, simplificación de geometrías, equilibrio entre fidelidad y peso) resolviéndolos como
+        problemas concretos.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Correo transaccional y entregabilidad</h2>
+      <p>
+        Divino también se comunica con las bodegas, lo que me metió en la madriguera de conseguir que el correo
+        <em>realmente llegue</em>. Enviar un mensaje de forma programática es fácil, que pase los filtros de spam y
+        llegue hasta la bandeja de entrada es en sí un pequeño problema de sistemas. El envío se hace con
+        <strong>Resend</strong>, configurando la pila de
+        autenticación completa sobre un dominio propio, <strong>SPF, DKIM y DMARC</strong>, y tratando de forma práctica
+        cómo funciona la propagación de DNS y el caché negativo (el mismo registro puede ser visible en un
+        resolver e invisible en otro durante un rato). En el lado de la app, el estado de entrega llega por
+        <strong>webhooks firmados</strong>. Antes de fiarme de un evento verifico su firma
+        <strong>HMAC-SHA256 con Web Crypto</strong>, rechazo timestamps fuera de tolerancia para evitar
+        <em>replays</em> y comparo la firma en tiempo constante.
+      </p>
+
+      <figure style="text-align: center;">
+        <img src="/DivinoWebMail.png" alt="Sistema de envío de correo de Divino" title="Sistema de envío de correo de Divino" style="max-width: 100%; height: auto; margin: 0 auto; display: block;">
+        <figcaption>Figura 3: Sistema de envío de correo interno de <em>Divino</em>.</figcaption>
+      </figure>
+
+
+      <h2 class="text-2xl font-semibold mt-6">Front-end: hecho para todos, mobile-first</h2>
+      <p>
+        La interfaz está construida con <strong>React 19</strong> y <strong>Tailwind CSS 4</strong>, con un enfoque
+        <strong>responsive y mobile-first</strong>. El filtrado, las interacciones del mapa y el diseño tenían que
+        sentirse nativos en un móvil, no adaptados a la fuerza, así que tocó planear también este diseño casi que desde 0.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-6">Lo que me llevo</h2>
+      <p>
+        Divino es el proyecto donde se plasma toda la teoría de la carrera. Computación en el edge, bases de
+        datos serverless, renderizado geoespacial sobre WebGL, modelado y limpieza de datos, DNS y protocolos de
+        correo, criptografía aplicada, rendimiento en el front-end… Me llevo  una forma de pensar sobre construir software de 
+        principio a fin.
+      </p>
+
+      <p>
+        Ahora, a seguir manteniendo y ampliando funcionalidades de la web. Añadiré una incrustación de la web
+        aquí más adelante, cuando amplíe el desarrollo para uso en terceros. De mientras, se puede ver en
+        <a
+          href="https://mapa.wine"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-primary underline underline-offset-2 hover:opacity-80"
+        >mapa.wine</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

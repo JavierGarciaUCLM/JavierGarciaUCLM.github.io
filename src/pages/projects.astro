@@ -5,12 +5,24 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 <BaseLayout title = "Projects" sideBarActiveItemID="projects">
   
-  <div>
-    <div class="text-3xl w-full font-bold mb-5">Projects {"</>"} </div>
+  <div class="mb-5 flex justify-between items-center">
+    <div class="text-3xl font-bold">Projects {"</>"}</div>
+    <a href="/projects/es" class="flex items-center gap-2 text-sm px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-300 hover:shadow-lg transition-shadow whitespace-nowrap">
+      <img src="/language/SP.svg" alt="Bandera de España" class="w-5 h-5" />
+      <span>Leer en español</span>
+    </a>
   </div>
   <HorizontalCard
+    title="Divino"
+    img="/Divino.png"
+    desc="Divino is an interactive map built to discover Spanish wineries, giving visibility to the ones that usually don't get any."
+    url="/projects/Divino"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
     title="Minecraft Bot"
-    img="/MinecraftBot.jpg"
+    img="/MinecraftBot.png"
     desc="A constantly active chat bot that seamlessly connects Minecraft and Discord, enabling real-time communication and community engagement."
     url="/projects/MinecraftBot"
     badge="NEW"
@@ -18,15 +30,15 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <div class="divider my-0"></div>
   <HorizontalCard
     title="JobAlba"
-    img="/JobAlba.jpg"
+    img="/JobAlba.png"
     desc="JobAlba is a project specifically designed for the UCLM Emprende I competition, achieving fifth place in the engineering and architecture category."
     url="/projects/JobAlba"
-    badge="NEW"
+    badge=""
   />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="AppForDevices"
-    img="/AppForDevices.jpg"
+    img="/AppForDevices.png"
     desc="AppForDevices is a project that has been deployed through the Software Engineering II subject."
     url="/projects/AppForDevices"
     badge=""
@@ -34,15 +46,15 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Logical Network Design Tool"
-    img="/LogicalDesign.jpg"
+    img="/LogicalDesign.png"
     desc="A project aimed at assisting undergraduate Computer Science students with networking-related subjects."
     url="/projects/LogicalDesign"
-    badge="N"
+    badge=""
   />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Flappy Bird"
-    img="/FlappyBird.jpg"
+    img="/FlappyBird.png"
     desc="Flappy Bird was one of the first programming projects I worked on."
     url="/projects/FlappyBird"
     badge=""
@@ -50,7 +62,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Pong"
-    img="/Pong.jpg"
+    img="/Pong.png"
     desc="Common pong. First implementation of simple AI in Python."
     url="/projects/FootballPong"
     badge=""
@@ -58,7 +70,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Future project..."
-    img="/Loading.jpg"
+    img="/Loading.png"
     desc="Working in new projects..."
     url="#"
     badge="UPCOMING"

@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../../components/HorizontalCard.astro";
+---
+
+<BaseLayout title="Proyectos" sideBarActiveItemID="projects">
+
+  <div class="mb-5 flex justify-between items-center">
+    <div class="text-3xl font-bold">Proyectos {"</>"}</div>
+    <a href="/projects" class="flex items-center gap-2 text-sm px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-300 hover:shadow-lg transition-shadow whitespace-nowrap">
+      <img src="/language/GB.svg" alt="UK flag" class="w-5 h-5" />
+      <span>Read in English</span>
+    </a>
+  </div>
+
+  <HorizontalCard
+    title="Divino"
+    img="/Divino.png"
+    desc="Divino es un mapa interactivo para descubrir bodegas españolas, dando visibilidad a las que normalmente no la tienen."
+    url="/projects/es/Divino"
+    badge="NUEVO"
+  />
+  <div class="divider my-0"></div>
+</BaseLayout>
