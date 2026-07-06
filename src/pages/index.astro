@@ -4,7 +4,9 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 import createSlug from "../lib/createSlug";
 
-const posts = (await getCollection("blog", ({ id }) => !id.startsWith('en/'))).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection("blog", ({ filePath }) =>
+  filePath?.replace(/\\/g, '/').includes('/content/blog/en/') ?? false
+)).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
 ---
@@ -70,6 +72,14 @@ const last_posts = posts.slice(0, 3);
   </div>
 
   <HorizontalCard
+    title="Divino"
+    img="/Divino.png"
+    desc="Divino is an interactive map built to discover Spanish wineries, giving visibility to the ones that usually don't get any."
+    url="/projects/Divino"
+    badge="NEW"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
   title="Minecraft Talk Bot"
   img="/MinecraftBot.png"
   desc="A constantly active chat bot that seamlessly connects Minecraft and Discord, enabling real-time communication and community engagement."
@@ -79,17 +89,9 @@ const last_posts = posts.slice(0, 3);
   <div class="divider my-0"></div>
   <HorizontalCard
     title="JobAlba"
-    img="/JobAlba.jpg"
+    img="/JobAlba.png"
     desc="JobAlba is a project specifically designed for the UCLM Emprende I competition, achieving fifth place in the engineering and architecture category."
     url="/projects/JobAlba"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="AppForDevices"
-    img="/AppForDevices.png"
-    desc="AppForDevices is a project that has been deployed through the Software Engineering II subject."
-    url="/projects/AppForDevices"
     badge="NEW"
   />
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
