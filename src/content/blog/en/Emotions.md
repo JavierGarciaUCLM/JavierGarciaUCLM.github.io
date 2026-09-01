@@ -4,7 +4,7 @@ description: "More and more human aspects are reflected in the behaviour of the 
 pubDate: "Apr 20 2026"
 heroImage: "/Blog/Emociones.png"
 tags: ["AI", "Emotions"]
-translationUrl: "/blog/emocionados-sin-sentir-sentir-sin-vivir" blog/emotional-without-feeling-feeling-without-living
+translationUrl: "/blog/emocionados-sin-sentir-sentir-sin-vivir"
 ---
 
 <p style="text-align: justify;">
