@@ -4,6 +4,7 @@ description: "La delegación de nuestras decisiones, tanto individuales como de 
 pubDate: "Feb 12 2026"
 heroImage: "/Blog/Paternalismo.png"
 tags: ["IA", "Empatía Sintética", "Ética"]
+translationUrl: "/blog/paternalism-in-the-algorithm"  
 ---
 <p style="text-align: justify;">
 No hay día en el que no estemos rodeados de algoritmos que intentan orientar nuestras elecciones. Lo vemos, por ejemplo, en las redes sociales con sistemas que se alimentan de nuestra interacción, a veces casi imperceptible, y ajustan lo que se nos muestra para inclinar la balanza hacia ciertos contenidos. En ese contexto, nuestras decisiones dejan de ser completamente nuestras, porque se toman dentro de un entorno diseñado para empujarnos en una dirección.

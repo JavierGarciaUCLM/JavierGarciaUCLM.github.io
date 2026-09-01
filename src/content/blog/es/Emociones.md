@@ -4,6 +4,7 @@ description: "Cada vez son más los aspectos humanos que quedan reflejados en el
 pubDate: "Apr 20 2026"
 heroImage: "/Blog/Emociones.png"
 tags: ["IA", "Emociones"]
+translationUrl: "/blog/emotional-without-feeling-feeling-without-living" 
 ---
 
 <p style="text-align: justify;">
