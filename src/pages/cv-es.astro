@@ -3,90 +3,123 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="CV en Español | Javier García" sideBarActiveItemID="cv" lang="es">
+<BaseLayout title="CV en español | Javier García" sideBarActiveItemID="cv">
   <Fragment slot="head">
     <link rel="alternate" hreflang="en" href={new URL('/cv', Astro.site)} />
     <link rel="alternate" hreflang="es" href={new URL('/cv-es', Astro.site)} />
     <link rel="alternate" hreflang="x-default" href={new URL('/cv', Astro.site)} />
   </Fragment>
+
   <div class="relative">
-  <div class="absolute top-1 right-1 z-10 flex gap-3">
-    <section
-      class="
-        inline-block px-3 py-2
-        bg-base-100
-        rounded-lg
-        shadow-md
-        border border-base-400
-        hover:shadow-lg
-        transition-shadow
-      "
-    >
-      <a 
-        href="/cv"
-        class="flex items-center gap-2 text-sm cursor-pointer"
-        
-      >
-        <img src="/language/GB.svg" alt="Bandera de Reino Unido" class="w-5 h-5" />
-        <span>Traducir al inglés</span>
-      </a>
-    </section>
+    <div class="absolute top-1 right-1 z-10 flex gap-3">
+      <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg transition-shadow">
+        <a href="/cv" class="flex items-center gap-2 text-sm cursor-pointer">
+          <img src="/language/GB.svg" alt="English flag" class="w-5 h-5" />
+          <span>Traducir al inglés</span>
+        </a>
+      </section>
+    </div>
   </div>
-</div>
+
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Perfil</div>
   </div>
 
-  <div class="mb-10 text-justify">
-    Graduado en Ingeniería Informática e investigador de los impactos sociales de la IA generativa. Actualmente realizo una investigación empírica independiente 
-    sobre la complacencia (sycophancy) en LLMs mediante comparación entre modelos y redacto un trabajo de fin de grado sobre la empatía sintética. Investigo el apego 
-    parasocial, el paternalismo algorítmico y la erosión de la toma de decisiones autónoma en la interacción humano‑IA. Experiencia profesional en el diseño de arquitecturas 
-    de APIs listas para producción e integraciones entre múltiples sistemas (MuleSoft/CloudHub 2.0, Salesforce).
-    </div>
+  <div class="mb-4 text-justify">
+    Estudié Ingeniería Informática en la UCLM y la UPV/EHU, y ahora estoy haciendo un máster en Filosofía en la UOC. Mi
+    TFG trató sobre la empatía sintética en la IA generativa. Desde entonces llevo un estudio propio sobre sycophancy en
+    Claude, GPT-4o y Llama 3.3: con qué frecuencia abandonan una respuesta correcta cuando el usuario les lleva la
+    contraria. En mi TFM quiero mirar dentro de los modelos y comprobar si siguen representando la respuesta correcta
+    cuando ceden. Trabajo como desarrollador MuleSoft y Salesforce en Teknei.
+  </div>
+
+  <div class="mb-10">
+    <span class="font-semibold">Busco un doctorado en interpretabilidad y veracidad de LLM.</span>
+    <a href="mailto:garter.javier@gmail.com" class="underline ml-1">garter.javier@gmail.com</a>
+  </div>
+
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Estudios</div>
+    <div class="text-3xl w-full font-bold">Investigación</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Grado en Ingeniería Informática"
-      subtitle="Desde 2025 hasta 2026 en Euskal Herriko Unibertsitatea, San Sebastián, España. SICUE"
-      description="Enfocado en los sistemas web, tecnologías basadas en el conocimiento y en la seguridad, el rendimiento y la disponibilidad de infraestructuras"
+      title="TFM: Conocimiento latente y sycophancy en los LLM"
+      subtitle="En curso · Universitat Oberta de Catalunya (UOC)"
+    >
+      Investiga si los modelos de lenguaje siguen representando internamente la respuesta correcta cuando ceden ante la
+      presión del usuario. Combina un análisis filosófico de la mentira y el conocimiento con el sondeo (probing) de las
+      representaciones internas de verdad en modelos de pesos abiertos.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Estudio empírico de sycophancy en LLM"
+      subtitle="En curso · Claude Sonnet, GPT-4o, Llama 3.3 70B"
+    >
+      Diseño factorial 3×3 (tres modelos, tres niveles de presión de refutación), 270 interacciones anotadas y pipeline
+      completo de recogida, anotación y análisis estadístico (kappa de Cohen). Resultados preliminares: tasas de
+      capitulación de hasta el 26,7 % en GPT-4o frente a ~4,4 % en los otros modelos. Redacción IMRyD orientada a
+      publicación científica.
+    </TimeLineElement>
+    <TimeLineElement
+      title="TFG: Synthetic Empathy in Generative AI: Ethics and Regulation"
+      subtitle="Abril 2025 – julio 2026 · UCLM / UPV-EHU"
+    >
+      Análisis técnico de la arquitectura Transformer (embeddings, self-attention, RLHF) como mecanismo que produce
+      respuestas percibidas como empáticas sin experiencia subjetiva subyacente. Taxonomía de patrones de daño (apego
+      parasocial, paternalismo algorítmico, erosión de la autonomía decisional) y seis criterios de diseño para IA
+      emocionalmente interactiva.
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Educación</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Máster Universitario en Filosofía para los Retos Contemporáneos"
+      subtitle="Desde octubre de 2026 en la Universitat Oberta de Catalunya (UOC)"
+      description="Itinerario de retos tecnocientíficos"
     />
     <TimeLineElement
-      title="Grado en Ingeniería Informática, modalidad bilingüe y con mención en Tecnologías de la Información (TIC)"
-      subtitle="Desde 2022 hasta 2025 en la Universidad de Castilla-La Mancha, Albacete, España"
-      description="Especialización centrada en la infraestructura de sistemas tecnológicos, ciberseguridad, redes y soluciones de software"
-    />
-    <TimeLineElement
-      title="Bachillerato"
-      subtitle="Desde 2020 hasta 2022 en el Instituto Ramón y Cajal, Albacete, España"
+      title="Grado en Ingeniería Informática, mención en Tecnologías de la Información (programa bilingüe)"
+      subtitle="2022 – 2026 en la Universidad de Castilla-La Mancha (Albacete) y la Euskal Herriko Unibertsitatea (San Sebastián, movilidad SICUE)"
+      description="Infraestructuras TI, ciberseguridad, sistemas web y tecnologías basadas en el conocimiento"
     />
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experiencia Profesional</div>
+    <div class="text-3xl w-full font-bold">Experiencia</div>
   </div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Desarrollador Junior de Salesforce"
-      subtitle="Desde septiembre, 2025 en Teknei, San Sebastián, España"
+      title="Desarrollador MuleSoft y Salesforce"
+      subtitle="Desde junio de 2025 en Teknei, San Sebastián, España"
     >
-    Desarrollo soluciones en Salesforce orientadas a integraciones y automatización, conectando la plataforma con sistemas externos 
-    mediante MuleSoft (Anypoint Platform) y servicios API. Participo en el diseño e implementación de integraciones API-led, 
-    definición de contratos, mapeos y reglas de negocio, asegurando trazabilidad y estabilidad de extremo a extremo.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Desarrollador Junior de Salesforce"
-      subtitle="Desde junio a septiembre de 2025 en Teknei, Albacete, España"
-    >
-    Desarrollo e implementación de soluciones personalizadas en Salesforce con Apex, creación y optimización de código.
-Configuración e integración con Amazon Connect y Service Cloud Voice, incluyendo IVR, enrutamiento dinámico y uso de AWS Lambda para automatización de procesos.
-Formación y certificación en el plan Amazon Connect Communications Specialist Learning & Badge.
+      Diseño e implementación de una arquitectura de integración multiconector sobre CloudHub 2.0 que conecta Salesforce
+      con ERP (Navision, OData V4), plataformas de RR. HH., ITSM (JIRA Assets) y APIs de telemetría industrial. Desarrollo
+      de un proveedor OAuth2, API Gateways, gestión de errores estandarizada y estándares de desarrollo MuleSoft para el
+      equipo.
     </TimeLineElement>
   </div>
 
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Premios y proyectos</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Gipuzkoa AI Hackathon, Urban Challenge · Top 3 de 60 equipos"
+      subtitle="2026 · Equipo GIE Labs"
+      description="Agente de datos con IA para el análisis de accidentes de carretera."
+    />
+    <TimeLineElement
+      title="DIVINO / mapa.wine"
+      subtitle="Desde 2025 · Cofundador"
+      description="Directorio geolocalizado de ~3.943 bodegas españolas: pipeline de scraping, fuzzy-matching y geocodificación. Next.js, Turso, Cloudflare."
+    />
+  </div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Certificaciones</div>
@@ -94,160 +127,112 @@ Formación y certificación en el plan Amazon Connect Communications Specialist 
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="https://www.uclm.es/estudios/propios/curso-universitario-formacion-avanzada-herramientas-dig-aplicadas-transporte-logistica" target="_blank">
-        Curso Avanzado en Herramientas Digitales Aplicadas al Transporte y la Logística - UCLM
-      </a>
-      <br>
-      <span class="text-sm italic">Certificado por la Universidad de Castilla-La Mancha (UCLM)</span>
-  </li>
-  <li>
-    <a href="/docs/AWSCetificate.pdf" target="_blank">Amazon Connect Specialist (Click para ver el certificado)</a>
-    <br>
-    <span class="text-sm italic">Certificado por AWS Training & Certification </span>
-</li>
-    <li>
-        <a href="/docs/SpanishB1.pdf" target="_blank">Certificación B1 (con enlace)</a>
-        <br>
-        <span class="text-sm italic">Certificado por la Universidad de Castilla-La Mancha (UCLM)</span>
+      MuleSoft Certified Developer – Level 1 (Mule 4) · En curso
     </li>
-
-</ul>
+    <li>
+      <a href="/docs/AWSCetificate.pdf" target="_blank">Amazon Connect Specialist (clic para ver el certificado)</a>
+      <br>
+      <span class="text-sm italic">Certificado por AWS Training & Certification</span>
+    </li>
+  </ul>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experiencia de Voluntariado</div>
+    <div class="text-3xl w-full font-bold">Voluntariado</div>
   </div>
 
   <div class="time-line-container mb-10">
     <TimeLineElement
+      title="Representante estatal de la UCLM en RITSI"
+      subtitle="2022 – 2026 · Reunión de Estudiantes de Ingenierías Técnicas y Superiores en Informática"
+      description="Representación del estudiantado de Informática de la UCLM en asambleas nacionales y participación en decisiones de ámbito estatal."
+    />
+    <TimeLineElement
       title="Mentor de estudiantes de primer curso"
-      subtitle="Desde Septiembre, 2024 hasta Julio, 2025 en la Universidad de Castilla-La Mancha, Albacete, España"
-    >
-    Guié y apoyé a los estudiantes de primer año en su adaptación a la universidad, brindando orientación académica y sobre el campus. 
-    Además, asistí en sesiones de bienvenida, resolví dudas sobre asignaturas y facilité su integración ayudándolos a encontrar su grupo de compañeros rápidamente.
-    </TimeLineElement>
+      subtitle="Septiembre 2024 – julio 2025 en la Universidad de Castilla-La Mancha"
+      description="Orientación académica y en el campus para estudiantes de primer curso."
+    />
     <TimeLineElement
-      title="Representante estudiantil a nivel estatal de la UCLM en RITSI (Reunión de Estudiantes de Ingenierías Técnicas y Superiores en Informática)."
-      subtitle="Desde Octubre, 2022 en RITSI, España"
-    >
-    Como representante estatal, participé en reuniones nacionales en ciudades como Ourense, A Coruña y Barcelona, defendiendo los intereses de los estudiantes de Ingeniería Informática 
-    de la UCLM. Mi labor incluyó impulsar mejoras académicas, fomentar la colaboración entre universidades y contribuir a la toma de decisiones a nivel nacional sobre asuntos 
-    estudiantiles, promoviendo iniciativas para mejorar la experiencia educativa.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Estudiante voluntario"
-      subtitle="Agosto, 2024 en Avada, Santiago de Compostela, España"
-    >
-    Participé en la restauración de un área natural, centrándome en la limpieza y eliminación de residuos para preservar el medio ambiente.
-    El área fue acondicionada y convertida en una zona de descanso, proporcionando un espacio limpio y acogedor para los viajeros, al tiempo que fomentaba la conciencia ambiental.
-    Trabajé en equipo para garantizar que el área se mantuviera sostenible y accesible para el uso público.
-    </TimeLineElement>
-    
+      title="Desarrollador web voluntario"
+      subtitle="Les Chamis de Mamie · Asociación de rescate felino, Hendaya"
+    />
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Habilidades</div>
+    <div class="text-3xl w-full font-bold">Competencias</div>
   </div>
 
-  <ul class="list-disc md:columns-5 columns-2 mx-6 gap-x-6">
-    <li>Salesforce</li>
-    <li>GitHub</li>
-    <li>C/C#</li>
-    <li>Java</li>
-    <li>Visual Studio</li>
-    <li>Figma</li>
-    <li>Manejo de Proyectos</li>
-    <li>Habilidades Analíticas</li>
-    <li>Pensamiento Estratégico</li>
-    <li>Liderazgo de Equipo</li>
-    <li>Gestión de Eventos</li>
-  </ul>
+  <div class="mb-10 grid gap-3">
+    <div><span class="font-semibold">IA e investigación:</span> Arquitectura Transformer · RLHF · Diseño experimental · Análisis estadístico · Anotación de corpus</div>
+    <div><span class="font-semibold">Desarrollo:</span> Python · Java · TypeScript · SQL · XML/XSD · Git</div>
+    <div><span class="font-semibold">Integración:</span> MuleSoft Anypoint · CloudHub 2.0 · DataWeave 2.0 · OpenAPI 3.0 · OAuth2/JWT · OData V4</div>
+    <div><span class="font-semibold">Salesforce:</span> Apex · Flows · Service Cloud</div>
+    <div><span class="font-semibold">Idiomas:</span> Español (nativo) · Inglés (C1 lectura/comprensión, B2 escritura/conversación)</div>
+  </div>
 
   <!-- Contenedor: fijado abajo a la derecha, inicialmente fuera de la pantalla (translate-x-full) -->
   <div
-  id="calamardo-container"
-  class="
-    fixed bottom-5 right-0 z-10
-    flex flex-col items-center      /*,centrado en X */
-    gap-3                           /* separa un poco cada elemento */
-    p-4                             
-    transform translate-x-full
-    transition-transform duration-700
-    bg-transparent
-  "
->
-  <p class="font-semibold text-base-content bg-base-100/70 px-2 py-1 rounded-md">
-    ¿Quieres más información?
-  </p>
-  
+    id="calamardo-container"
+    class="fixed bottom-5 right-0 z-10 flex flex-col items-center gap-3 p-4 transform translate-x-full transition-transform duration-700 bg-transparent"
+  >
+    <p class="font-semibold text-base-content bg-base-100/70 px-2 py-1 rounded-md">
+      ¿Quieres más información?
+    </p>
 
-  <div class="flex space-x-2">
-    <section
-      class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg"
-    >
-      <button
-        class="px-3 py-2 text-sm cursor-pointer inline-block"
-        onclick="respuestaSi()"
-      >
-        Sí, por favor
-      </button>
-    </section>
-    
-    <section
-      class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg"
-    >
-      <button
-        class="px-3 py-2 text-sm cursor-pointer inline-block"
-        onclick="respuestaNo()"
-      >
-        No, gracias
-      </button>
-    </section>
+    <div class="flex space-x-2">
+      <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg">
+        <button class="px-3 py-2 text-sm cursor-pointer inline-block" onclick="respuestaSi()">
+          ¡Sí!
+        </button>
+      </section>
+      <section class="inline-block px-3 py-2 bg-base-100 rounded-lg shadow-md border border-base-400 hover:shadow-lg">
+        <button class="px-3 py-2 text-sm cursor-pointer inline-block" onclick="respuestaNo()">
+          No, gracias
+        </button>
+      </section>
+    </div>
+
+    <model-viewer
+      src="/3DModels/BackedModel.glb"
+      alt="Mi modelo 3D"
+      camera-controls
+      autoplay
+      class="w-[160px] h-[160px]"
+      style="--progress-bar-color: transparent;">
+    </model-viewer>
   </div>
 
-  <model-viewer
-    src="/3DModels/BackedModel.glb"
-    alt="Mi modelo 3D"
-    camera-controls
-    autoplay
-    style="w-[160px] h-auto; --progress-bar-color: transparent;">
-</model-viewer>
-</div>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-<script is:client>
-  function mostrarModal() {
-    const container = document.getElementById('calamardo-container');
-    if (container) {
-      container.classList.remove('translate-x-full');
-      container.classList.add('translate-x-0');
+  <script is:inline>
+    function mostrarModal() {
+      const container = document.getElementById('calamardo-container');
+      if (container) {
+        container.classList.remove('translate-x-full');
+        container.classList.add('translate-x-0');
+      }
     }
-  }
 
-  function ocultarModal() {
-    const container = document.getElementById('calamardo-container');
-    if (container) {
-      container.style.display = 'none';
+    function ocultarModal() {
+      const container = document.getElementById('calamardo-container');
+      if (container) {
+        container.style.display = 'none';
+      }
     }
-  }
 
-  // Muestra el modal en la primera carga
-  window.addEventListener('load', () => {
-    setTimeout(mostrarModal, 5000);
-  });
+    window.addEventListener('load', () => {
+      setTimeout(mostrarModal, 5000);
+    });
 
-  // Muestra el modal en cada cambio de página en Astro (Astro carga las páginas con SPA (No se bienq ue significa, pero una vez cargada la página, no se recarga al cambiar de página))
-  document.addEventListener('astro:after-swap', () => {
-    setTimeout(mostrarModal, 5000);
-  });
+    document.addEventListener('astro:after-swap', () => {
+      setTimeout(mostrarModal, 5000);
+    });
 
-  function respuestaSi() {
-    window.open("https://www.linkedin.com/in/javier-garcia-tercero", "_blank");
-  }
+    function respuestaSi() {
+      window.open("https://www.linkedin.com/in/javier-garcia-tercero", "_blank");
+    }
 
-  function respuestaNo() {
-    ocultarModal();
-  }
-</script>
-    
+    function respuestaNo() {
+      ocultarModal();
+    }
+  </script>
 </BaseLayout>
