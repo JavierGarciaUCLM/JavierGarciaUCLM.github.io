@@ -7,21 +7,25 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+    # Permisos mínimos del GITHUB_TOKEN: solo escribir en el repo (rama gh-pages)
+    permissions:
+      contents: write
+
     steps:
       # 1) Descarga el código del repo
       - name: Check out code
         uses: actions/checkout@v3
 
-      # 2) Usa Node (versión recomendada para Astro: >=16)
+      # 2) Usa Node (versión fijada en .nvmrc: 24 LTS)
       - name: Use Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .nvmrc
 
-      # 3) Instala dependencias (pnpm o npm)
+      # 3) Instala exactamente las versiones de package-lock.json
+      #    (--legacy-peer-deps sigue siendo necesario por @astrojs/tailwind)
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
       # 4) Compila tu proyecto Astro (genera carpeta dist/)
       - name: Build
