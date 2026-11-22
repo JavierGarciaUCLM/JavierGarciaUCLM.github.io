@@ -3,11 +3,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
-<BaseLayout title="CV en español | Javier García" sideBarActiveItemID="cv">
+<BaseLayout
+  title="CV (Español) | Javier García Tercero"
+  description="Currículum de Javier García Tercero: ingeniero informático y estudiante de máster en Filosofía que investiga la honestidad y la interpretabilidad de los modelos de lenguaje. Desarrollador MuleSoft y Salesforce."
+  sideBarActiveItemID="cv"
+  lang="es"
+>
   <Fragment slot="head">
-    <link rel="alternate" hreflang="en" href={new URL('/cv', Astro.site)} />
-    <link rel="alternate" hreflang="es" href={new URL('/cv-es', Astro.site)} />
-    <link rel="alternate" hreflang="x-default" href={new URL('/cv', Astro.site)} />
+    <link rel="alternate" hreflang="en" href={new URL('/cv/', Astro.site)} />
+    <link rel="alternate" hreflang="es" href={new URL('/cv-es/', Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/cv/', Astro.site)} />
   </Fragment>
 
   <div class="relative">
