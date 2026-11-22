@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /cv/
-Disallow: /cv-es/
 
-Sitemap: https://javiergarciauclm.github.io/sitemap.xml
+Sitemap: https://javiergarciatercero.es/sitemap-index.xml
